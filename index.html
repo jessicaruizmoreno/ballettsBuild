@@ -7,16 +7,17 @@
 		<title>Bridal Shop London, Kitchener, St. Catharines | Ontario's Designer Wedding Dresses & Gowns</title>
 		<meta name="description" content="Your one stop shop for all of your designer bridal gowns, prom dresses, & wedding accessories offered by Balletts Bridal Shop in London, Kitchener & St. Catharines.">
 		<link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png">
-		<!---css styles--->
-		<link href="./styles/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<!--bootstrap css-->
-		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+				<!---css styles--->
+				<link href="./styles/styles.css" rel="stylesheet" type="text/css" media="screen">
 		<!--font awesome icons/ loading faster script--->
 		<script src="https://kit.fontawesome.com/2994bc2806.js" crossorigin="anonymous"></script>
 		<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	</head>
 	<body>
-		<div class="container-fluid social-nav">	
+		<div class="container-fluid">
+		<div class="social-nav">	
 		<div id="box-left">
 			<p>connect:</p>
 				<a link href="https://www.facebook.com/ballettsbridalshop/"><i class="fab fa-facebook-f"></i></i></a>
@@ -27,21 +28,25 @@
 		<div id="box-right">	
 		<a link href="#"><i class="fas fa-calendar-alt"></i>Book Appoinment</a>
 		</div>
+		</div>
 
-		<div class="pos-f-t">
-		<div class="collapse" id="navbarToggleExternalContent">
-			<div class="bg-dark p-4">
-			  <h5 class="text-white h4">Collapsed content</h5>
-			  <span class="text-muted">Toggleable via the navbar brand.</span>
-			</div>	
-			</div>
-
-		<nav class="navbar navbar-expand-lg sticky-top">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+		<div class="container-xl">
+			<nav class="navbar">
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNav" aria-controls="showNav" aria-expanded="false" aria-label="Toggle navigation">
+				<svg class="bi bi-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
+				  </svg>
 			  </button>
+			  
 			</nav>
-			</div>
+			<div class="collapse" id="showNav">
+				<div class="bg-dark p-4">
+				  <h5 class="text-white h4">Collapsed content</h5>
+				  <span class="text-muted">Toggleable via the navbar brand.</span>
+				</div>
+			  </div>
+			  </div>
+		  
 			
 	
 <!--end of container fluid-->
