@@ -5,8 +5,15 @@ body {
   margin: 0px;
 }
 
+.collaspe.show {
+  display: block;
+}
+
+#navbarToggleExternalContent {
+  display: none;
+}
+
 .social-nav {
-  background-color: #000000;
   text-align: center;
 }
 
@@ -18,4 +25,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+/*# sourceMappingURL=styles.css.map */
+
 /*# sourceMappingURL=styles.css.map */
