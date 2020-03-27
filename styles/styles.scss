@@ -1,3 +1,55 @@
+// ===== VARIABLES ===== //
+
+
+// Colours
+$black: #000000;
+$white: #FFFFFF;
+$light-grey: #F0F0F0;
+$main-pink: #FA85B6;
+$accent:#FCBAD6;
+$light-accent:#FFF5F9;
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
+
+$font-cursive: 'Niconne', Helvetica, sans-serif;
+$font-set-1: 'Noto Sans JP', Helvetica, sans-serif;
+
+$light: 300;
+$normal: 400;
+$med:500;
+$bold:700;
+
+
+// ===== MIXINS ===== //
+
+// Breakpoints
+
+
+// ===== GLOBAL STYLES ===== //
+
 body{
-font-size:16px;    
+    font-size:16px;    
+    margin:0px;
+ 
+}
+
+.collaspe.show{
+    display:block;
+}
+
+#navbarToggleExternalContent{
+    display:none;
+}
+
+
+.social-nav{
+    text-align:center;
+}
+
+.social-nav #box-left, .social-nav #box-right{
+    display: inline-flex;
+    align-items: center;
 }

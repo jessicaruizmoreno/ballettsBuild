@@ -1,4 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
 body {
   font-size: 16px;
+  margin: 0px;
+}
+
+.collaspe.show {
+  display: block;
+}
+
+#navbarToggleExternalContent {
+  display: none;
+}
+
+.social-nav {
+  text-align: center;
+}
+
+.social-nav #box-left, .social-nav #box-right {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
