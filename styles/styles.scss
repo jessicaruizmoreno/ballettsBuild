@@ -33,23 +33,27 @@ $bold:700;
 body{
     font-size:16px;    
     margin:0px;
- 
 }
 
-.collaspe.show{
-    display:block;
+.container-fluid{
+    padding:0px;
 }
-
-#navbarToggleExternalContent{
-    display:none;
-}
-
 
 .social-nav{
     text-align:center;
+    background-color:$black;
 }
 
 .social-nav #box-left, .social-nav #box-right{
     display: inline-flex;
     align-items: center;
+}
+
+.navbar{
+    padding: .5rem 0rem;
+}
+
+.navbar-toggler{
+padding:0px;
+font-size: 3rem;
 }
