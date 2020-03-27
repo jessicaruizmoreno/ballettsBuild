@@ -28,11 +28,21 @@ body {
 }
 
 .navbar-toggler {
-  padding: 0px;
+  margin: 0 30px 0 0;
   font-size: 3rem;
+  padding: 0;
 }
 
 img#logo {
   width: 30%;
+  margin: 0 auto;
+}
+
+.search svg {
+  width: 26px;
+}
+
+.cart svg {
+  width: 32px;
 }
 /*# sourceMappingURL=styles.css.map */
