@@ -5,26 +5,72 @@ body {
   margin: 0px;
 }
 
-.container-fluid {
+.container-fluid, .container-xl {
   padding: 0px;
 }
 
-.social-nav {
-  text-align: center;
-  background-color: #000000;
+ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
-.social-nav #box-left, .social-nav #box-right {
+button {
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 0.6875rem;
+}
+
+.second-nav {
+  font-size: 1.01rem;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #F0F0F0;
+}
+
+.social-nav {
+  font-size: 1.01rem;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #000000;
+  padding: 0 1.125rem;
+}
+
+#showNav {
+  position: absolute;
+  width: 100%;
+}
+
+.social-nav #box-left {
+  border-right: 2px solid;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: left;
+}
+
+.social-nav #box-left a {
+  color: #FFFFFF;
+  padding: 0 7px;
+}
+
+.social-nav #box-right {
+  text-align: right;
+  float: right;
+}
+
+.social-nav #box-right a {
+  color: #FFFFFF;
+  padding: 0 7px;
 }
 
 .navbar {
-  padding: .5rem 0rem;
+  padding: 0 15px 0 15px;
+  height: 60px;
 }
 
 .navbar-toggler {
@@ -33,16 +79,38 @@ body {
   padding: 0;
 }
 
+.nav-link {
+  padding: 0;
+}
+
 img#logo {
-  width: 30%;
+  width: 90px;
   margin: 0 auto;
 }
 
-.search svg {
-  width: 26px;
+.icon svg {
+  height: 22px;
 }
 
-.cart svg {
-  width: 32px;
+.pink-box {
+  background-color: #FFF5F9;
+}
+
+.pink-box li {
+  font-size: 18px;
+  padding: 20px 26px;
+}
+
+.pink-box li a {
+  color: #2F2F2F;
+  text-decoration: none;
+}
+
+.pink-box li a:hover, .pink-box li a:active {
+  background-color: #FCBAD6;
+  height: 55px;
+  display: block;
+  padding-top: 15px;
+  padding-left: 30px;
 }
 /*# sourceMappingURL=styles.css.map */

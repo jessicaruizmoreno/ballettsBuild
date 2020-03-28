@@ -3,6 +3,7 @@
 
 // Colours
 $black: #000000;
+$soft-black:#2F2F2F;
 $white: #FFFFFF;
 $light-grey: #F0F0F0;
 $main-pink: #FA85B6;
@@ -25,7 +26,37 @@ $bold:700;
 
 // ===== MIXINS ===== //
 
+//aligments
+@mixin flexCenter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//global barNavs
+@mixin barNavs{
+    font-size: 1.01rem;
+    color:$white;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+}
+
+//transparent
+@mixin remove{
+        border-color:transparent;
+        background-color:transparent;
+    }
+
+
 // Breakpoints
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @mixin desktop {
+    @media (min-width: 1200px) { @content; }
+  }
 
 
 // ===== GLOBAL STYLES ===== //
@@ -35,22 +66,66 @@ body{
     margin:0px;
 }
 
-.container-fluid{
+.container-fluid, .container-xl{
     padding:0px;
 }
 
-.social-nav{
-    text-align:center;
-    background-color:$black;
+
+ul{
+    list-style: none;
+    padding-inline-start: 0px;
 }
 
-.social-nav #box-left, .social-nav #box-right{
-    display: inline-flex;
-    align-items: center;
+button{
+    @include remove();
+    font-size: 0.6875rem;
 }
+
+// ==== MAIN NAV ===//
+.second-nav{
+    @include barNavs();
+    background-color: $light-grey;
+}
+
+
+
+.social-nav{
+    @include barNavs();
+    background-color:$black;
+    padding: 0 1.125rem;
+}
+
+#showNav{
+    position: absolute;
+    width: 100%;
+}
+
+.social-nav #box-left{
+    border-right: 2px solid;
+    display: inline-flex;
+    text-align: left;
+
+ a{
+     color:$white;
+     padding: 0 7px;
+ }
+
+}
+
+.social-nav #box-right{
+    text-align: right;
+    float: right;
+
+    a{
+        color: $white;
+        padding: 0 7px;
+    }
+}
+
 
 .navbar{
-    padding: .5rem 0rem;
+    padding: 0 15px 0 15px;
+    height: 60px;
 }
 
 .navbar-toggler{
@@ -59,15 +134,43 @@ body{
     padding: 0;
 }
 
+.nav-link{
+    padding:0;
+}
+
+
 img#logo{
-    width:30%;
+    width: 90px;
     margin: 0 auto;
 
 }
 
-.search svg{
-    width:26px;
+.icon svg{
+    height:22px;
 } 
-.cart svg{
-width:32px;
+
+.pink-box{
+    background-color: $light-accent;
+
+    li{
+        font-size: 18px;
+        padding: 20px 26px;
+
+    a{
+        color:$soft-black;
+        text-decoration: none;  
+
+        &:hover, &:active{
+            background-color: #FCBAD6;
+            height: 55px;
+            display: block;
+            padding-top: 15px;
+            padding-left: 30px; 
+            }
+           
+    }
+    
+    } 
+    
+    
 }
