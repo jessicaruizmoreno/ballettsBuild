@@ -25,12 +25,18 @@ $bold:700;
 
 H1{
     font-family:$font-cursive;
-    font-size: 36px;
-    line-height:38px;
+    font-size: 2.25rem; //36px
+    line-height:2.375rem; //38px
     color:$soft-black;
-    padding: 82px 0 20px;
+    padding: 5.125rem 0 1.25rem; //80px 0 20px
 }
 
+H2{
+    color:$soft-black;
+    font-family:$font-set-1; 
+    font-weight: $med;
+    font-size: 1.25rem;//20px
+}
 
 // ===== MIXINS ===== //
 
@@ -43,7 +49,7 @@ H1{
     font-weight: $bold;
     width:168px;
     height:40px;
-    font-size: 13px;
+    font-size: 0.8125rem;//13px
     text-transform: uppercase;
     border-radius: 3px;
 
@@ -57,7 +63,7 @@ H1{
         font-weight: $bold;
         width:168px;
         height:40px;
-        font-size: 13px;
+        font-size: 0.8125rem;//13px
         text-transform: uppercase;
         border-radius: 3px;
     }
@@ -75,7 +81,7 @@ H1{
     font-size: 1.01rem;
     color:$white;
     height: 40px;
-    line-height: 36px;
+    line-height: 2.25rem; //36px;
     text-align: center;
 }
 
@@ -149,7 +155,7 @@ button{
 
  a{
      color:$white;
-     padding: 0 7px;
+     padding: 0 0.4375rem;
  }
 }
 
@@ -158,18 +164,18 @@ button{
         padding: 0;
     a{
         color: $white;
-        padding: 0 7px;
+        padding: 0 0.4375rem;
     }
 }
 
 
 .navbar{
-    padding: 0 15px 0 15px;
+    padding: 0 0.9375rem 0 0.9375rem;
     height: 60px;
 }
 
 .navbar-toggler{
-    margin: 0 30px 0 0;
+    margin: 0 1.875rem 0 0;
     font-size: 2rem;
     padding: 0;
 }
@@ -193,8 +199,8 @@ img#logo{
     background-color: $light-accent;
 
     li{
-        font-size: 18px;
-        padding: 20px 26px;
+        font-size: 1.125rem;//18px
+        padding: 1.25rem 1.625rem; //20px 26px
 
     a{
         color:$soft-black;
@@ -204,8 +210,8 @@ img#logo{
             background-color: #FCBAD6;
             height: 55px;
             display: block;
-            padding-top: 15px;
-            padding-left: 30px; 
+            padding-top: 0.9375rem;//15px
+            padding-left: 1.875rem; //30px
             }
            
     }
@@ -218,7 +224,7 @@ img#logo{
 // ===BANNER===//
 #heroImage {
     background: url(/assets/images/bride-hero.png) no-repeat;
-    height: 100vh;
+    height: 75vh;
     background-position-x: 39vw;
     background-position-y: -63px;
     background-size: 300px;
@@ -226,10 +232,39 @@ img#logo{
 
 .primaryBtn{
     @include primaryBtn();
-    margin-bottom: 22px;
+}
+
+.hero.primaryBtn{
+    @include primaryBtn();
+    margin-bottom: 1.375rem;//22px
 }
 
 
 .secBtn{
     @include secBtn();
+}
+
+//====Ad Image Layout
+.ad-image{
+    padding:0;
+
+    img{
+        width:320px;
+    }
+}
+
+.ad-text{
+    background-color: $light-accent;
+    height:273px;
+    margin-top:0.5rem;//8px
+    h2{
+        margin:5.25rem 1.5625rem 1.5625rem 1.5625rem;//84px 3(25px)
+        text-align:center;
+    }
+}
+
+.ad.primaryBtn{
+    @include primaryBtn();
+    display:block;
+    margin:0 auto;
 }

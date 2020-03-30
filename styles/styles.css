@@ -2,10 +2,17 @@
 @import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
 H1 {
   font-family: "Niconne", Helvetica, sans-serif;
-  font-size: 36px;
-  line-height: 38px;
+  font-size: 2.25rem;
+  line-height: 2.375rem;
   color: #2F2F2F;
-  padding: 82px 0 20px;
+  padding: 5.125rem 0 1.25rem;
+}
+
+H2 {
+  color: #2F2F2F;
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 body {
@@ -33,7 +40,7 @@ button {
   font-size: 1.01rem;
   color: #FFFFFF;
   height: 40px;
-  line-height: 36px;
+  line-height: 2.25rem;
   text-align: center;
   background-color: #F0F0F0;
 }
@@ -42,7 +49,7 @@ button {
   font-size: 1.01rem;
   color: #FFFFFF;
   height: 40px;
-  line-height: 36px;
+  line-height: 2.25rem;
   text-align: center;
   background-color: #000000;
   margin-right: 0;
@@ -64,7 +71,7 @@ button {
 
 .box-left a {
   color: #FFFFFF;
-  padding: 0 7px;
+  padding: 0 0.4375rem;
 }
 
 .box-right {
@@ -74,16 +81,16 @@ button {
 
 .box-right a {
   color: #FFFFFF;
-  padding: 0 7px;
+  padding: 0 0.4375rem;
 }
 
 .navbar {
-  padding: 0 15px 0 15px;
+  padding: 0 0.9375rem 0 0.9375rem;
   height: 60px;
 }
 
 .navbar-toggler {
-  margin: 0 30px 0 0;
+  margin: 0 1.875rem 0 0;
   font-size: 2rem;
   padding: 0;
 }
@@ -106,8 +113,8 @@ img#logo {
 }
 
 .pink-box li {
-  font-size: 18px;
-  padding: 20px 26px;
+  font-size: 1.125rem;
+  padding: 1.25rem 1.625rem;
 }
 
 .pink-box li a {
@@ -119,13 +126,13 @@ img#logo {
   background-color: #FCBAD6;
   height: 55px;
   display: block;
-  padding-top: 15px;
-  padding-left: 30px;
+  padding-top: 0.9375rem;
+  padding-left: 1.875rem;
 }
 
 #heroImage {
   background: url(/assets/images/bride-hero.png) no-repeat;
-  height: 100vh;
+  height: 75vh;
   background-position-x: 39vw;
   background-position-y: -63px;
   background-size: 300px;
@@ -138,10 +145,22 @@ img#logo {
   font-weight: 700;
   width: 168px;
   height: 40px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 3px;
-  margin-bottom: 22px;
+}
+
+.hero.primaryBtn {
+  background-color: #FA85B6;
+  color: #000000;
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+  font-weight: 700;
+  width: 168px;
+  height: 40px;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-bottom: 1.375rem;
 }
 
 .secBtn {
@@ -151,8 +170,41 @@ img#logo {
   font-weight: 700;
   width: 168px;
   height: 40px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 3px;
+}
+
+.ad-image {
+  padding: 0;
+}
+
+.ad-image img {
+  width: 320px;
+}
+
+.ad-text {
+  background-color: #FFF5F9;
+  height: 273px;
+  margin-top: 0.5rem;
+}
+
+.ad-text h2 {
+  margin: 5.25rem 1.5625rem 1.5625rem 1.5625rem;
+  text-align: center;
+}
+
+.ad.primaryBtn {
+  background-color: #FA85B6;
+  color: #000000;
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+  font-weight: 700;
+  width: 168px;
+  height: 40px;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=styles.css.map */
