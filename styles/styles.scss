@@ -94,6 +94,7 @@ z-index: 1;
     display:flex;
     justify-content: center;
     align-items: center;
+    text-align:center;
 }
 
 //global barNavs
@@ -306,6 +307,7 @@ a.active_link:hover, a.active_link:active {
     position: relative;
     margin-bottom: 8px;
     @include flexCenter();
+    padding: 1.875rem;//30px
     
     .cat-images{
         top: 0;
@@ -317,3 +319,4 @@ a.active_link:hover, a.active_link:active {
     }
 }
 
+//=====Testimonals===//

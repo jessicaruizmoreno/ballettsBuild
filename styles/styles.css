@@ -249,6 +249,8 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  padding: 1.875rem;
 }
 
 .cats_box .cat-images {
