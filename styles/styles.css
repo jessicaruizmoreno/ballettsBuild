@@ -45,7 +45,8 @@ button {
   line-height: 36px;
   text-align: center;
   background-color: #000000;
-  padding: 0 1.125rem;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 #showNav {
@@ -53,25 +54,25 @@ button {
   width: 100%;
 }
 
-.social-nav #box-left {
-  border-right: 2px solid;
+.box-left {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  text-align: left;
+  max-width: 46%;
+  border-right: solid;
 }
 
-.social-nav #box-left a {
+.box-left a {
   color: #FFFFFF;
   padding: 0 7px;
 }
 
-.social-nav #box-right {
-  text-align: right;
-  float: right;
+.box-right {
+  max-width: 58%;
+  padding: 0;
 }
 
-.social-nav #box-right a {
+.box-right a {
   color: #FFFFFF;
   padding: 0 7px;
 }

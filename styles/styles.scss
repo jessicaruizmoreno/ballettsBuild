@@ -130,7 +130,8 @@ button{
 .social-nav{
     @include barNavs();
     background-color:$black;
-    padding: 0 1.125rem;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 #showNav{
@@ -138,22 +139,23 @@ button{
     width: 100%;
 }
 
-.social-nav #box-left{
-    border-right: 2px solid;
+.box-left{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    text-align: left;
+    max-width: 46%;
+    border-right: solid;
+    
 
  a{
      color:$white;
      padding: 0 7px;
  }
-
 }
 
-.social-nav #box-right{
-    text-align: right;
-    float: right;
-
+.box-right{
+        max-width: 58%;
+        padding: 0;
     a{
         color: $white;
         padding: 0 7px;
