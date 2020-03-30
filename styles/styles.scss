@@ -45,11 +45,18 @@ margin:69px auto;
 text-align: center;
 }
 
+H3{
+    font-weight: $bold;
+    font-size: 1.25rem;//20px  
+}
+
 H3.category_links{
 color:$white;
-position: absolute;
-top:40%;
+position: relative;
+z-index: 1;
 }
+
+
 
 // ===== MIXINS ===== //
 
@@ -283,10 +290,22 @@ img#logo{
 }
 
 //=== Categories===//
+a.active_link:hover, a.active_link:active {
+    color:$white;
+    text-decoration: underline;
+    .cats_box .cat-images{
+        background-color: #0000002e !important;
+        background-blend-mode: overlay;
+    }
+
+}
+
+
 .cats_box {
     min-height: 216px;
     position: relative;
     margin-bottom: 8px;
+    @include flexCenter();
     
     .cat-images{
         top: 0;
@@ -295,7 +314,6 @@ img#logo{
         bottom: 0;
         display: block;
         position: absolute;
-    
     }
 }
 

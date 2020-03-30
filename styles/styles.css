@@ -22,10 +22,15 @@ H2.cats_title {
   text-align: center;
 }
 
+H3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
 H3.category_links {
   color: #FFFFFF;
-  position: absolute;
-  top: 40%;
+  position: relative;
+  z-index: 1;
 }
 
 body {
@@ -221,10 +226,29 @@ img#logo {
   margin: 0 auto;
 }
 
+a.active_link:hover, a.active_link:active {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-images {
+  background-color: #0000002e !important;
+  background-blend-mode: overlay;
+}
+
 .cats_box {
   min-height: 216px;
   position: relative;
   margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cats_box .cat-images {
