@@ -38,6 +38,19 @@ H2{
     font-size: 1.25rem;//20px
 }
 
+H2.cats_title{
+font-weight: $light;
+font-size: 1.25rem;//20px
+margin:69px auto;
+text-align: center;
+}
+
+H3.category_links{
+color:$white;
+position: absolute;
+top:40%;
+}
+
 // ===== MIXINS ===== //
 
 //buttons
@@ -245,7 +258,7 @@ img#logo{
 }
 
 //====Ad Image Layout
-.ad-image{
+.ad-image, .cat{
     padding:0;
 
     img{
@@ -268,3 +281,21 @@ img#logo{
     display:block;
     margin:0 auto;
 }
+
+//=== Categories===//
+.cats_box {
+    min-height: 216px;
+    position: relative;
+    margin-bottom: 8px;
+    
+    .cat-images{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+    
+    }
+}
+

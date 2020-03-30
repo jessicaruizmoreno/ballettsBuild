@@ -15,6 +15,19 @@ H2 {
   font-size: 1.25rem;
 }
 
+H2.cats_title {
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin: 69px auto;
+  text-align: center;
+}
+
+H3.category_links {
+  color: #FFFFFF;
+  position: absolute;
+  top: 40%;
+}
+
 body {
   font-size: 16px;
   margin: 0px;
@@ -175,11 +188,11 @@ img#logo {
   border-radius: 3px;
 }
 
-.ad-image {
+.ad-image, .cat {
   padding: 0;
 }
 
-.ad-image img {
+.ad-image img, .cat img {
   width: 320px;
 }
 
@@ -206,5 +219,20 @@ img#logo {
   border-radius: 3px;
   display: block;
   margin: 0 auto;
+}
+
+.cats_box {
+  min-height: 216px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.cats_box .cat-images {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
 }
 /*# sourceMappingURL=styles.css.map */
