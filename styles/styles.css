@@ -38,7 +38,7 @@ body {
   margin: 0px;
 }
 
-.container-fluid {
+.container-fluid, .container-xl {
   padding: 0px;
 }
 
@@ -70,7 +70,7 @@ button {
   line-height: 2.25rem;
   text-align: center;
   background-color: #000000;
-  margin-left: 0;
+  margin: 0;
 }
 
 #showNav {
@@ -82,7 +82,7 @@ button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  max-width: 46%;
+  max-width: 43%;
   border-right: solid;
 }
 
@@ -190,10 +190,6 @@ img#logo {
   font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 3px;
-}
-
-.ad-image img, .cat img {
-  width: 320px;
 }
 
 .ad-text {
