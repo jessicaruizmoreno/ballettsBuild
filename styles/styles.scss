@@ -50,10 +50,21 @@ H3{
     font-size: 1.25rem;//20px  
 }
 
+H3.testimonals{
+color:$soft-black;
+}
+
 H3.category_links{
 color:$white;
 position: relative;
 z-index: 1;
+}
+
+H4.accents{
+font-size:4.6875rem;
+font-weight: $bold;
+color:$main-pink;
+text-align: center;
 }
 
 

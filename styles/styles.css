@@ -27,10 +27,21 @@ H3 {
   font-size: 1.25rem;
 }
 
+H3.testimonals {
+  color: #2F2F2F;
+}
+
 H3.category_links {
   color: #FFFFFF;
   position: relative;
   z-index: 1;
+}
+
+H4.accents {
+  font-size: 4.6875rem;
+  font-weight: 700;
+  color: #FA85B6;
+  text-align: center;
 }
 
 body {
