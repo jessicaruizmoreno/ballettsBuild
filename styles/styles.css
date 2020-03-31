@@ -38,7 +38,7 @@ body {
   margin: 0px;
 }
 
-.container-fluid, .container-xl {
+.container-fluid {
   padding: 0px;
 }
 
@@ -70,7 +70,6 @@ button {
   line-height: 2.25rem;
   text-align: center;
   background-color: #000000;
-  margin-right: 0;
   margin-left: 0;
 }
 
@@ -191,10 +190,6 @@ img#logo {
   font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 3px;
-}
-
-.ad-image, .cat {
-  padding: 0;
 }
 
 .ad-image img, .cat img {
