@@ -192,6 +192,14 @@ img#logo {
   border-radius: 3px;
 }
 
+.ad-image {
+  padding: 0;
+}
+
+.ad-image img {
+  width: 320px;
+}
+
 .ad-text {
   background-color: #FFF5F9;
   height: 273px;
@@ -199,8 +207,8 @@ img#logo {
 }
 
 .ad-text h2 {
-  margin: 5.25rem 1.5625rem 1.5625rem 1.5625rem;
   text-align: center;
+  padding: 5.25rem 1.5625rem 1.5625rem;
 }
 
 .ad.primaryBtn {
@@ -225,6 +233,10 @@ a.active_link:hover, a.active_link:active {
 a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-images {
   background-color: #0000002e !important;
   background-blend-mode: overlay;
+}
+
+.cat.col {
+  padding: 0;
 }
 
 .cats_box {

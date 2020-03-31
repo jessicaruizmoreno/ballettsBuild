@@ -32,8 +32,7 @@
 		
 		</div>
 		<!---main nav--->
-		<div class="container-xl">
-			<nav class="navbar">
+			<nav class="navbar navbar-expand-md">
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNav" aria-controls="showNav" aria-expanded="false" aria-label="Toggle navigation">
 				<svg class="bi bi-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
@@ -46,9 +45,9 @@
 				<button class="icon" type="button"><svg id="Group_119" data-name="Group 119" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.49 17.13"><path id="Path_1" data-name="Path 1" d="M6.28,11.42H16.64a.58.58,0,0,0,.55-.41l2.28-8a.57.57,0,0,0-.39-.71l-.16,0H5L4.55.45A.56.56,0,0,0,4,0H.57A.58.58,0,0,0,0,.57a.57.57,0,0,0,.57.57h3L5.6,10.42a1.72,1.72,0,0,0,.68,3.29H16.64a.58.58,0,0,0,0-1.15H6.28A.57.57,0,0,1,5.71,12a.58.58,0,0,1,.57-.57Zm11.88-8-1.95,6.85H6.74L5.22,3.43Z" transform="translate(0)"/><path id="Path_2" data-name="Path 2" d="M5.71,15.42a1.72,1.72,0,1,0,1.71-1.71A1.71,1.71,0,0,0,5.71,15.42Zm1.71-.57a.56.56,0,0,1,.57.57.57.57,0,0,1-.57.57.58.58,0,0,1-.57-.57A.57.57,0,0,1,7.42,14.85Z" transform="translate(0)"/><path id="Path_3" data-name="Path 3" d="M13.78,15.42a1.72,1.72,0,1,0,1.72-1.71A1.71,1.71,0,0,0,13.78,15.42Zm1.72-.57a.57.57,0,0,1,.57.57.58.58,0,0,1-1.15,0A.57.57,0,0,1,15.5,14.85Z" transform="translate(0)"/></svg></button>
 			  </div>
 			</nav>
-			<div class="collapse" id="showNav">
+			<div class="collapse navbar-collaspe" id="showNav">
 				<div class="pink-box">
-				  <ul>
+				  <ul class="navbar-nav">
 					  <li><a link href="#home">Home</a></li>
 					  <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#shop" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -70,7 +69,7 @@
 		
 				</div>
 			  </div>
-		</div>
+	
 		<!---second nav--->
 		<div class="second-nav">	
 				<button class="icon" type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -130,31 +129,35 @@
 	   </button>
 
 		</div>
-		<!---Hero Banner----		
-		<div id="heroImage">
-			<div class="container-lg">
+
+		<div class="container-md">
+		<!---Hero Banner---->	
+		<div class="row" id="heroImage">
+		<div class="col">	
 			<h1>Let us help you <br >
 			find the one</h1>
 			
 		<button class="hero primaryBtn">Shop Now</button>
 		<button class="secBtn">Book Appointment</button>
 		</div>
+		</div>
 
-		</div>
-	
-		<div class="container-md">
-		---ad layout--
+		<!---ad layout-->
 		<div class="row">
-		<div class="col ad-image" style="background:url(/assets/images/ad-img.jpg) center center no-repeat; background-size:cover;"></div>
+		<div class="col ad-image">
+		<img src="assets/images/ad-img.jpg">
 		</div>
+
 		<div class="col ad-text">
 		<h2>Limited Edition Collection</h2>	
 		<button class="ad primaryBtn">Shop Now</button>
 		</div>
 		</div>
+
+		
 		
 
-		-cats--
+		<!--cats-->
 		<h2 class="cats_title">Shop By Categories</h2>
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 
@@ -228,6 +231,7 @@
 			</div>
 		</div>
 
+	<!---end of md-container-->	
        </div>
 	
 
@@ -236,7 +240,7 @@
 
 
 
-		  --end of container fluid-->
+		  <!--end of container fluid-->
 		</div>
 		
 	<!---bootstrap js bundle-->

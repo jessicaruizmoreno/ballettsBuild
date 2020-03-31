@@ -265,13 +265,22 @@ img#logo{
 
 //====Ad Image Layout
 
+.ad-image{
+    padding: 0; 
+
+    img{
+        width:320px;
+    }
+}
+
+
 .ad-text{
     background-color: $light-accent;
     height:273px;
     margin-top:0.5rem;//8px
     h2{
-        margin:5.25rem 1.5625rem 1.5625rem 1.5625rem;//84px 3(25px)
         text-align:center;
+        padding: 5.25rem 1.5625rem 1.5625rem;
     }
 }
 
@@ -292,6 +301,9 @@ a.active_link:hover, a.active_link:active {
 
 }
 
+.cat.col{
+padding:0;
+}
 
 .cats_box {
     min-height: 216px;
