@@ -23,6 +23,12 @@ $normal: 400;
 $med:500;
 $bold:700;
 
+
+H2,H3,H4,H5,H6,P{
+    font-family:$font-set-1; 
+}
+
+
 H1{
     font-family:$font-cursive;
     font-size: 2.25rem; //36px
@@ -31,9 +37,9 @@ H1{
     padding: 5.125rem 0 1.25rem; //80px 0 20px
 }
 
+
 H2{
     color:$soft-black;
-    font-family:$font-set-1; 
     font-weight: $med;
     font-size: 1.25rem;//20px
 }
@@ -60,12 +66,7 @@ position: relative;
 z-index: 1;
 }
 
-H4.accents{
-font-size:4.6875rem;
-font-weight: $bold;
-color:$main-pink;
-text-align: center;
-}
+
 
 
 

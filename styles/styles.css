@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
+H2, H3, H4, H5, H6, P {
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+}
+
 H1 {
   font-family: "Niconne", Helvetica, sans-serif;
   font-size: 2.25rem;
@@ -10,7 +14,6 @@ H1 {
 
 H2 {
   color: #2F2F2F;
-  font-family: "Noto Sans JP", Helvetica, sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
 }
@@ -35,13 +38,6 @@ H3.category_links {
   color: #FFFFFF;
   position: relative;
   z-index: 1;
-}
-
-H4.accents {
-  font-size: 4.6875rem;
-  font-weight: 700;
-  color: #FA85B6;
-  text-align: center;
 }
 
 body {
