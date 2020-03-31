@@ -58,6 +58,9 @@ H3{
 
 H3.testimonals{
 color:$soft-black;
+text-align: center;
+margin-top:4.625rem;
+margin-bottom: 1.875rem;
 }
 
 H3.category_links{
@@ -67,6 +70,17 @@ z-index: 1;
 }
 
 
+H4.authors{
+font-weight: $bold;
+font-size:14px;
+color:$soft-black;
+}
+
+p{
+    color: $soft-black;
+    font-size: 1rem;
+    line-height: 24px;
+}
 
 
 
@@ -334,3 +348,51 @@ padding:0;
     }
 }
 
+
+
+//===Testimoanls====//
+    .carouselTestimonals img{
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-testimonial-img img{
+margin-bottom: 15px;
+}
+
+.carousel-inner{
+    padding: 0 53px;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    opacity: 1; 
+}
+
+.carousel-control-prev-icon , .carousel-control-next-icon{
+    background-image: none;
+    opacity: 1;
+    
+    .fas.fa-chevron-left, .fas.fa-chevron-right{
+        color:$soft-black;
+        font-size:30px;
+    }
+}
+
+
+
+.carousel-indicators > li {
+    background-color: $light-grey;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    top: 3em;
+    opacity: 1;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color:$main-pink;
+}

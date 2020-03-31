@@ -32,12 +32,27 @@ H3 {
 
 H3.testimonals {
   color: #2F2F2F;
+  text-align: center;
+  margin-top: 4.625rem;
+  margin-bottom: 1.875rem;
 }
 
 H3.category_links {
   color: #FFFFFF;
   position: relative;
   z-index: 1;
+}
+
+H4.authors {
+  font-weight: 700;
+  font-size: 14px;
+  color: #2F2F2F;
+}
+
+p {
+  color: #2F2F2F;
+  font-size: 1rem;
+  line-height: 24px;
 }
 
 body {
@@ -270,5 +285,49 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   bottom: 0;
   display: block;
   position: absolute;
+}
+
+.carouselTestimonals img {
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-testimonial-img img {
+  margin-bottom: 15px;
+}
+
+.carousel-inner {
+  padding: 0 53px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-image: none;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon .fas.fa-chevron-left, .carousel-control-prev-icon .fas.fa-chevron-right, .carousel-control-next-icon .fas.fa-chevron-left, .carousel-control-next-icon .fas.fa-chevron-right {
+  color: #2F2F2F;
+  font-size: 30px;
+}
+
+.carousel-indicators > li {
+  background-color: #F0F0F0;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+  top: 3em;
+  opacity: 1;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #FA85B6;
 }
 /*# sourceMappingURL=styles.css.map */
