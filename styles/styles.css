@@ -348,4 +348,12 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   opacity: 1;
   background-color: #FA85B6;
 }
+
+.newsletter {
+  background-color: #F0F0F0;
+}
+
+.footer {
+  background-color: #000000;
+}
 /*# sourceMappingURL=styles.css.map */
