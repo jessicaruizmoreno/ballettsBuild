@@ -9,6 +9,8 @@ $light-grey: #F0F0F0;
 $main-pink: #FA85B6;
 $accent:#FCBAD6;
 $light-accent:#FFF5F9;
+$grey:#A5A5A5;
+$opacGrey:#a5a5a557;
 
 
 // Typography
@@ -28,6 +30,9 @@ H2,H3,H4,H5,H6,P{
     font-family:$font-set-1; 
 }
 
+a{
+    font-family:$font-set-1;
+}
 
 H1{
     font-family:$font-cursive;
@@ -76,10 +81,37 @@ font-size:14px;
 color:$soft-black;
 }
 
+H4{
+    font-weight: $light;
+    font-size:20px;
+}
+
+H5{
+ font-weight: $med;   
+ font-size:14px;
+}
+
 p{
     color: $soft-black;
     font-size: 1rem;
     line-height: 24px;
+}
+
+p.copyright{
+    font-size: 11px;
+    color: $grey;
+    font-weight: $normal;
+    padding-top:10px;
+    margin-bottom: 8px;
+     a{
+         font-weight: $med;
+         color:$white;
+
+         &:hover, &:active{
+             color:$main-pink;
+            text-decoration: none;
+            }
+     }
 }
 
 
@@ -167,6 +199,8 @@ body{
 
 .layout-main{
     margin-bottom: 110px;
+    position: relative;
+    top: 100px;
 }
 
 ul{
@@ -184,6 +218,10 @@ button{
 .second-nav{
     @include barNavs();
     background-color: $light-grey;
+    top:60px;
+    position:fixed;
+    width:100%;
+    z-index: 19;
 }
 
 
@@ -194,21 +232,31 @@ button{
     margin: 0;
 }
 
-#showNav{
-    position: absolute;
+#showNav {
     width: 100%;
+    position: fixed;
+    z-index: 20;
+    top: 60px;
 }
 
 .box-left{
         display: inline-flex;
         max-width: 43%;
-        border-right: solid;
+        border-right: 2px solid;
 
     
-
+p{
+    line-height:33px;
+    color:$white;
+}
  a{
      color:$white;
      padding: 0 0.4375rem;
+
+     &:active, &:hover{
+        color:$main-pink;
+        text-decoration: none;
+    }
  }
 }
 
@@ -218,14 +266,25 @@ button{
     a{
         color: $white;
         padding: 0 0.4375rem;
+
+        &:active, &:hover{
+            color:$main-pink;
+            text-decoration: none;
+        }
     }
 }
 
 
-.navbar{
-    padding: 0 0.9375rem 0 0.9375rem;
-    height: 60px;
-}
+
+    .navbar {
+        padding: 1rem 0.9375rem;
+        height: 60px;
+        position: fixed;
+        z-index: 20;
+        background: white;
+        justify-content: space-between;
+        width: 100%;
+    }
 
 .navbar-toggler{
     margin: 0 1.875rem 0 0;
@@ -243,6 +302,47 @@ img#logo{
     margin: 0 auto;
 
 }
+
+
+
+
+.search-container {
+	position: relative;
+	display: inline-block;
+}
+
+
+
+
+.search {
+	position: absolute;
+	right: 49px;
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 50vw;
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+
 
 .icon svg{
     height:20px;
@@ -409,9 +509,105 @@ margin-bottom: 15px;
 
 //====Newsletter=====//
 .newsletter{
-    background-color: $light-grey;
+    background-color: $light-accent;
+    padding:77px 0;
+
+    h5{
+        padding-bottom: 21px;
+    }
+    .primaryBtn{
+        background-color: #FB9DC4;
+        width: 100%;
+    }
+
+}
+
+.form-control{
+    background-clip: unset;
+    border: 1px solid transparent;
+
+    
 }
 //=====Footer====//
-.footer{
+footer{
     background-color: $black;
-}
+    text-align: center;
+    padding-bottom: 30px;
+        
+    img{
+            width:130px;
+                margin: 0 auto;
+                display: block;
+                padding:44px 0 14px 0;
+        }
+
+        a.emailLink{
+         
+         color:$grey;
+         display: block;
+         font-size:12px;
+         font-weight: $light;
+         padding-bottom: 18px;
+        }
+
+
+        .row{
+            margin:0;
+        }
+    
+       
+        li.nav-item:nth-last-child(1) {
+            border-bottom: 1px solid #a5a5a557;
+        }
+
+      
+        .nav-item .nav-link {
+            border-radius: unset;
+            border-top: 1px solid #a5a5a557;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 12px 0;
+
+    
+
+        }
+        .social-footer a {
+            color: #A5A5A5;
+            font-size: 20px;
+            padding: 0 15px;
+
+            &:active,&:hover{
+                color:$main-pink;
+            }
+        }
+
+
+        .last-links{
+            font-weight: $bold;
+            font-size: 14px;
+            color:$white;
+            padding: 0 20px;
+
+            &:hover, &:active{
+                color:$main-pink;
+                text-decoration:none;
+            }
+        }
+
+        .more-links a{ 
+            color: #A5A5A5;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 40px;
+        &:hover, &:active{
+            color:$main-pink;
+            text-decoration:none;
+        }
+
+        }
+
+
+    }
+
+

@@ -4,6 +4,10 @@ H2, H3, H4, H5, H6, P {
   font-family: "Noto Sans JP", Helvetica, sans-serif;
 }
 
+a {
+  font-family: "Noto Sans JP", Helvetica, sans-serif;
+}
+
 H1 {
   font-family: "Niconne", Helvetica, sans-serif;
   font-size: 2.25rem;
@@ -49,10 +53,38 @@ H4.authors {
   color: #2F2F2F;
 }
 
+H4 {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+H5 {
+  font-weight: 500;
+  font-size: 14px;
+}
+
 p {
   color: #2F2F2F;
   font-size: 1rem;
   line-height: 24px;
+}
+
+p.copyright {
+  font-size: 11px;
+  color: #A5A5A5;
+  font-weight: 400;
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+
+p.copyright a {
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+p.copyright a:hover, p.copyright a:active {
+  color: #FA85B6;
+  text-decoration: none;
 }
 
 body {
@@ -80,6 +112,8 @@ body {
 
 .layout-main {
   margin-bottom: 110px;
+  position: relative;
+  top: 100px;
 }
 
 ul {
@@ -101,6 +135,10 @@ button {
   line-height: 2.25rem;
   text-align: center;
   background-color: #F0F0F0;
+  top: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 19;
 }
 
 .social-nav {
@@ -114,8 +152,10 @@ button {
 }
 
 #showNav {
-  position: absolute;
   width: 100%;
+  position: fixed;
+  z-index: 20;
+  top: 60px;
 }
 
 .box-left {
@@ -123,12 +163,22 @@ button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   max-width: 43%;
-  border-right: solid;
+  border-right: 2px solid;
+}
+
+.box-left p {
+  line-height: 33px;
+  color: #FFFFFF;
 }
 
 .box-left a {
   color: #FFFFFF;
   padding: 0 0.4375rem;
+}
+
+.box-left a:active, .box-left a:hover {
+  color: #FA85B6;
+  text-decoration: none;
 }
 
 .box-right {
@@ -141,9 +191,21 @@ button {
   padding: 0 0.4375rem;
 }
 
+.box-right a:active, .box-right a:hover {
+  color: #FA85B6;
+  text-decoration: none;
+}
+
 .navbar {
-  padding: 0 0.9375rem 0 0.9375rem;
+  padding: 1rem 0.9375rem;
   height: 60px;
+  position: fixed;
+  z-index: 20;
+  background: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .navbar-toggler {
@@ -159,6 +221,40 @@ button {
 img#logo {
   width: 90px;
   margin: 0 auto;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search {
+  position: absolute;
+  right: 49px;
+  background-color: white;
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.search:focus {
+  width: 50vw;
+  padding: 0 16px 0 0;
+}
+
+.expandright {
+  left: auto;
+}
+
+.expandright:focus {
+  padding: 0 0 0 16px;
 }
 
 .icon svg {
@@ -350,10 +446,93 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 }
 
 .newsletter {
-  background-color: #F0F0F0;
+  background-color: #FFF5F9;
+  padding: 77px 0;
 }
 
-.footer {
+.newsletter h5 {
+  padding-bottom: 21px;
+}
+
+.newsletter .primaryBtn {
+  background-color: #FB9DC4;
+  width: 100%;
+}
+
+.form-control {
+  background-clip: unset;
+  border: 1px solid transparent;
+}
+
+footer {
   background-color: #000000;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+footer img {
+  width: 130px;
+  margin: 0 auto;
+  display: block;
+  padding: 44px 0 14px 0;
+}
+
+footer a.emailLink {
+  color: #A5A5A5;
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  padding-bottom: 18px;
+}
+
+footer .row {
+  margin: 0;
+}
+
+footer li.nav-item:nth-last-child(1) {
+  border-bottom: 1px solid #a5a5a557;
+}
+
+footer .nav-item .nav-link {
+  border-radius: unset;
+  border-top: 1px solid #a5a5a557;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 0;
+}
+
+footer .social-footer a {
+  color: #A5A5A5;
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+footer .social-footer a:active, footer .social-footer a:hover {
+  color: #FA85B6;
+}
+
+footer .last-links {
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
+
+footer .last-links:hover, footer .last-links:active {
+  color: #FA85B6;
+  text-decoration: none;
+}
+
+footer .more-links a {
+  color: #A5A5A5;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 40px;
+}
+
+footer .more-links a:hover, footer .more-links a:active {
+  color: #FA85B6;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */
