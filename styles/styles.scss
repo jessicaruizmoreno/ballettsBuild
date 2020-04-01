@@ -156,10 +156,18 @@ body{
     margin:0px;
 }
 
+.newsletter{
+    @include flexCenter();
+    margin:0;
+}
+
 .container-fluid, .container-xl{
     padding:0px;
 }
 
+.layout-main{
+    margin-bottom: 110px;
+}
 
 ul{
     list-style: none;
@@ -396,3 +404,7 @@ margin-bottom: 15px;
     opacity: 1;
     background-color:$main-pink;
 }
+
+//======Instagram====//
+
+//=====Footer====//
