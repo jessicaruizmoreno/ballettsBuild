@@ -140,6 +140,16 @@ button {
   left: 0;
 }
 
+@media (min-width: 992px) {
+  .second-nav {
+    background-color: transparent;
+    margin-top: 0;
+    left: auto;
+    width: auto;
+    color: #000000;
+  }
+}
+
 .social-nav {
   font-size: 1.01rem;
   color: #FFFFFF;
@@ -282,6 +292,41 @@ img#logo {
   display: block;
   padding-top: 0.9375rem;
   padding-left: 1.875rem;
+}
+
+@media (min-width: 992px) {
+  img#logo {
+    width: 130px;
+  }
+  .main-nav {
+    padding: 33px 40px;
+  }
+  .pink-box {
+    background-color: transparent;
+  }
+  .pink-box li {
+    margin-top: 40px;
+  }
+  .pink-box li a {
+    color: #000000;
+  }
+  .pink-box li a:hover, .pink-box li a:active {
+    background-color: transparent;
+    height: 0;
+    padding-top: 0;
+    padding-left: 0;
+    color: #FA85B6;
+  }
+  .pink-box .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #000000;
+  }
 }
 
 #heroImage {

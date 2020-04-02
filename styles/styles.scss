@@ -254,6 +254,15 @@ button{
     left:0;
 }
 
+@include respond-above(lg) {
+    .second-nav{
+        background-color: transparent;
+        margin-top: 0;
+        left: auto;
+        width: auto;
+        color:$black;
+    }
+  }
 
 
 .social-nav{
@@ -403,6 +412,46 @@ img#logo{
     
     
 }
+
+
+@include respond-above(lg) {
+
+    img#logo{
+        width:130px;
+    }
+
+    .main-nav {
+        padding: 33px 40px;
+    }
+
+    .pink-box{
+        background-color: transparent;
+    
+    li {
+        margin-top: 40px;
+        a {
+        color:$black;   
+        
+         &:hover, &:active{
+        background-color: transparent;
+        height: 0;
+        padding-top: 0;
+        padding-left: 0;
+        color: $main-pink;                 
+        }
+    }
+    }
+    
+    
+        .navbar-nav{
+        flex-direction: row;
+        justify-content: center;
+        color:$black;
+    }
+  }
+}
+
+
 
 // ===BANNER===//
 #heroImage {
