@@ -13,7 +13,7 @@ H1 {
   font-size: 2.25rem;
   line-height: 2.375rem;
   color: #2F2F2F;
-  padding: 5.125rem 0 1.25rem;
+  padding: 4.125rem 0 1.25rem;
 }
 
 H2 {
@@ -106,12 +106,12 @@ body {
   margin: 0;
 }
 
-.container-fluid, .container-xl {
+.container-fluid {
   padding: 0px;
 }
 
 .layout-main {
-  margin-bottom: 110px;
+  margin-bottom: 180px;
   position: relative;
   top: 100px;
 }
@@ -129,16 +129,15 @@ button {
 }
 
 .second-nav {
-  font-size: 1.01rem;
-  color: #FFFFFF;
-  height: 40px;
-  line-height: 2.25rem;
-  text-align: center;
   background-color: #F0F0F0;
-  top: 60px;
-  position: fixed;
   width: 100%;
-  z-index: 19;
+  margin-top: 54px;
+  position: fixed;
+  z-index: 20;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 0;
 }
 
 .social-nav {
@@ -164,6 +163,9 @@ button {
   display: inline-flex;
   max-width: 43%;
   border-right: 2px solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .box-left p {
@@ -196,9 +198,8 @@ button {
   text-decoration: none;
 }
 
-.navbar {
+.main-nav {
   padding: 1rem 0.9375rem;
-  height: 60px;
   position: fixed;
   z-index: 20;
   background: white;
@@ -285,10 +286,15 @@ img#logo {
 
 #heroImage {
   background: url(/assets/images/bride-hero.png) no-repeat;
-  height: 75vh;
-  background-position-x: 39vw;
-  background-position-y: -63px;
-  background-size: 300px;
+  min-height: 500px;
+  background-position-x: 35vw;
+  background-size: 270px;
+  padding: 30px 8px;
+  background-position-y: 3vh;
+}
+
+#banner {
+  width: 280px;
 }
 
 .primaryBtn {
@@ -301,6 +307,12 @@ img#logo {
   font-size: 0.8125rem;
   text-transform: uppercase;
   border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .primaryBtn, .secBtn {
+    height: 46px;
+  }
 }
 
 .hero.primaryBtn {
@@ -328,23 +340,34 @@ img#logo {
   border-radius: 3px;
 }
 
-.ad-image {
-  padding: 0;
+.ad-layout .col {
+  padding: 0px;
 }
 
-.ad-image img {
-  width: 320px;
+@media (min-width: 576px) {
+  .ad-layout {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.ad-image {
+  min-height: 300px;
+  width: 100%;
+  background: url(/assets/images/ad-img.jpg) no-repeat;
+  background-size: cover;
 }
 
 .ad-text {
   background-color: #FFF5F9;
-  height: 273px;
   margin-top: 0.5rem;
+  min-height: 300px;
 }
 
 .ad-text h2 {
   text-align: center;
-  padding: 5.25rem 1.5625rem 1.5625rem;
+  padding: 6.25rem 1.5625rem 1.5625rem;
 }
 
 .ad.primaryBtn {
@@ -373,6 +396,26 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 
 .cat.col {
   padding: 0;
+}
+
+.pr-2 {
+  padding-right: 0px !important;
+}
+
+.pr-3 {
+  padding-right: 0px !important;
+}
+
+@media (min-width: 576px) {
+  .pr-2 {
+    padding-right: 8px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .pr-3 {
+    padding-right: 8px !important;
+  }
 }
 
 .cats_box {
@@ -411,7 +454,13 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 }
 
 .carousel-inner {
-  padding: 0 53px;
+  padding: 0 60px;
+}
+
+@media (min-width: 576px) {
+  .carousel-inner {
+    padding: 0 80px;
+  }
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -534,5 +583,63 @@ footer .more-links a {
 footer .more-links a:hover, footer .more-links a:active {
   color: #FA85B6;
   text-decoration: none;
+}
+
+@media (min-width: 387px) {
+  #heroImage {
+    background-position-x: right;
+  }
+}
+
+@media (min-width: 460px) {
+  #banner {
+    width: 100%;
+  }
+  H1 {
+    font-size: 3rem;
+    line-height: 2.99rem;
+  }
+}
+
+@media (min-width: 500px) {
+  H1 {
+    font-size: 3.6rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  H1 {
+    font-size: 65px;
+    line-height: 63px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-control-next {
+    right: -20px;
+  }
+  .carousel-control-prev {
+    left: -20px;
+  }
+  .form {
+    padding: 0 15px;
+  }
+  .form-control {
+    background-clip: unset;
+    border: 1px solid transparent;
+    width: 68%;
+    float: left;
+    height: 46px;
+    margin-right: 10px;
+  }
+  .newsletter .primaryBtn {
+    background-color: #FB9DC4;
+    width: 30%;
+    float: left;
+  }
+  .form-group {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
