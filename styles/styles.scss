@@ -1,5 +1,4 @@
-// ===== VARIABLES ===== //
-
+// ===== ROOT ===== //
 
 // Colours
 $black: #000000;
@@ -11,6 +10,9 @@ $accent:#FCBAD6;
 $light-accent:#FFF5F9;
 $grey:#A5A5A5;
 $opacGrey:#a5a5a557;
+
+
+
 
 // ===== MIXINS ===== //
 
@@ -102,7 +104,7 @@ $breakpoint: map-get($breakpoints,sm);
   }
   
 
-
+//==== VARIBLES====//
 
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap');
@@ -133,7 +135,6 @@ H1{
     padding: 4.125rem 0 1.25rem;
 
 }
-
 
 
 
@@ -209,20 +210,32 @@ p.copyright{
      }
 }
 
+    p.link-nav {
+        font-size: 11px;
+        text-align: left;
+        float: right;
+        padding-left: 6px;
+    }
+
+
+
+
 // ===== GLOBAL STYLES ===== //
 
 body{
     font-size:16px;    
-    margin:0px;
 }
 
 .newsletter{
     @include flexCenter();
-    margin:0;
 }
 
-.container-fluid{
+.container-fluid, .container-md{
     padding:0px;
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .layout-main{
@@ -243,39 +256,42 @@ button{
 }
 
 
+
+
 // ==== MAIN NAV ===//
+
+.navbar-toggler{
+    line-height: 0;
+}
+
 .second-nav{
     background-color: $light-grey;
     width:100%;
-    margin-top: 54px;
+    margin-top: 52px;
     position: fixed;
     z-index: 20;
     justify-content: space-between;
     left:0;
+    height:42px;
 }
 
-@include respond-above(lg) {
-    .second-nav{
-        background-color: transparent;
-        margin-top: 0;
-        left: auto;
-        width: auto;
-        color:$black;
-    }
-  }
+.center-align{
+    justify-content: space-between;
+    width: 100%;
+    display: inline-flex;
+}
 
 
 .social-nav{
     @include barNavs();
     background-color:$black;
-    margin: 0;
 }
 
 #showNav {
     width: 100%;
     position: fixed;
     z-index: 20;
-    top: 60px;
+    top: 108px;
 }
 
 .box-left{
@@ -413,22 +429,71 @@ img#logo{
     
 }
 
+// ==== MAIN NAV BREAKPOINTS ===//
+@include respond-above(md){
 
-@include respond-above(lg) {
 
     img#logo{
         width:130px;
     }
 
+    .center-align {
+
+        .box{
+            line-height: 2;
+        }
+
+        .navbar-toggler{
+           font-size: 2.6rem;
+        }
+
+        .icon svg {
+            height: 25px;
+        }
+            width: 720px;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            display: flex;
+            margin: 0 auto;
+        }
+
+    .second-nav{
+        height: 47px;
+     margin-top:61px;
+
+        p.link-nav {
+            font-size: 18px;}
+    
+    }
+}
+
+@include respond-above(lg) {
+
+    img#logo{
+        margin-left: 383px;
+    }
+    
+
     .main-nav {
-        padding: 33px 40px;
+        padding: 20px 0px;
     }
 
     .pink-box{
         background-color: transparent;
-    
+
+        .navbar-nav{
+            flex-direction: row;
+            justify-content: center;
+            color:$black;
+            background-color: $white;
+        }
+
+
     li {
-        margin-top: 40px;
+        margin-top: 0px;
+        padding: 0rem 1.625rem;
+
         a {
         color:$black;   
         
@@ -440,15 +505,36 @@ img#logo{
         color: $main-pink;                 
         }
     }
+    
+}
     }
-    
-    
-        .navbar-nav{
-        flex-direction: row;
-        justify-content: center;
+
+  
+
+    .second-nav{
+        background-color: transparent;
+        margin-top: 0;
+        left: auto;
+        width: 169px;
         color:$black;
+    
+    p.link-nav{
+        display:none;
     }
-  }
+    
+    }
+
+.center-align{
+    width: 920px;
+}
+
+.collapse:not(.show) {
+    display: block;
+}
+
+#showNav{
+    top: 128px;
+    }
 }
 
 
@@ -474,6 +560,11 @@ img#logo{
 }
 
     @include respond-above(md) { 
+
+        .layout-main{
+            top: 130px;
+        }
+
         .primaryBtn, .secBtn{
             height:46px;
         }
@@ -489,7 +580,7 @@ img#logo{
     @include secBtn();
 }
 
-//====Ad Image Layout
+//====Ad Image Layout=====//
 
 
 .ad-layout .col{
@@ -543,7 +634,9 @@ a.active_link:hover, a.active_link:active {
 padding:0;
 
 }
-.pr-2{
+
+
+.pr-2, .pr-1, .pr-4{
     padding-right:0px !important;
 }
 
@@ -552,17 +645,21 @@ padding:0;
 }
 
 @include respond-above(sm) {
-    .pr-2{
+
+
+.pr-2, .pr-1{
 padding-right:8px !important;
 }
 }
 
 @include respond-above(md) {
     .pr-3{
-        padding-right:8px !important;
+        padding-right:0px !important;
 }
+.pr-1{
+    padding-right:8px !important;
+    }
 
-}
 .cats_box {
     min-height: 216px;
     position: relative;
@@ -577,6 +674,18 @@ padding-right:8px !important;
         bottom: 0;
         display: block;
         position: absolute;
+    }
+}
+}
+
+
+@include respond-above(lg) {
+
+    .pr-3 {
+        padding-right: 8px !important;
+    }
+    .pr-1 {
+        padding-right: 0px !important;
     }
 }
 
@@ -652,17 +761,50 @@ margin-bottom: 15px;
 
 }
 
+//====NEWSLETTER BREAKPOINTS====//
+
+@include respond-above(md) {
+.newsletter .col{
+    max-width: 720px;
+}
+}
+
+@include respond-above(lg){
+
+    .newsletter .col{
+        max-width: 960px;   
+    }
+}
+
+@include respond-above(xl){
+    .newsletter .col{
+        max-width: 1140px; 
+    }
+}
+
+
 .form-control{
     background-clip: unset;
     border: 1px solid transparent;
+    margin-bottom: 14px;
+}
+
+
 
     
-}
+
 //=====Footer====//
 footer{
     background-color: $black;
     text-align: center;
     padding-bottom: 30px;
+
+    .ml-5{
+        margin-left:unset !important;
+    }
+
+    .center-align{
+        display: block;}
         
     img{
             width:130px;
@@ -680,11 +822,6 @@ footer{
          padding-bottom: 18px;
         }
 
-
-        .row{
-            margin:0;
-        }
-    
        
         li.nav-item:nth-last-child(1) {
             border-bottom: 1px solid #a5a5a557;
@@ -713,7 +850,7 @@ footer{
         }
 
 
-        .last-links{
+        .last-links a{
             font-weight: $bold;
             font-size: 14px;
             color:$white;
@@ -739,6 +876,80 @@ footer{
 
 
     }
+
+@include respond-above(md){
+
+footer{
+    text-align: unset;
+
+
+    .col .last-links{
+        text-align:center;
+    }
+
+    .last-links a{
+        font-size: 10px;
+    }
+
+    .ml-5{
+        margin-left:3rem !important;
+    }
+
+.row-cols-md-5>* {
+    flex: 0 0 18%;
+}
+
+
+img{
+    width:101px;
+    display:flex;
+    }
+
+    a.emailLink{
+        font-size: 10px;
+    }
+
+    .footer-link{
+        margin-top: 2.2em;
+        padding: 0;
+    }
+
+
+    .nav-item .nav-link{
+        padding: 5px 0;
+        border-top: unset;
+        font-size:12px;
+    }
+
+    .more-links a{
+        font-size: 11px;
+        line-height: 28px;
+    }
+
+.accordion .collapse:not(.show) {
+    display: block;
+
+}
+
+
+li.nav-item:nth-last-child(1){
+    border-bottom: unset;    
+    }
+
+}
+
+p.copyright{
+    text-align:center;
+}
+
+}
+
+
+
+
+
+
+
 
 
     @media (min-width: 387px) { 
