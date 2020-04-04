@@ -59,7 +59,6 @@ $opacGrey:#a5a5a557;
 @mixin barNavs{
     font-size: 1.01rem;
     color:$white;
-    height: 40px;
     line-height: 2.25rem; //36px;
     text-align: center;
 }
@@ -285,13 +284,16 @@ button{
 .social-nav{
     @include barNavs();
     background-color:$black;
+    z-index: 1000000;
+    position: relative;
+    height:38px;
+
 }
 
 #showNav {
     width: 100%;
     position: fixed;
     z-index: 20;
-    top: 108px;
 }
 
 .box-left{
@@ -339,6 +341,7 @@ p{
         background: white;
         justify-content: space-between;
         width: 100%;
+        
     }
 
 .navbar-toggler{
@@ -476,7 +479,7 @@ img#logo{
     
 
     .main-nav {
-        padding: 20px 0px;
+        padding: 30px 0px;
     }
 
     .pink-box{
@@ -487,7 +490,11 @@ img#logo{
             justify-content: center;
             color:$black;
             background-color: $white;
+            line-height: 3.5;
+            height: 65px;
+            border-bottom: 1px solid #F0F0F0;
         }
+
 
 
     li {
@@ -505,9 +512,11 @@ img#logo{
         color: $main-pink;                 
         }
     }
+   
     
-}
-    }
+
+    }}
+    
 
   
 
@@ -533,8 +542,8 @@ img#logo{
 }
 
 #showNav{
-    top: 128px;
-    }
+    top: 130px;
+}
 }
 
 

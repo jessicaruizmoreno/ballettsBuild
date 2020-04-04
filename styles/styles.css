@@ -168,17 +168,18 @@ button {
 .social-nav {
   font-size: 1.01rem;
   color: #FFFFFF;
-  height: 40px;
   line-height: 2.25rem;
   text-align: center;
   background-color: #000000;
+  z-index: 1000000;
+  position: relative;
+  height: 38px;
 }
 
 #showNav {
   width: 100%;
   position: fixed;
   z-index: 20;
-  top: 108px;
 }
 
 .box-left {
@@ -345,7 +346,7 @@ img#logo {
     margin-left: 383px;
   }
   .main-nav {
-    padding: 20px 0px;
+    padding: 30px 0px;
   }
   .pink-box {
     background-color: transparent;
@@ -360,6 +361,9 @@ img#logo {
             justify-content: center;
     color: #000000;
     background-color: #FFFFFF;
+    line-height: 3.5;
+    height: 65px;
+    border-bottom: 1px solid #F0F0F0;
   }
   .pink-box li {
     margin-top: 0px;
@@ -392,7 +396,7 @@ img#logo {
     display: block;
   }
   #showNav {
-    top: 128px;
+    top: 130px;
   }
 }
 
