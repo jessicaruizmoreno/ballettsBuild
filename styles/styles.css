@@ -121,7 +121,7 @@ body {
 }
 
 .layout-main {
-  margin-bottom: 180px;
+  margin-bottom: 108px;
   position: relative;
   top: 100px;
 }
@@ -517,6 +517,32 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   padding: 0;
 }
 
+.cats_box {
+  min-height: 216px;
+  position: relative;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 1.875rem;
+}
+
+.cats_box .cat-images {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+}
+
 .pr-2, .pr-1, .pr-4 {
   padding-right: 0px !important;
 }
@@ -537,30 +563,6 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   }
   .pr-1 {
     padding-right: 8px !important;
-  }
-  .cats_box {
-    min-height: 216px;
-    position: relative;
-    margin-bottom: 8px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    padding: 1.875rem;
-  }
-  .cats_box .cat-images {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    position: absolute;
   }
 }
 
@@ -621,6 +623,27 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 .carousel-indicators .active {
   opacity: 1;
   background-color: #FA85B6;
+}
+
+#carouselTestimonial {
+  margin-bottom: 70px;
+}
+
+.instagram-url {
+  background-color: #FFF5F9;
+}
+
+.equal-height {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 104px;
+  height: 104px;
+}
+
+.equal-height img {
+  width: 100%;
 }
 
 .newsletter {

@@ -238,7 +238,7 @@ body{
 }
 
 .layout-main{
-    margin-bottom: 180px;
+    margin-bottom: 108px;
     position: relative;
     top: 100px;
 }
@@ -317,6 +317,7 @@ p{
     }
  }
 }
+
 
 .box-right{
         max-width: 58%;
@@ -632,6 +633,7 @@ img#logo{
 a.active_link:hover, a.active_link:active {
     color:$white;
     text-decoration: underline;
+    
     .cats_box .cat-images{
         background-color: #0000002e !important;
         background-blend-mode: overlay;
@@ -641,9 +643,26 @@ a.active_link:hover, a.active_link:active {
 
 .cat.col{
 padding:0;
-
 }
 
+
+
+.cats_box {
+    min-height: 216px;
+    position: relative;
+    margin-bottom: 8px;
+    @include flexCenter();
+    padding: 1.875rem;//30px
+    
+    .cat-images{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+    }
+}
 
 .pr-2, .pr-1, .pr-4{
     padding-right:0px !important;
@@ -668,23 +687,6 @@ padding-right:8px !important;
 .pr-1{
     padding-right:8px !important;
     }
-
-.cats_box {
-    min-height: 216px;
-    position: relative;
-    margin-bottom: 8px;
-    @include flexCenter();
-    padding: 1.875rem;//30px
-    
-    .cat-images{
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        position: absolute;
-    }
-}
 }
 
 
@@ -753,7 +755,32 @@ margin-bottom: 15px;
     background-color:$main-pink;
 }
 
+
+#carouselTestimonial{
+    margin-bottom: 70px;
+    
+    }
+    
 //======Instagram====//
+.instagram-url{
+    background-color: $light-accent;
+} 
+
+
+.equal-height{
+    padding: 0;
+    display: flex;
+    width: 104px;
+    height: 104px;   
+
+img{
+    width: 100%;
+}
+
+}
+
+
+
 
 //====Newsletter=====//
 .newsletter{

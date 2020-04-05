@@ -1,18 +1,19 @@
 
-	$.ajax({
-	url:"https://www.instagram.com/balletts_bridal/",
-	type:'get',
-	success:function(response){
-		
-	post = response.graphql.user.edge_owner_to_timeline_media.edges;
-	posts_html = '';
-	for(var i=0; i<posts.length;i++){
-		url = posts[i].node.display_url;
-		posts_html = '<div class="col-md-4"><img style="min-height:50px;background-color:#fff;width:100%; src="'+url+'"></div>';
+
+
+  $.ajax({
+    url:"https://www.instagram.com/balletts_bridal?__a=1",
+	type:'GET',
+    success:function(response){
+      posts = response.graphql.user.edge_owner_to_timeline_media.edges;
+	  posts_html = '';
+	  url_html='';
+      for(i=0; i < 8; i++){
+        url = posts[i].node.display_url;
+		posts_html += '<div class="col equal-height"><img src="'+url+'"></div>';
+		url_html='<div class="col equal-height instagram-url"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/balletts_bridal?__a=1"><p>View More</p></a></div>';
 	}
-	$(".posts").html(posts_html);
+
+	  $(".posts").html(posts_html+url_html);
 	}
-	
-	
-	});
-	
+})
