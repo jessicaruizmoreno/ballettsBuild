@@ -76,7 +76,7 @@ $breakpoints: (
   sm: 576px,
   md:768px,
   lg:992px,
-  xl:1200px
+xl:1200px
 );
 
 $breakpoint: map-get($breakpoints,sm);
@@ -159,7 +159,12 @@ line-height: 3.5rem;
     }
 }
 
+@include respond-above(lg) {
+H1{
+    font-size: 97px;
+    line-height: 88px;
 
+}}
 
 
 H2{
@@ -168,12 +173,28 @@ H2{
     font-size: 1.25rem;//20px
 }
 
+.ad-text{
+    background-color: $light-accent;
+    margin-top:0.5rem;//8px
+    min-height: 300px;
+    padding: 6.25rem 1.5625rem 1.5625rem; 
+    h2{
+        text-align:center;
+       
+    }
+
+
+}
+
+
 H2.cats_title{
 font-weight: $light;
 font-size: 1.25rem;//20px
 margin:69px auto;
 text-align: center;
 }
+
+
 
 H3{
     font-weight: $bold;
@@ -244,6 +265,47 @@ p.copyright{
 
 
 
+@include respond-above(md) {
+    .ad-text {
+        padding: 79px; 
+        h2{
+       font-size: 26px;
+       text-align: left; 
+       line-height: 33px;
+    }
+}
+}
+
+@include respond-above(lg) {
+    
+    H2.cats_title, h3{   
+    font-size: 28px;
+    }
+    .ad-text {
+        padding-top: 136px;
+    h2 {
+        font-size: 43px;
+        line-height: 53px;
+        margin-bottom: 37px;
+    }
+}
+
+h3.category_links{
+    font-size: 22px;
+}
+
+p,h5{
+    font-size: 18px;
+    line-height: 28px; 
+}
+
+h4{
+    font-size: 28px;;
+}
+
+
+}
+
 
 // ===== GLOBAL STYLES ===== //
 
@@ -263,10 +325,20 @@ body{
     margin-left: 0;
 }
 
+
 .layout-main{
     margin-bottom: 108px;
     position: relative;
     top: 100px;
+
+}
+
+   
+@include respond-above(md) { 
+
+    .layout-main{
+        top: 130px;
+    }
 }
 
 
@@ -284,6 +356,12 @@ button{
 
 
 // ==== MAIN NAV ===//
+
+.box-soc{
+    width: 1200px;
+    margin: 0 auto;
+    display: inline-flex;
+}
 
 .navbar-toggler{
     line-height: 0;
@@ -312,7 +390,7 @@ button{
     background-color:$black;
     z-index: 1000000;
     position: relative;
-    height:38px;
+   
 
 }
 
@@ -455,7 +533,6 @@ img#logo{
     
 }
 
-// ==== MAIN NAV BREAKPOINTS ===//
 @include respond-above(md){
 
 
@@ -570,6 +647,20 @@ img#logo{
 }
 
 
+@include respond-above(xl){
+ img#logo{
+    margin-left: 533px;
+ }
+
+ .box-left,.box-right{
+     max-width: inherit;
+ }
+    .center-align{
+        width: 1200px;
+    } 
+    
+}
+
 
 // ===BANNER===//
 #heroImage {
@@ -582,7 +673,6 @@ img#logo{
 
 }
 
-
 #banner{
     width: 280px;
 }
@@ -594,6 +684,23 @@ img#logo{
     }  
 }
 
+
+
+@include respond-above(lg){
+    #heroImage{
+        background-size: 330px;
+    }
+}
+
+@include respond-above(xl){
+    #heroImage {
+        background-size: 455px;
+        height: 740px;
+        background-position-x: 640px;;
+    }
+}
+
+
 @media (min-width: 460px) { 
     #banner{
         width: 100%;
@@ -604,26 +711,56 @@ img#logo{
     @include primaryBtn();
 }
 
-    @include respond-above(md) { 
+@include respond-above(md) {
+    .primaryBtn{
+        height:46px;
+        font-size: 15px;  
+        } 
+    }
 
-        .layout-main{
-            top: 130px;
+    @include respond-above(lg) {
+        .primaryBtn{
+            height:60px;
+            font-size: 18px;  
+            } 
         }
+    
 
-        .primaryBtn, .secBtn{
-            height:46px;
-        }
-}
+    
 
 .hero.primaryBtn{
     @include primaryBtn();
     margin-bottom: 1.375rem;//22px
+    
+    @include respond-above(md) {
+        font-size: 15px;    
+        height:46px;
+    } 
+    @include respond-above(lg) {
+        height:60px;
+        font-size: 18px;
+        width: 239px
+    }
+
 }
 
 
 .secBtn{
     @include secBtn();
+
+    @include respond-above(md) {
+        height:46px;
+        font-size: 15px;  
+        width: 204px;
+            } 
+            @include respond-above(lg) {
+                height:60px;
+                font-size: 18px;
+                width: 242px
+            }
+        
 }
+
 
 //====Ad Image Layout=====//
 
@@ -648,21 +785,35 @@ img#logo{
 }
 
 
-.ad-text{
-    background-color: $light-accent;
-    margin-top:0.5rem;//8px
-    min-height: 300px;
-    h2{
-        text-align:center;
-        padding: 6.25rem 1.5625rem 1.5625rem;
-    }
-}
-
 .ad.primaryBtn{
     @include primaryBtn();
     display:block;
     margin:0 auto;
 }
+
+
+@include respond-above(md) {
+    .ad.primaryBtn{
+        height:46px;
+        width:193px;
+        margin: unset;
+
+    }
+}
+
+@include respond-above(lg) {
+    .ad-text, .ad-image{
+        min-height: 454px;
+    }
+    .ad.primaryBtn{
+        height:60px;
+        font-size: 18px;
+        width:324px;
+    }
+ }
+
+
+
 
 //=== Categories===//
 a.active_link:hover, a.active_link:active {
@@ -766,23 +917,6 @@ margin-bottom: 15px;
     }
 }
 
-@include respond-above(sm) {
-    .carousel-inner {
-        padding: 0 80px;
-    }
-    }
-
-    @include respond-above(md) {
-        .carousel-control-next {
-            right: -20px;
-        }
-        
-        .carousel-control-prev {
-            left: -20px;
-        }
-        
-    }
-
 
 .carousel-indicators > li {
     background-color: $light-grey;
@@ -807,6 +941,55 @@ margin-bottom: 15px;
     
     }
     
+    @include respond-above(sm) {
+        .carousel-inner {
+            padding: 0 80px;
+        }
+        }
+    
+        @include respond-above(md) {
+
+            
+            .carousel-control-next {
+                right: -20px;
+            }
+            
+            .carousel-control-prev {
+                left: -20px;
+            }
+            
+        }
+
+        @include respond-above(lg) {
+            .carousel-inner{
+width:920px;
+padding: 0 30px 0 80px ;
+            }
+        
+        
+        .carousel-control-next {
+            right: -60px;
+        }
+    }
+
+        @include respond-above(xl) {
+
+
+            .carousel-inner{
+                width: 90%;
+    padding: 0;
+    margin: 0 auto;
+}
+                        
+
+    .carousel-control-prev {
+        left: -75px;
+    }
+    .carousel-control-next {
+        right: -75px;
+    }
+}
+
 //======Instagram====//
 
 
@@ -919,6 +1102,9 @@ img{
 }
 
 @include respond-above(lg){
+    .form-control{
+        height:60px;
+    }
 
     .newsletter .col{
         max-width: 960px;   
@@ -1029,7 +1215,7 @@ footer{
 @include respond-above(md){
 
 footer{
-    text-align: unset;
+    text-align: end;
 
 
     .col .last-links{
@@ -1092,5 +1278,13 @@ p.copyright{
 }
 
 }
+@include respond-above(lg){
+footer .ml-5 {
+    margin-left: 4rem !important;
+}
+footer img{
+float: right;
+}
 
 
+}
