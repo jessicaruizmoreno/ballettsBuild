@@ -1,8 +1,11 @@
+
 $.ajax({
-	url: "https://www.instagram.com/balletts_bridal?__a=1",
+
+	user:'1692144803',
+	url: "https://www.instagram.com/balletts_bridal/?__a=1",
 	type: 'GET',
 	success: function (response) {
-		posts = response.graphql.user.edge_owner_to_timeline_media.edges;
+		posts = response.graphql.user.edge_owner_to_timeline_media.count;
 		posts_html = '';
 		url_html = '';
 
