@@ -1015,14 +1015,16 @@ a.active_link:active {
         padding: 0 30px 0 80px;
     }
 
-
+    .carousel-indicators{
+        margin-right: 13%;
+    }
+    
     .carousel-control-next {
         right: -60px;
     }
 }
 
 @include respond-above(xl) {
-
 
     .carousel-inner {
         width: 90%;
