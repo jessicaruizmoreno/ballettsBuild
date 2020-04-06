@@ -37,15 +37,15 @@ H1 {
 
 @media (min-width: 576px) {
   H1 {
-    font-size: 65px;
-    line-height: 63px;
+    font-size: 4.0625rem;
+    line-height: 3.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   H1 {
-    font-size: 97px;
-    line-height: 88px;
+    font-size: 6.0625rem;
+    line-height: 5.5rem;
   }
 }
 
@@ -93,33 +93,33 @@ H3.category_links {
 
 H4.authors {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #2F2F2F;
 }
 
 H4 {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 H5 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 H5.modal-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #000000;
 }
 
 p, .modal-body {
   color: #2F2F2F;
   font-size: 1rem;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 p.copyright {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: #A5A5A5;
   font-weight: 400;
   padding-top: 10px;
@@ -137,7 +137,7 @@ p.copyright a:hover, p.copyright a:active {
 }
 
 p.link-nav {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: left;
   float: right;
   padding-left: 6px;
@@ -149,35 +149,35 @@ p.link-nav {
     padding: 79px;
   }
   .ad-text h2 {
-    font-size: 26px;
+    font-size: 1.625rem;
     text-align: left;
-    line-height: 33px;
+    line-height: 2.0625rem;
   }
 }
 
 @media (min-width: 992px) {
   H2.cats_title,
   h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .ad-text {
     padding-top: 136px;
   }
   .ad-text h2 {
-    font-size: 43px;
-    line-height: 53px;
+    font-size: 2.6875rem;
+    line-height: 3.3125rem;
     margin-bottom: 37px;
   }
   h3.category_links {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   p,
   h5 {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
   h4 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 
@@ -295,7 +295,7 @@ button {
 }
 
 .box-left p {
-  line-height: 33px;
+  line-height: 2.0625rem;
   color: #FFFFFF;
 }
 
@@ -438,7 +438,7 @@ img#logo {
     margin-top: 61px;
   }
   .second-nav p.link-nav {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -515,7 +515,7 @@ img#logo {
 }
 
 #heroImage {
-  background: url(/assets/images/bride-hero.png) no-repeat;
+  background: url(../assets/images/bride-hero.png) no-repeat;
   min-height: 500px;
   background-position-x: 35vw;
   background-size: 270px;
@@ -568,14 +568,14 @@ img#logo {
 @media (min-width: 768px) {
   .primaryBtn {
     height: 46px;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .primaryBtn {
     height: 60px;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -602,7 +602,7 @@ img#logo {
 
 @media (min-width: 768px) {
   .hero.primaryBtn {
-    font-size: 15px;
+    font-size: 0.9375rem;
     height: 46px;
   }
 }
@@ -610,7 +610,7 @@ img#logo {
 @media (min-width: 992px) {
   .hero.primaryBtn {
     height: 60px;
-    font-size: 18px;
+    font-size: 1.125rem;
     width: 239px;
   }
 }
@@ -630,7 +630,7 @@ img#logo {
 @media (min-width: 768px) {
   .secBtn {
     height: 46px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     width: 204px;
   }
 }
@@ -638,7 +638,7 @@ img#logo {
 @media (min-width: 992px) {
   .secBtn {
     height: 60px;
-    font-size: 18px;
+    font-size: 1.125rem;
     width: 242px;
   }
 }
@@ -658,7 +658,7 @@ img#logo {
 .ad-image {
   min-height: 300px;
   width: 100%;
-  background: url(/assets/images/ad-img.jpg) no-repeat;
+  background: url(../assets/images/ad-img.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -691,7 +691,7 @@ img#logo {
   }
   .ad.primaryBtn {
     height: 60px;
-    font-size: 18px;
+    font-size: 1.125rem;
     width: 324px;
   }
 }
@@ -802,7 +802,7 @@ a.active_link:active .cats_box .cat-images {
 .carousel-control-next-icon .fas.fa-chevron-left,
 .carousel-control-next-icon .fas.fa-chevron-right {
   color: #2F2F2F;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .carousel-indicators > li {
@@ -1011,7 +1011,7 @@ footer img {
 footer a.emailLink {
   color: #A5A5A5;
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 300;
   padding-bottom: 18px;
 }
@@ -1031,7 +1031,7 @@ footer .nav-item .nav-link {
 
 footer .social-footer a {
   color: #A5A5A5;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 0 15px;
 }
 
@@ -1041,7 +1041,7 @@ footer .social-footer a:active, footer .social-footer a:hover {
 
 footer .last-links a {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #FFFFFF;
   padding: 0 20px;
 }
@@ -1054,7 +1054,7 @@ footer .last-links a:hover, footer .last-links a:active {
 footer .more-links a {
   color: #A5A5A5;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 40px;
 }
 
@@ -1071,7 +1071,7 @@ footer .more-links a:hover, footer .more-links a:active {
     text-align: center;
   }
   footer .last-links a {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   footer .ml-5 {
     margin-left: 3rem !important;
@@ -1088,7 +1088,7 @@ footer .more-links a:hover, footer .more-links a:active {
     display: flex;
   }
   footer a.emailLink {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   footer .footer-link {
     margin-top: 2.2em;
@@ -1097,11 +1097,11 @@ footer .more-links a:hover, footer .more-links a:active {
   footer .nav-item .nav-link {
     padding: 5px 0;
     border-top: unset;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   footer .more-links a {
-    font-size: 11px;
-    line-height: 28px;
+    font-size: 0.6875rem;
+    line-height: 1.75rem;
   }
   footer .accordion .collapse:not(.show) {
     display: block;
