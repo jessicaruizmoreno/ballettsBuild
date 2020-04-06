@@ -33,7 +33,34 @@
 		</div>
 
 		<div class="col box-right">
-			<a link href="#"><i class="far fa-calendar-alt"></i> Book Appoinment</a>
+
+
+
+			
+			<a link href="#" data-toggle="modal" data-target="#alertModal"><i class="far fa-calendar-alt"></i> Book Appoinment</a>
+		
+		
+			<!----modal-->
+			<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="alertModalLabel">Covid19</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+					<p>At this time we are not accepting appointments until further notice</p>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		
+		
 		</div>
 	</div>
 		
@@ -171,8 +198,8 @@
 			<h1>Let us help you <br >
 			find the one</h1>
 			
-		<button class="hero primaryBtn">Shop Now</button>
-		<button class="secBtn">Book Appointment</button>
+	<a href="#shop" role="button"><button class="hero primaryBtn">Shop Now</button></a>
+		<button class="secBtn" data-toggle="modal" data-target="#alertModal">Book Appointment</button>
 	</div>
 		</div>
 		</div>
@@ -198,7 +225,7 @@
 		
 
 		<!--cats-->
-		<h2 class="cats_title">Shop By Categories</h2>
+		<h2 class="cats_title" id="shop">Shop By Categories</h2>
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
 
 		<div class="cat col pr-2">

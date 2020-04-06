@@ -243,11 +243,18 @@ H5 {
     font-size: 14px;
 }
 
-p {
+
+H5.modal-title{
+    font-size:18px;
+    color:$black;
+}
+
+p, .modal-body{
     color: $soft-black;
     font-size: 1rem;
     line-height: 24px;
 }
+
 
 p.copyright {
     font-size: 11px;
@@ -766,6 +773,14 @@ img#logo {
 .hero.primaryBtn {
     @include primaryBtn();
     margin-bottom: 1.375rem; //22px
+    a{
+        color:$black;
+    &:active,&:hover{
+    text-decoration: none;
+    }
+    
+    
+    }   
 
     @include respond-above(md) {
         font-size: 15px;
