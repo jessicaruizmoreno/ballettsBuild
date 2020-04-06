@@ -118,6 +118,8 @@ $med:500;
 $bold:700;
 
 
+
+
 H2,H3,H4,H5,H6,P{
     font-family:$font-set-1; 
 }
@@ -134,6 +136,29 @@ H1{
     padding: 4.125rem 0 1.25rem;
 
 }
+
+@media (min-width: 460px) { 
+    H1{
+        font-size: 3rem;
+        line-height: 2.99rem;
+    }
+}
+
+@media (min-width: 500px){
+H1 {
+font-size: 3.6rem;
+line-height: 3.5rem;
+}
+}
+
+
+@include respond-above(sm) {
+    H1 {
+        font-size: 65px;
+        line-height: 63px;
+    }
+}
+
 
 
 
@@ -214,6 +239,7 @@ p.copyright{
         text-align: left;
         float: right;
         padding-left: 6px;
+        margin-bottom: 0;
     }
 
 
@@ -370,14 +396,10 @@ img#logo{
 	display: inline-block;
 }
 
-
-
-
 .search {
 	position: absolute;
 	right: 49px;
 	background-color: white;
-	outline: none;
 	border: none;
 	padding: 0;
 	width: 0;
@@ -565,6 +587,19 @@ img#logo{
     width: 280px;
 }
 
+
+@media (min-width: 387px) { 
+    #heroImage {
+        background-position-x: right;
+    }  
+}
+
+@media (min-width: 460px) { 
+    #banner{
+        width: 100%;
+    
+}}
+
 .primaryBtn{
     @include primaryBtn();
 }
@@ -716,11 +751,6 @@ margin-bottom: 15px;
 .carousel-inner{
     padding: 0 60px;
 }
-@include respond-above(sm) {
-    .carousel-inner {
-        padding: 0 80px;
-    }
-    }
 
 .carousel-control-next, .carousel-control-prev{
     opacity: 1; 
@@ -736,6 +766,22 @@ margin-bottom: 15px;
     }
 }
 
+@include respond-above(sm) {
+    .carousel-inner {
+        padding: 0 80px;
+    }
+    }
+
+    @include respond-above(md) {
+        .carousel-control-next {
+            right: -20px;
+        }
+        
+        .carousel-control-prev {
+            left: -20px;
+        }
+        
+    }
 
 
 .carousel-indicators > li {
@@ -757,29 +803,77 @@ margin-bottom: 15px;
 
 
 #carouselTestimonial{
-    margin-bottom: 70px;
+    margin-bottom: 108px;
     
     }
     
 //======Instagram====//
+
+
+
 .instagram-url{
     background-color: $light-accent;
-} 
+    text-align: center;
+
+i.fab{
+    font-size: 3rem;
+    margin: 0 auto;
+  color:$black;
+}
+
+a{
+    top: 33% !important;
+    margin: 0 auto;
+
+}
+
+p{
+    font-weight: $bold;
+    color:$black;
+}
+
+}
+
 
 
 .equal-height{
-    padding: 0;
-    display: flex;
-    width: 104px;
-    height: 104px;   
+    position: relative;
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding-bottom: 50%;
+
+a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 
 img{
     width: 100%;
+    height: auto;
+    transition: all .2s;
+    backface-visibility: hidden;
 }
 
 }
 
 
+@include respond-above(sm) {
+.equal-height{
+    padding-bottom: 25%;  
+}   
+}
+
+@include respond-above(md) {
+    .posts {
+        margin-bottom: 200px;
+    }
+}
 
 
 //====Newsletter=====//
@@ -797,11 +891,30 @@ img{
 
 }
 
-//====NEWSLETTER BREAKPOINTS====//
 
 @include respond-above(md) {
 .newsletter .col{
     max-width: 720px;
+}
+
+.form{
+    padding: 0 15px;
+}
+.form-control {
+    background-clip: unset;
+    border: 1px solid transparent;
+    width: 68%;
+    float: left;
+    height: 46px;
+    margin-right: 10px;
+}
+.newsletter .primaryBtn {
+    background-color: #FB9DC4;
+    width: 30%;
+    float: left;
+}
+.form-group{
+    text-align:left;
 }
 }
 
@@ -981,71 +1094,3 @@ p.copyright{
 }
 
 
-
-
-
-
-
-
-
-    @media (min-width: 387px) { 
-        #heroImage {
-            background-position-x: right;
-        }  
-    }
-
-    @media (min-width: 460px) { 
-        #banner{
-            width: 100%;
-        }
-        H1{
-            font-size: 3rem;
-            line-height: 2.99rem;
-        }
-    }
-
-    @media (min-width: 500px){
-H1 {
-    font-size: 3.6rem;
-    line-height: 3.5rem;
-}
-}
-
-@media (min-width: 576px){
-    H1 {
-        font-size: 65px;
-        line-height: 63px;
-    }
-
-}
-
-@media (min-width: 768px){
-.carousel-control-next {
-    right: -20px;
-}
-
-.carousel-control-prev {
-    left: -20px;
-}
-
-.form{
-    padding: 0 15px;
-}
-.form-control {
-    background-clip: unset;
-    border: 1px solid transparent;
-    width: 68%;
-    float: left;
-    height: 46px;
-    margin-right: 10px;
-}
-.newsletter .primaryBtn {
-    background-color: #FB9DC4;
-    width: 30%;
-    float: left;
-}
-.form-group{
-    text-align:left;
-}
-
-}

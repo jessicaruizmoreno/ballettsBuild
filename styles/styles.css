@@ -16,6 +16,27 @@ H1 {
   padding: 4.125rem 0 1.25rem;
 }
 
+@media (min-width: 460px) {
+  H1 {
+    font-size: 3rem;
+    line-height: 2.99rem;
+  }
+}
+
+@media (min-width: 500px) {
+  H1 {
+    font-size: 3.6rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  H1 {
+    font-size: 65px;
+    line-height: 63px;
+  }
+}
+
 H2 {
   color: #2F2F2F;
   font-weight: 500;
@@ -92,6 +113,7 @@ p.link-nav {
   text-align: left;
   float: right;
   padding-left: 6px;
+  margin-bottom: 0;
 }
 
 body {
@@ -258,7 +280,6 @@ img#logo {
   position: absolute;
   right: 49px;
   background-color: white;
-  outline: none;
   border: none;
   padding: 0;
   width: 0;
@@ -411,6 +432,18 @@ img#logo {
 
 #banner {
   width: 280px;
+}
+
+@media (min-width: 387px) {
+  #heroImage {
+    background-position-x: right;
+  }
+}
+
+@media (min-width: 460px) {
+  #banner {
+    width: 100%;
+  }
 }
 
 .primaryBtn {
@@ -588,12 +621,6 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   padding: 0 60px;
 }
 
-@media (min-width: 576px) {
-  .carousel-inner {
-    padding: 0 80px;
-  }
-}
-
 .carousel-control-next, .carousel-control-prev {
   opacity: 1;
 }
@@ -606,6 +633,21 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 .carousel-control-prev-icon .fas.fa-chevron-left, .carousel-control-prev-icon .fas.fa-chevron-right, .carousel-control-next-icon .fas.fa-chevron-left, .carousel-control-next-icon .fas.fa-chevron-right {
   color: #2F2F2F;
   font-size: 30px;
+}
+
+@media (min-width: 576px) {
+  .carousel-inner {
+    padding: 0 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-control-next {
+    right: -20px;
+  }
+  .carousel-control-prev {
+    left: -20px;
+  }
 }
 
 .carousel-indicators > li {
@@ -626,24 +668,66 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 }
 
 #carouselTestimonial {
-  margin-bottom: 70px;
+  margin-bottom: 108px;
 }
 
 .instagram-url {
   background-color: #FFF5F9;
+  text-align: center;
+}
+
+.instagram-url i.fab {
+  font-size: 3rem;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.instagram-url a {
+  top: 33% !important;
+  margin: 0 auto;
+}
+
+.instagram-url p {
+  font-weight: 700;
+  color: #000000;
 }
 
 .equal-height {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 104px;
-  height: 104px;
+  position: relative;
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding-bottom: 50%;
+}
+
+.equal-height a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .equal-height img {
   width: 100%;
+  height: auto;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@media (min-width: 576px) {
+  .equal-height {
+    padding-bottom: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .posts {
+    margin-bottom: 200px;
+  }
 }
 
 .newsletter {
@@ -663,6 +747,25 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 @media (min-width: 768px) {
   .newsletter .col {
     max-width: 720px;
+  }
+  .form {
+    padding: 0 15px;
+  }
+  .form-control {
+    background-clip: unset;
+    border: 1px solid transparent;
+    width: 68%;
+    float: left;
+    height: 46px;
+    margin-right: 10px;
+  }
+  .newsletter .primaryBtn {
+    background-color: #FB9DC4;
+    width: 30%;
+    float: left;
+  }
+  .form-group {
+    text-align: left;
   }
 }
 
@@ -808,64 +911,6 @@ footer .more-links a:hover, footer .more-links a:active {
   }
   p.copyright {
     text-align: center;
-  }
-}
-
-@media (min-width: 387px) {
-  #heroImage {
-    background-position-x: right;
-  }
-}
-
-@media (min-width: 460px) {
-  #banner {
-    width: 100%;
-  }
-  H1 {
-    font-size: 3rem;
-    line-height: 2.99rem;
-  }
-}
-
-@media (min-width: 500px) {
-  H1 {
-    font-size: 3.6rem;
-    line-height: 3.5rem;
-  }
-}
-
-@media (min-width: 576px) {
-  H1 {
-    font-size: 65px;
-    line-height: 63px;
-  }
-}
-
-@media (min-width: 768px) {
-  .carousel-control-next {
-    right: -20px;
-  }
-  .carousel-control-prev {
-    left: -20px;
-  }
-  .form {
-    padding: 0 15px;
-  }
-  .form-control {
-    background-clip: unset;
-    border: 1px solid transparent;
-    width: 68%;
-    float: left;
-    height: 46px;
-    margin-right: 10px;
-  }
-  .newsletter .primaryBtn {
-    background-color: #FB9DC4;
-    width: 30%;
-    float: left;
-  }
-  .form-group {
-    text-align: left;
   }
 }
 /*# sourceMappingURL=styles.css.map */
