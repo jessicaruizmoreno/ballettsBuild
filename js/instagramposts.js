@@ -14,4 +14,4 @@ $.ajax({
 
 		$(".posts").html(posts_html + url_html);
 	}
-})
+});

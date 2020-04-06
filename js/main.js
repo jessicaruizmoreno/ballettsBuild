@@ -2,20 +2,20 @@
 	"use strict";
     console.log("SEAF Fired");
     
-    document.getElementsByClassName("navbar")[0].style.top='40px';
+    document.getElementsByClassName("navbar")[0].style.top='50px';
 
     if (window.matchMedia("(min-width: 320px)").matches) {
         document.getElementById("showNav").style.top='108px';
       }
 
       if (window.matchMedia("(min-width: 768px)").matches) {
-        document.getElementById("showNav").style.top='117px';
+        document.getElementById("showNav").style.top='132px';
       }
       
       
     window.addEventListener("scroll", function(){
         if(window.scrollY > 2) { 
-                  document.getElementsByClassName("social-nav")[0].style.visibility = 'hidden';
+                  document.getElementsByClassName("social-nav")[0].style.display = 'none';
                   document.getElementsByClassName("navbar")[0].style.top='0px';
 
                   if (window.matchMedia("(min-width: 320px)").matches) {
@@ -27,7 +27,7 @@
                   }
 
                 } else {
-                    document.getElementsByClassName("social-nav")[0].style.visibility = 'visible';
+                    document.getElementsByClassName("social-nav")[0].style.display = '';
                     document.getElementsByClassName("navbar")[0].style.top='';
 
 
