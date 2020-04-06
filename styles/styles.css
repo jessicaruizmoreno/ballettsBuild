@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
-H2, H3, H4, H5, H6, P {
+H2,
+H3,
+H4,
+H5,
+H6,
+P {
   font-family: "Noto Sans JP", Helvetica, sans-serif;
 }
 
@@ -102,7 +107,12 @@ H5 {
   font-size: 14px;
 }
 
-p {
+H5.modal-title {
+  font-size: 18px;
+  color: #000000;
+}
+
+p, .modal-body {
   color: #2F2F2F;
   font-size: 1rem;
   line-height: 24px;
@@ -146,7 +156,8 @@ p.link-nav {
 }
 
 @media (min-width: 992px) {
-  H2.cats_title, h3 {
+  H2.cats_title,
+  h3 {
     font-size: 28px;
   }
   .ad-text {
@@ -160,7 +171,8 @@ p.link-nav {
   h3.category_links {
     font-size: 22px;
   }
-  p, h5 {
+  p,
+  h5 {
     font-size: 18px;
     line-height: 28px;
   }
@@ -186,7 +198,8 @@ body {
   text-align: center;
 }
 
-.container-fluid, .container-md {
+.container-fluid,
+.container-md {
   padding: 0px;
 }
 
@@ -235,7 +248,7 @@ button {
   background-color: #F0F0F0;
   width: 100%;
   margin-top: 52px;
-  position: fixed;
+  position: absolute;
   z-index: 20;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -335,6 +348,7 @@ button {
 img#logo {
   width: 90px;
   margin: 0 auto;
+  height: intrinsic;
 }
 
 .search-container {
@@ -491,7 +505,8 @@ img#logo {
   img#logo {
     margin-left: 533px;
   }
-  .box-left, .box-right {
+  .box-left,
+  .box-right {
     max-width: inherit;
   }
   .center-align {
@@ -575,6 +590,14 @@ img#logo {
   text-transform: uppercase;
   border-radius: 3px;
   margin-bottom: 1.375rem;
+}
+
+.hero.primaryBtn a {
+  color: #000000;
+}
+
+.hero.primaryBtn a:active, .hero.primaryBtn a:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -662,7 +685,8 @@ img#logo {
 }
 
 @media (min-width: 992px) {
-  .ad-text, .ad-image {
+  .ad-text,
+  .ad-image {
     min-height: 454px;
   }
   .ad.primaryBtn {
@@ -672,12 +696,14 @@ img#logo {
   }
 }
 
-a.active_link:hover, a.active_link:active {
+a.active_link:hover,
+a.active_link:active {
   color: #FFFFFF;
   text-decoration: underline;
 }
 
-a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-images {
+a.active_link:hover .cats_box .cat-images,
+a.active_link:active .cats_box .cat-images {
   background-color: #0000002e !important;
   background-blend-mode: overlay;
 }
@@ -712,7 +738,9 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   position: absolute;
 }
 
-.pr-2, .pr-1, .pr-4 {
+.pr-2,
+.pr-1,
+.pr-4 {
   padding-right: 0px !important;
 }
 
@@ -721,7 +749,8 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
 }
 
 @media (min-width: 576px) {
-  .pr-2, .pr-1 {
+  .pr-2,
+  .pr-1 {
     padding-right: 8px !important;
   }
 }
@@ -757,16 +786,21 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   padding: 0 60px;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
   opacity: 1;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   background-image: none;
   opacity: 1;
 }
 
-.carousel-control-prev-icon .fas.fa-chevron-left, .carousel-control-prev-icon .fas.fa-chevron-right, .carousel-control-next-icon .fas.fa-chevron-left, .carousel-control-next-icon .fas.fa-chevron-right {
+.carousel-control-prev-icon .fas.fa-chevron-left,
+.carousel-control-prev-icon .fas.fa-chevron-right,
+.carousel-control-next-icon .fas.fa-chevron-left,
+.carousel-control-next-icon .fas.fa-chevron-right {
   color: #2F2F2F;
   font-size: 30px;
 }
@@ -811,6 +845,9 @@ a.active_link:hover .cats_box .cat-images, a.active_link:active .cats_box .cat-i
   .carousel-inner {
     width: 920px;
     padding: 0 30px 0 80px;
+  }
+  .carousel-indicators {
+    margin-right: 13%;
   }
   .carousel-control-next {
     right: -60px;
