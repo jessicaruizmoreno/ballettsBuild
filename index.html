@@ -23,81 +23,55 @@
 
 		<!----FULL WIDTH FLUID CONTAINER-------->
 		<div class="container-fluid">
-		<!--NAV BLACK BAR--->
-		<div class="row social-nav">	
-		<div class="box-soc">
-			<div class="col box-left">
-			<p>Connect:</p>	
-			<a link href="https://www.facebook.com/ballettsbridalshop/"> <i class="fab fa-facebook-f"></i></i></a>
-			<a link href="https://www.instagram.com/balletts_bridal/">	<i class="fab fa-instagram"></i></i></a>
-		</div>
-
-		<div class="col box-right">
-
-
+		<!---NAV--->
+		<nav class="navbar main-nav">	
+			<div class="social-nav">
+			<div class="box-soc">
+				<div class="col box-left">
+				<p>Connect:</p>	
+				<a link href="https://www.facebook.com/ballettsbridalshop/"> <i class="fab fa-facebook-f"></i></i></a>
+				<a link href="https://www.instagram.com/balletts_bridal/">	<i class="fab fa-instagram"></i></i></a>
+			</div>
+	
+			<div class="col box-right">
+	
+	
+	
+				
+				<a link href="#" data-toggle="modal" data-target="#alertModal"><i class="far fa-calendar-alt"></i> Book Appoinment</a>
 
 			
-			<a link href="#" data-toggle="modal" data-target="#alertModal"><i class="far fa-calendar-alt"></i> Book Appoinment</a>
-		
-		
-			<!----modal-->
-			<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
-				<div class="modal-dialog" role="document">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title" id="alertModalLabel">Covid19</h5>
-					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					  </button>
-					</div>
-					<div class="modal-body">
-					<p>At this time we are not accepting appointments until further notice</p>
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				  </div>
-				</div>
-			  </div>
-		
-		
+			
+			</div>
 		</div>
-	</div>
-		
 		</div>
 	
-		<!---NAV--->
-			<nav class="navbar navbar-expand-lg main-nav">
-			<div class="center-align">
+			
+			<nav class="center-align nav2 navbar-expand-lg">
+			
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNav" aria-controls="showNav" aria-expanded="false" aria-label="Toggle navigation">
 				<svg class="bi bi-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
 				  </svg>
 			  </button>
 			  <img src="assets/images/logo.png" alt="Balletts Bridal Logo" id="logo">
+			
+			
+
+
+			
+					<form action="/search" method="get" action="Search.asp" class="searchbar">
+					<input class="search_input" type="text" name="" placeholder="Search...">
+					<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+				</form>
 			  
-			  <div class="box">
-				
-			
+			  
+<button class="icon icon-cart" type="button"><svg id="Group_119" data-name="Group 119" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.49 17.13"><path id="Path_1" data-name="Path 1" d="M6.28,11.42H16.64a.58.58,0,0,0,.55-.41l2.28-8a.57.57,0,0,0-.39-.71l-.16,0H5L4.55.45A.56.56,0,0,0,4,0H.57A.58.58,0,0,0,0,.57a.57.57,0,0,0,.57.57h3L5.6,10.42a1.72,1.72,0,0,0,.68,3.29H16.64a.58.58,0,0,0,0-1.15H6.28A.57.57,0,0,1,5.71,12a.58.58,0,0,1,.57-.57Zm11.88-8-1.95,6.85H6.74L5.22,3.43Z" transform="translate(0)"/><path id="Path_2" data-name="Path 2" d="M5.71,15.42a1.72,1.72,0,1,0,1.71-1.71A1.71,1.71,0,0,0,5.71,15.42Zm1.71-.57a.56.56,0,0,1,.57.57.57.57,0,0,1-.57.57.58.58,0,0,1-.57-.57A.57.57,0,0,1,7.42,14.85Z" transform="translate(0)"/><path id="Path_3" data-name="Path 3" d="M13.78,15.42a1.72,1.72,0,1,0,1.72-1.71A1.71,1.71,0,0,0,13.78,15.42Zm1.72-.57a.57.57,0,0,1,.57.57.58.58,0,0,1-1.15,0A.57.57,0,0,1,15.5,14.85Z" transform="translate(0)"/></svg></button>
+			 
+
+			</nav>
 	
-
-
-<div class="search-container">
-	<form action="/search" method="get" action="Search.asp">
-	  <input class="search expandright" id="searchright" type="search" name="search" placeholder="Search...">
-	  <button class="icon" type="button"> 
-	  <label class="button searchbutton" for="searchright">
-		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.76 15.77"><defs><style>.cls-1{stroke:#000;stroke-width:0.6px;}</style></defs><path id="Path_4" data-name="Path 4" class="cls-1" d="M15.35,14.46,11,10.06a6,6,0,1,0-.89.89l4.4,4.4a.31.31,0,0,0,.44,0l.45-.44A.34.34,0,0,0,15.35,14.46ZM6.29,11A4.74,4.74,0,1,1,11,6.3h0A4.75,4.75,0,0,1,6.29,11Z" transform="translate(0.02 0.02)"/></svg>  
-		</label>
-		</button>
-	</form>
-  </div>
-  
 			
-				<button class="icon" type="button"><svg id="Group_119" data-name="Group 119" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.49 17.13"><path id="Path_1" data-name="Path 1" d="M6.28,11.42H16.64a.58.58,0,0,0,.55-.41l2.28-8a.57.57,0,0,0-.39-.71l-.16,0H5L4.55.45A.56.56,0,0,0,4,0H.57A.58.58,0,0,0,0,.57a.57.57,0,0,0,.57.57h3L5.6,10.42a1.72,1.72,0,0,0,.68,3.29H16.64a.58.58,0,0,0,0-1.15H6.28A.57.57,0,0,1,5.71,12a.58.58,0,0,1,.57-.57Zm11.88-8-1.95,6.85H6.74L5.22,3.43Z" transform="translate(0)"/><path id="Path_2" data-name="Path 2" d="M5.71,15.42a1.72,1.72,0,1,0,1.71-1.71A1.71,1.71,0,0,0,5.71,15.42Zm1.71-.57a.56.56,0,0,1,.57.57.57.57,0,0,1-.57.57.58.58,0,0,1-.57-.57A.57.57,0,0,1,7.42,14.85Z" transform="translate(0)"/><path id="Path_3" data-name="Path 3" d="M13.78,15.42a1.72,1.72,0,1,0,1.72-1.71A1.71,1.71,0,0,0,13.78,15.42Zm1.72-.57a.57.57,0,0,1,.57.57.58.58,0,0,1-1.15,0A.57.57,0,0,1,15.5,14.85Z" transform="translate(0)"/></svg></button>
-			  </div>
-
-
 			<nav class="navbar second-nav">	
 					<div class="center-align">
 				<button class="icon" type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -159,10 +133,28 @@
 
 
 			</nav>
-		</div>
+		
 			  </nav>
 
-
+	<!----modal-->
+	<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="alertModalLabel">Covid19</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			<p>At this time we are not accepting appointments until further notice</p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
 		
 			<div class="collapse navbar-collaspe" id="showNav">
 				<div class="pink-box">
@@ -178,7 +170,7 @@
 						  <a class="dropdown-item" href="https://balletts.com/prom-dresses/">Prom & Grad</a>
 						  <a class="dropdown-item" href="https://balletts.com/wedding-accessories/">Accessories</a>
 						  <a class="dropdown-item" href="https://balletts.com/special-occasions-dresses/">Special Occasions</a>
-						  <a class="dropdown-item" href="#">Flower Girls</a>
+						 <!---- <a class="dropdown-item" href="#">Flower Girls</a>-->
 						</div>
 
 					  </li>
@@ -262,7 +254,8 @@
 		</a>
 		</div>
 
-			<div class="cat col pr-3">
+	
+			<div class="cat mid col pr-3">
 				<a href="https://balletts.com/wedding-accessories/" class="active_link">
 					<div class="cats_box">
 						<span class="cat-images" style="background:url(assets/images/acc-img.jpg) center center no-repeat; background-size:cover;">
@@ -273,7 +266,7 @@
 				</a>
 			</div>
 
-			<div class="cat col pr-2">
+			<div class="cat mid2 col pr-2">
 				<a href="https://balletts.com/special-occasions-dresses/" class="active_link">
 					<div class="cats_box">
 						<span class="cat-images" style="background:url(assets/images/occ-img.jpg) center center no-repeat; background-size:cover;">
@@ -283,8 +276,8 @@
 				
 				</a>
 			</div>
-
-			<div class="cat col pr-4">
+	
+		<!----	<div class="cat col pr-4">
 				<a href="#" class="active_link">
 					<div class="cats_box">
 						<span class="cat-images" style="background:url(assets/images/flower-img.jpg) center center no-repeat; background-size:cover;">
@@ -293,7 +286,7 @@
 						</div>
 			
 				</a>
-			</div>
+			</div>-->
 		</div>
 		
 		<!--testimonals-->
@@ -490,7 +483,6 @@
 
 		  <!----FOOTER FULL WIDTH--->
 		  <footer>		 
-			
 			<div class="center-align">
 			<div class="row row-cols-1 row-cols-md-6">		
 			<div class="col">
