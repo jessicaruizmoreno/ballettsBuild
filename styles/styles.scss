@@ -350,6 +350,7 @@ body {
     position: relative;
     top: 140px;
     margin-bottom: 147px;
+    overflow: hidden;
 }
 
 .row {
@@ -357,9 +358,82 @@ body {
     margin-left: 0;
 }
 
+
+//ANIMATION//
+.first-section{
+    position: relative;
+}
+
+.first-section .image-wrapper{
+    display: inline-block;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+
+.image-container{
+  
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 54vw;
+    right: 0;
+}
+}
+.section1-1{
+    position: absolute;
+    width: 335px;
+    z-index: -1;
+    top: 93px;
+}
+
+.section1-2{
+    width: 89px;
+    position: absolute;
+    z-index: -1;
+    top: -170px;
+    right: 139vw;
+}
+
+.section1-3{
+
+   
+    position: absolute;
+    z-index: 0;
+    width: 110px;
+    top: -100px;
+    left: 22%;
+}
+
+.section3-1{
+    position: absolute;
+    z-index: 0;
+    width: 110px;
+    top: 13%;
+    left: 77%;
+}
+
+.section4-1{
+    position: absolute;
+    z-index: -1;
+    width: 110px;
+    top: 2380px;
+    left: 77%;
+}
+
+.section4-2{
+    position: absolute;
+    z-index: -1;
+    width: 110px;
+    top: 2380px;
+    left: 77%;
+}
+
+
 @include respond-above(md) {
 
-    .layout-main {
+    .layoutmain {
         top: 180px;
     }
 }
@@ -1078,6 +1152,12 @@ a.active_link:active {
 
 
 //===Testimoanls====//
+
+.carousel.pointer-event {
+    -ms-touch-action: unset !important;
+    touch-action: none !important;
+}
+
 .carouselTestimonals img {
     display: block;
     margin: 0 auto;
@@ -1248,6 +1328,7 @@ z-index: 0 !important;
     .primaryBtn {
         background-color: #FB9DC4;
         width: 100%;
+        margin-top: 20px;
     }
 
 }
