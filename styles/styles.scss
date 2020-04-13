@@ -2,6 +2,7 @@
 @import "mixins";
 @import "colors";
 @import "breakpoints";
+@import "fonts";
 
 //Hompage Styles//
 //ANIMATION//
@@ -328,12 +329,6 @@ button {
     padding: 0px;
 }
 
-@include respond-above(sm) {
-    .ad-layout {
-        align-items: flex-end;
-    }
-
-}
 
 .ad-image {
     min-height: 300px;
@@ -342,10 +337,27 @@ button {
     background-size: cover;
 }
 
+@include respond-above(sm) {
+    .ad-layout {
+        align-items: flex-end;
+    }
 
+}
+
+
+@include respond-above(md) {
+.ad-text {
+    padding: 79px;
+}
+}
 
 @include respond-above(lg) {
-    .ad-text,
+   
+    .ad-text {
+        padding-top: 116px;
+        min-height: 384px;
+    }
+    
     .ad-image {
         min-height: 384px;
     }

@@ -135,42 +135,6 @@ H2 {
   padding-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .ad-text {
-    padding: 79px;
-  }
-  .ad-text h2 {
-    font-size: 1.625rem;
-    text-align: left;
-    line-height: 2.0625rem;
-  }
-}
-
-@media (min-width: 992px) {
-  H2.cats_title,
-  h3 {
-    font-size: 1.75rem;
-  }
-  .ad-text {
-    padding-top: 116px;
-  }
-  .ad-text h2 {
-    font-size: 2.375rem;
-    line-height: 2.875rem;
-  }
-  h3.category_links {
-    font-size: 1.375rem;
-  }
-  p,
-  h5 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-  h4 {
-    font-size: 1.75rem;
-  }
-}
-
 H2.cats_title {
   font-weight: 300;
   font-size: 1.25rem;
@@ -247,6 +211,36 @@ p.link-nav {
   float: right;
   padding-left: 6px;
   margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .ad-text h2 {
+    font-size: 1.625rem;
+    text-align: left;
+    line-height: 2.0625rem;
+  }
+}
+
+@media (min-width: 992px) {
+  H2.cats_title,
+  h3 {
+    font-size: 1.75rem;
+  }
+  .ad-text h2 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+  h3.category_links {
+    font-size: 1.375rem;
+  }
+  p,
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  h4 {
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 768px) {
