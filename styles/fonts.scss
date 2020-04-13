@@ -106,13 +106,58 @@ H2 {
 .ad-text {
     background-color: $light-accent;
     margin-top: 0.5rem; //8px
-    min-height: 300px;
     padding: 6.25rem 1.5625rem 1.5625rem;//100px 25px
 
     h2 {
         text-align: center;
         padding-bottom: 20px;
     }
+}
+
+@include respond-above(md) {
+    .ad-text {
+        padding: 79px;
+
+        h2 {
+            font-size: 1.625rem;//26px
+            text-align: left;
+            line-height: 2.0625rem;//33px
+        }
+    }
+}
+
+@include respond-above(lg) {
+
+    H2.cats_title,
+    h3 {
+        font-size: 1.75rem;//28px
+    }
+
+    .ad-text {
+        padding-top: 116px;
+
+        h2 {
+            font-size: 2.375rem;//38px
+            line-height: 2.875rem;//46px;
+          
+        }
+    }
+
+    h3.category_links {
+        font-size: 1.375rem;//22px
+    }
+
+    p,
+    h5 {
+        font-size: 1.125rem;//18px
+        line-height: 1.75rem;//28px
+    }
+
+    h4 {
+        font-size: 1.75rem;//28px
+    }
+
+
 }
 
 
@@ -202,50 +247,3 @@ p.link-nav {
     margin-bottom: 0;
 }
 
-
-
-@include respond-above(md) {
-    .ad-text {
-        padding: 79px;
-
-        h2 {
-            font-size: 1.625rem;//26px
-            text-align: left;
-            line-height: 2.0625rem;//33px
-        }
-    }
-}
-
-@include respond-above(lg) {
-
-    H2.cats_title,
-    h3 {
-        font-size: 1.75rem;//28px
-    }
-
-    .ad-text {
-        padding-top: 116px;
-
-        h2 {
-            font-size: 2.375rem;//38px
-            line-height: 2.875rem;//46px;
-          
-        }
-    }
-
-    h3.category_links {
-        font-size: 1.375rem;//22px
-    }
-
-    p,
-    h5 {
-        font-size: 1.125rem;//18px
-        line-height: 1.75rem;//28px
-    }
-
-    h4 {
-        font-size: 1.75rem;//28px
-    }
-
-
-}

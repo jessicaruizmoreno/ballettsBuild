@@ -335,8 +335,6 @@ button {
 
 }
 
-
-
 .ad-image {
     min-height: 300px;
     width: 100%;
@@ -347,7 +345,6 @@ button {
 
 
 @include respond-above(lg) {
-
     .ad-text,
     .ad-image {
         min-height: 384px;
