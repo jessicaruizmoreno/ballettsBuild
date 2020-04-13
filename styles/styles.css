@@ -1,5 +1,55 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Niconne&display=swap");
+@media (min-width: 768px) {
+  .container-md {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-md {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-md {
+    max-width: 1140px;
+  }
+}
+
+.more p {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+.more .fa-chevron-down {
+  -webkit-animation: mover 50s linear infinite;
+  animation: mover 1s linear infinite;
+  position: relative;
+}
+
+@-webkit-keyframes mover {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 3px;
+  }
+}
+
+@keyframes mover {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 3px;
+  }
+}
+
 H2,
 H3,
 H4,
@@ -211,12 +261,25 @@ body {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .layout-main {
+    top: 180px;
+    margin-bottom: -13px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .layout-main {
+    overflow: visible;
+  }
+}
+
 .row {
   margin-right: 0;
   margin-left: 0;
 }
 
-.first-section {
+.first-section, .third-section {
   position: relative;
 }
 
@@ -256,28 +319,160 @@ body {
   z-index: 0;
   width: 110px;
   top: -100px;
-  left: 22%;
+  right: 40vw;
+}
+
+.section1-4 {
+  display: none;
 }
 
 .section3-1 {
   position: absolute;
   z-index: 0;
-  width: 110px;
-  top: 13%;
-  left: 77%;
+  width: 80px;
+  top: -11px;
+  left: 88%;
 }
 
 .section4-1 {
   position: absolute;
   z-index: 0;
-  width: 110px;
-  top: 13%;
-  left: 77%;
+  width: 100px;
+  top: 2550px;
+  left: 83%;
+  right: 0;
+}
+
+.section4-2 {
+  position: absolute;
+  z-index: -1;
+  width: 220px;
+  top: 3080px;
+  left: -35%;
+  right: 0;
+}
+
+@media (min-width: 400px) {
+  .section1-3 {
+    right: 51vw;
+    top: -130px;
+  }
+  .section4-1 {
+    left: 81%;
+    right: 0;
+  }
 }
 
 @media (min-width: 768px) {
-  .layoutmain {
-    top: 180px;
+  .first-section .image-wrapper .image-container {
+    left: 0;
+    right: 0;
+  }
+  .section1-1 {
+    width: 305px;
+    left: 55%;
+    right: 0;
+  }
+  .section1-2 {
+    width: 99px;
+    position: absolute;
+    z-index: -1;
+    top: -170px;
+    right: 0;
+    left: 0;
+  }
+  .section1-3 {
+    width: 120px;
+    left: 83%;
+    right: 0;
+  }
+  .section3-1 {
+    width: 100px;
+    left: 84%;
+  }
+  .section4-1 {
+    width: 110px;
+    top: 1660px;
+    right: 0;
+    left: 85%;
+  }
+  .section4-2 {
+    left: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  #heroImage {
+    background-position-x: right !important;
+  }
+  .section1-1 {
+    left: 59%;
+  }
+}
+
+@media (min-width: 992px) {
+  .section1-1 {
+    width: 365px;
+  }
+  .first-section {
+    padding-left: 23px;
+  }
+  .section1-2 {
+    top: -90px;
+    right: 0;
+    left: -60px;
+    width: 128px;
+  }
+  .section1-3 {
+    width: 150px;
+  }
+  .section3-1 {
+    width: 160px;
+  }
+  .section4-1 {
+    width: 140px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .section1-4 {
+    position: absolute;
+    width: 170px;
+    left: 85%;
+    right: 0;
+    display: block;
+    z-index: 0;
+    top: -29%;
+  }
+  .section4-1 {
+    width: 159px;
+    top: 1720px;
+  }
+  .section4-2 {
+    left: -5%;
+    width: 273px;
+    top: 2150px;
+  }
+  .section1-3, .section3-1 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #banner {
+    margin-top: 100px;
+  }
+  .section1-1 {
+    width: 475px;
+    left: 55%;
+  }
+  .section1-4 {
+    top: -24%;
+    left: 87%;
+    z-index: 1;
+  }
+  .section4-1 {
+    top: 1920px;
   }
 }
 
@@ -666,7 +861,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   background-position-x: 35vw;
   background-size: 270px;
   padding: 30px 8px;
-  background-position-y: 3vh;
+  background-position-y: 5vh;
 }
 
 #banner {
@@ -679,9 +874,22 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   }
 }
 
+@media (min-width: 768px) {
+  #heroImage {
+    background-size: 300px;
+    background-position-x: 55vw;
+  }
+}
+
 @media (min-width: 992px) {
   #heroImage {
     background-size: 330px;
+  }
+}
+
+@media (min-width: 1100px) {
+  #heroImage {
+    min-height: 560px;
   }
 }
 

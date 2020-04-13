@@ -61,25 +61,38 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     let controller = new ScrollMagic.Controller();
 
+
+
+
     //automatic//
     let tl = new TimelineMax();
-    tl.from('#heroImage',1 ,{opacity:0, delay:1})
-    tl.from('.section1-1', 1, {y:-100, x:180, ease:Power3.easeInOut});
-    tl.from('#banner', 0.5, {y:-400, ease:Power0.easeNone})
-    tl.from('.section1-2, .section1-3',1 ,{ opacity:0, y:300})
-
-    let t2 = new TimelineMax();
-    t2.from('.second-section', 3, {opacity:0},'-=4')
-    t2.to('.section1-2, .section1-3,.section1-1', 2, {top:'-30%'},'-=6')
+    tl.from('#heroImage',1 ,{opacity:0,delay:1});
+    tl.from('#banner', 1, {opacity:0, y:-30, ease:Power2.easeInOut});
+    tl.from('.section1-1', 4, {delay:3,opacity:0, x:50, ease:Power2.easeInOut},"-=6");
+    tl.from('.section1-2, .section1-3',4 ,{delay:3,opacity:0, y:50,ease:Power2.easeInOut},"-=6");
+    tl.from('.section1-4',4,{delay:1.8,opacity:0, y:100,ease:Power2.easeInOut},"-=6");
+    tl.from('.more',1, {opacity:0,ease:Power2.easeInOut,delay:3},"=-6");
+   
     
+
+    //second timeline//
+    let t2 = new TimelineMax();
+    t2.from('.second-section', 1, {opacity:0,ease:Power2.easeInOut,delay:3},'-=6');
+    t2.to('.section1-4', 6, {top:'53%',ease:Power2.easeInOut},'-=3');
+    t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
+    t2.to('.section1-3', 4, {top:'-27%',ease:Power2.easeInOut},'-=6');
+    t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut},'-=6');
+    t2.to('#heroImage',1,{y:-10,ease:Power0.easeNone,delay:1},'-=6');
+    t2.from('.third-section,.fourth-section,.fifth-section,.newsletter,footer',2,{opacity:0,ease:Power2.easeInOut,delay:6},'-=6');
+    t2.from('.section3-1', 6, {opacity:0,y:90,ease:Power2.easeInOut});  
+    t2.to('.section3-1', 6, {top:'-8%',ease:Power2.easeInOut},'-=6');  
+
     let scene = new ScrollMagic.Scene({
         triggerElement:'.parallax',
         duration:"80%",
         triggerHook:0
 
     })
-
-
 
     scene.addIndicators({
         name: 'scene', // custom name for your scene
@@ -92,6 +105,20 @@ document.addEventListener('DOMContentLoaded',()=>{
     .setTween(t2)
     .setPin('.parallax')
     .addTo(controller);
+    let t3 = new TimelineMax();
+    t3.from('.section4-1', 6, {opacity:0,y:90,ease:Power2.easeInOut},'-=6');
+    t3.from('.section4-2', 6, {opacity:0,y:200,ease:Power2.easeInOut},'-=6');
+    t3.to('.section4-2', 6, {top:'65%',ease:Power2.easeInOut},'-=6'); 
+
+    let scene2 = new ScrollMagic.Scene({
+        triggerElement:'.third-section',
+        duration:"80%",
+        triggerHook:'onCenter'
+
+    })
+    .setTween(t3)
+    .addTo(controller);
+
 });
 
 
