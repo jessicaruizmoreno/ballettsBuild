@@ -1,0 +1,50 @@
+@import "colors";
+@import "breakpoints";
+@import "fonts";
+
+// ===== MIXINS ===== //
+
+//buttons
+@mixin primaryBtn {
+    background-color: $main-pink;
+    color: $black;
+    font-family: $font-set-1;
+    font-weight: $bold;
+    width: 168px;
+    height: 40px;
+    font-size: 0.8125rem; //13px
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+@mixin secBtn {
+    background-color: $black;
+    color: $white;
+    font-family: $font-set-1;
+    font-weight: $bold;
+    width: 168px;
+    height: 40px;
+    font-size: 0.8125rem; //13px
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+
+//aligments
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin tabletPadding {
+    padding: 0 40px;
+}
+
+//transparent
+@mixin remove {
+    border-color: transparent;
+    background-color: transparent;
+}
+
