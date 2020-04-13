@@ -94,8 +94,9 @@ H1 {
 
 @media (min-width: 992px) {
   H1 {
-    font-size: 6.0625rem;
-    line-height: 5.5rem;
+    font-size: 90px;
+    line-height: 72px;
+    letter-spacing: 0px;
   }
 }
 
@@ -212,12 +213,11 @@ p.link-nav {
     font-size: 1.75rem;
   }
   .ad-text {
-    padding-top: 136px;
+    padding-top: 116px;
   }
   .ad-text h2 {
-    font-size: 2.6875rem;
-    line-height: 3.3125rem;
-    margin-bottom: 37px;
+    font-size: 38px;
+    line-height: 46px;
   }
   h3.category_links {
     font-size: 1.375rem;
@@ -265,6 +265,12 @@ body {
   .layout-main {
     top: 180px;
     margin-bottom: -13px;
+  }
+}
+
+@media (min-width: 992px) {
+  .layout-main {
+    top: 130px;
   }
 }
 
@@ -402,9 +408,6 @@ body {
 }
 
 @media (min-width: 900px) {
-  #heroImage {
-    background-position-x: right !important;
-  }
   .section1-1 {
     left: 59%;
   }
@@ -437,16 +440,19 @@ body {
 @media (min-width: 1100px) {
   .section1-4 {
     position: absolute;
-    width: 170px;
+    width: 130px;
     left: 85%;
     right: 0;
     display: block;
-    z-index: 0;
+    z-index: 1;
     top: -29%;
   }
+  .section1-2 {
+    width: 112px;
+  }
   .section4-1 {
-    width: 159px;
-    top: 1720px;
+    width: 119px;
+    top: 1550px;
   }
   .section4-2 {
     left: -5%;
@@ -459,20 +465,13 @@ body {
 }
 
 @media (min-width: 1200px) {
-  #banner {
-    margin-top: 100px;
-  }
-  .section1-1 {
-    width: 475px;
-    left: 55%;
-  }
   .section1-4 {
     top: -24%;
-    left: 87%;
+    left: 81%;
     z-index: 1;
   }
-  .section4-1 {
-    top: 1920px;
+  .section1-2 {
+    left: -30px;
   }
 }
 
@@ -699,6 +698,10 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
 }
 
 @media (min-width: 768px) {
+  .icon-cart {
+    width: 40px;
+    height: 36px;
+  }
   #showNav {
     top: 134px;
   }
@@ -707,7 +710,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     height: 61px;
   }
   .center-align {
-    width: 720px;
+    width: 750px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -748,6 +751,19 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
 }
 
 @media (min-width: 992px) {
+  .social-nav {
+    height: 27px;
+    line-height: 2.3;
+    font-size: 12px;
+  }
+  .center-align .icon svg {
+    height: 20px;
+    width: 20px;
+  }
+  .box-left p {
+    font-size: 12px;
+    line-height: unset;
+  }
   .box-left {
     max-width: 50%;
   }
@@ -759,8 +775,10 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     z-index: 30;
   }
   img#logo {
+    width: 136px;
+    height: 47px;
     position: relative;
-    left: 194px;
+    left: 175px;
   }
   .pink-box {
     background-color: transparent;
@@ -775,10 +793,12 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
             justify-content: center;
     color: #000000;
     background-color: #FFFFFF;
-    height: 65px;
+    height: 55px;
     border-bottom: 1px solid #F0F0F0;
   }
   .pink-box .navbar-nav li {
+    font-size: 16px;
+    padding: 14px 22px 0;
     background-color: transparent;
   }
   .pink-box .navbar-nav li a:hover, .pink-box .navbar-nav li a:active {
@@ -801,9 +821,10 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   }
   .second-nav {
     background-color: transparent;
-    margin-top: 0;
     color: #000000;
     float: left;
+    height: 0;
+    margin-top: 15px;
   }
   .second-nav p.link-nav {
     display: none;
@@ -814,7 +835,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     top: -78px;
   }
   .center-align {
-    width: 920px;
+    width: 1000px;
   }
   .collapse:not(.show) {
     display: block;
@@ -822,23 +843,25 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   #showNav {
     position: fixed;
     z-index: 20;
-    top: 140px;
+    top: 105px;
   }
   .dropdown-menu.show {
+    top: -10px;
     -webkit-transform: translate3d(26px, 62px, 0px) !important;
             transform: translate3d(26px, 62px, 0px) !important;
   }
-  .search_icon {
+  .center-align .search_icon {
     padding-right: 10px;
+    font-size: 18px;
   }
   .search_input, .searchbar:hover > .search_input {
     width: 260px;
     border: solid;
     position: relative;
-    top: -4px;
-    height: 43px;
+    top: -1px;
+    height: 38px;
     padding-left: 14px;
-    left: 44px;
+    left: 33px;
   }
 }
 
@@ -848,7 +871,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     max-width: inherit;
   }
   .center-align {
-    width: 1200px;
+    width: 1140px;
   }
   .nav2 {
     padding: 25px 35px;
@@ -881,23 +904,21 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 844px) {
   #heroImage {
-    background-size: 330px;
+    background-position-x: right;
   }
 }
 
 @media (min-width: 1100px) {
   #heroImage {
-    min-height: 560px;
+    min-height: 490px;
   }
 }
 
 @media (min-width: 1200px) {
   #heroImage {
-    background-size: 455px;
-    height: 740px;
-    background-position-x: 640px;
+    background-position-x: 670px !important;
   }
 }
 
@@ -923,13 +944,6 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   .primaryBtn {
     height: 46px;
     font-size: 0.9375rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .primaryBtn {
-    height: 60px;
-    font-size: 1.125rem;
   }
 }
 
@@ -961,14 +975,6 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   }
 }
 
-@media (min-width: 992px) {
-  .hero.primaryBtn {
-    height: 60px;
-    font-size: 1.125rem;
-    width: 239px;
-  }
-}
-
 .secBtn {
   background-color: #000000;
   color: #FFFFFF;
@@ -986,14 +992,6 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     height: 46px;
     font-size: 0.9375rem;
     width: 204px;
-  }
-}
-
-@media (min-width: 992px) {
-  .secBtn {
-    height: 60px;
-    font-size: 1.125rem;
-    width: 242px;
   }
 }
 
@@ -1041,12 +1039,14 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
 @media (min-width: 992px) {
   .ad-text,
   .ad-image {
-    min-height: 454px;
+    min-height: 384px;
   }
-  .ad.primaryBtn {
-    height: 60px;
-    font-size: 1.125rem;
-    width: 324px;
+}
+
+@media (min-width: 1200px) {
+  .second-section {
+    width: 1000px;
+    margin: 0px auto;
   }
 }
 
@@ -1324,8 +1324,8 @@ a.active_link:active .cats_box .cat-images {
 }
 
 @media (min-width: 992px) {
-  .form-control {
-    height: 60px;
+  .newsletter .primaryBtn {
+    margin-top: 0;
   }
   .form-group {
     width: 960px;
@@ -1486,6 +1486,9 @@ footer .more-links a:hover, footer .more-links a:active {
   }
   footer img {
     float: right;
+  }
+  footer a.emailLink {
+    text-align: right;
   }
 }
 /*# sourceMappingURL=styles.css.map */

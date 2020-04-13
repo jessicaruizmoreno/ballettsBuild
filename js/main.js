@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     //second timeline//
     let t2 = new TimelineMax();
     t2.from('.second-section', 1, {opacity:0,ease:Power2.easeInOut,delay:3},'-=6');
-    t2.to('.section1-4', 6, {top:'53%',ease:Power2.easeInOut},'-=3');
+    t2.to('.section1-4', 10, {top:'66%',ease:new SlowMo(0.1, 0.1)},'-=3');
     t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-3', 4, {top:'-27%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut},'-=6');
@@ -90,21 +90,16 @@ document.addEventListener('DOMContentLoaded',()=>{
     let scene = new ScrollMagic.Scene({
         triggerElement:'.parallax',
         duration:"80%",
-        triggerHook:0
+        triggerHook:"onLeave",
+        offset: 100
 
     })
-
-    scene.addIndicators({
-        name: 'scene', // custom name for your scene
-        indent: 520, // indent from the browser edge
-        colorStart: 'red', // custom color - colorEnd
-        colorTrigger: 'red',
-       })
 
 
     .setTween(t2)
     .setPin('.parallax')
     .addTo(controller);
+
     let t3 = new TimelineMax();
     t3.from('.section4-1', 6, {opacity:0,y:90,ease:Power2.easeInOut},'-=6');
     t3.from('.section4-2', 6, {opacity:0,y:200,ease:Power2.easeInOut},'-=6');
@@ -113,7 +108,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     let scene2 = new ScrollMagic.Scene({
         triggerElement:'.third-section',
         duration:"80%",
-        triggerHook:'onCenter'
+        triggerHook:'onLeave',
+        offset: 80
 
     })
     .setTween(t3)
