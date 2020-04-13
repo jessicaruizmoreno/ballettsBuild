@@ -127,7 +127,7 @@ $breakpoint: map-get($breakpoints, sm);
 
 @include respond-above(xl) {
     .container-md{
-     max-width: 1140px;;
+     max-width: 1140px;
     }   
 }
 
@@ -156,7 +156,7 @@ $bold:700;
     width: 100px;
     height: 100px;
     margin: 0 auto; 
-    font-size: 17px; 
+    font-size:1.0625rem;//17px
 }
 
 .more .fa-chevron-down{
@@ -360,8 +360,8 @@ p.link-nav {
         padding-top: 116px;
 
         h2 {
-            font-size: 38px;
-            line-height: 46px;
+            font-size: 2.375rem;//38px
+            line-height: 2.875rem;//46px;
           
         }
     }
@@ -765,7 +765,7 @@ button {
         height: 40px;
     width: 40px;
     color: black;
-    font-size: 19px;
+    font-size: 1.1875rem;//19px
     }
 
 
@@ -937,7 +937,7 @@ ul.navbar-nav{
         }
 
         .search_icon{
-            font-size: 24px;
+            font-size: 1.5rem//24px;
         }
 
         .icon svg {
@@ -985,7 +985,7 @@ margin-top:14px ;
     .social-nav{
         height: 27px;
         line-height: 2.3;
-        font-size: 12px;
+        font-size: 0.75rem;//12px;
     }
 
     .center-align .icon svg{
@@ -994,7 +994,7 @@ margin-top:14px ;
     }
 
     .box-left p{
-        font-size:12px;
+        font-size:0.75rem;//12px;
         line-height: unset;
     }
     
@@ -1014,8 +1014,6 @@ margin-top:14px ;
         z-index: 30;
 
     }
-
-
 
 
     
@@ -1039,7 +1037,7 @@ margin-top:14px ;
             height: 55px;
             border-bottom: 1px solid #F0F0F0;
             li{
-                font-size: 16px;
+                font-size: 1rem;//16px;
                 padding: 14px 22px 0;
                 background-color: transparent;
                 a {
@@ -1122,7 +1120,7 @@ margin-top:14px ;
     }
     .center-align .search_icon{
 padding-right: 10px;
-font-size: 18px;
+font-size: 1.125rem;//18px;
 }
 
  .search_input,.searchbar:hover > .search_input {
@@ -1480,7 +1478,6 @@ a.active_link:active {
 
 #carouselTestimonial {
     margin: 0 auto 108px auto;
-
 }
 
 .carousel-control-next, .carousel-control-prev, .carousel-indicators{
@@ -1707,7 +1704,7 @@ footer {
         border-radius: unset;
         border-top: 1px solid #a5a5a557;
         color: #fff;
-        font-size: 15px;
+        font-size: 0.9375rem;
         font-weight: 700;
         padding: 12px 0;
 
@@ -1749,7 +1746,7 @@ footer {
         color: #A5A5A5;
         font-weight: 400;
         font-size: 0.8125rem;//13px
-        line-height: 40px;
+        line-height: 2.5rem;//40px
 
         &:hover,
         &:active {
