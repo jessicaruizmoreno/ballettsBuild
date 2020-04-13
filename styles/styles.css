@@ -23,7 +23,7 @@
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 
 .more .fa-chevron-down {
@@ -216,8 +216,8 @@ p.link-nav {
     padding-top: 116px;
   }
   .ad-text h2 {
-    font-size: 38px;
-    line-height: 46px;
+    font-size: 2.375rem;
+    line-height: 2.875rem;
   }
   h3.category_links {
     font-size: 1.375rem;
@@ -562,7 +562,7 @@ button {
   height: 40px;
   width: 40px;
   color: black;
-  font-size: 19px;
+  font-size: 1.1875rem;
 }
 
 .social-nav {
@@ -726,7 +726,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     font-size: 2.6rem;
   }
   .center-align .search_icon {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .center-align .icon svg {
     height: 30px;
@@ -754,14 +754,14 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   .social-nav {
     height: 27px;
     line-height: 2.3;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .center-align .icon svg {
     height: 20px;
     width: 20px;
   }
   .box-left p {
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: unset;
   }
   .box-left {
@@ -797,7 +797,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
     border-bottom: 1px solid #F0F0F0;
   }
   .pink-box .navbar-nav li {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 14px 22px 0;
     background-color: transparent;
   }
@@ -852,7 +852,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   }
   .center-align .search_icon {
     padding-right: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .search_input, .searchbar:hover > .search_input {
     width: 260px;
@@ -1384,7 +1384,7 @@ footer .nav-item .nav-link {
   border-radius: unset;
   border-top: 1px solid #a5a5a557;
   color: #fff;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   padding: 12px 0;
 }
@@ -1420,7 +1420,7 @@ footer .more-links a {
   color: #A5A5A5;
   font-weight: 400;
   font-size: 0.8125rem;
-  line-height: 40px;
+  line-height: 2.5rem;
 }
 
 footer .more-links a:hover, footer .more-links a:active {
