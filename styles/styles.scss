@@ -628,11 +628,11 @@ width: 140px;
     .section1-4 {
         position: absolute;
         width: 130px;
-        left: 85%;
+        left: 91%;
         right: 0;
         display: block;
         z-index: 1;
-        top: -29%;
+        top: 32%;
     }
 
     .section1-2 {
@@ -650,7 +650,7 @@ width: 140px;
         top: 2150px;
     }
 
-.section1-3,.section3-1{display:none}
+.section3-1{display:none}
 
 }
 
@@ -659,15 +659,18 @@ width: 140px;
 
 @include respond-above(xl){
 
-    .section1-4{
-       top: -24%; 
-       left: 81%;
-       z-index: 1;
-   
-    }
+       .section1-3{
+           display: block;
+           left: 78%;
+       }
 
 .section1-2 {
     left: -30px;
+}
+
+.section1-4{
+    display: block;
+    left: 86%;
 }
 
 }

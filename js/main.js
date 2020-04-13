@@ -72,13 +72,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     tl.from('.section1-2, .section1-3',4 ,{delay:3,opacity:0, y:50,ease:Power2.easeInOut},"-=6");
     tl.from('.section1-4',4,{delay:1.8,opacity:0, y:100,ease:Power2.easeInOut},"-=6");
     tl.from('.more',1, {opacity:0,ease:Power2.easeInOut,delay:3},"=-6");
-   
+    tl.from('.second-section', 1, {opacity:0,ease:Power2.easeInOut,delay:3},'-=6');
     
 
     //second timeline//
     let t2 = new TimelineMax();
-    t2.from('.second-section', 1, {opacity:0,ease:Power2.easeInOut,delay:3},'-=6');
-    t2.to('.section1-4', 10, {top:'66%',ease:new SlowMo(0.1, 0.1)},'-=3');
+    t2.to('.section1-4', 6, {top:'27%',ease:Power2.easeInOut},'-=3');
     t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-3', 4, {top:'-27%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut},'-=6');
