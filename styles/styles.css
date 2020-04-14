@@ -43,7 +43,7 @@
 .more p {
   text-align: center;
   width: 100px;
-  height: 100px;
+  height: 70px;
   margin: 0 auto;
   font-size: 1.0625rem;
 }
@@ -440,7 +440,7 @@ body {
 .more p {
   text-align: center;
   width: 100px;
-  height: 100px;
+  height: 70px;
   margin: 0 auto;
   font-size: 1.0625rem;
 }
@@ -668,7 +668,7 @@ p.link-nav {
 .more p {
   text-align: center;
   width: 100px;
-  height: 100px;
+  height: 70px;
   margin: 0 auto;
   font-size: 1.0625rem;
 }
@@ -1047,7 +1047,7 @@ p.link-nav {
   .section1-4 {
     display: block;
     left: 86%;
-    top: 30%;
+    top: 25%;
   }
 }
 

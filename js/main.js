@@ -70,18 +70,18 @@ document.addEventListener('DOMContentLoaded',()=>{
     tl.from('#banner', 1, {opacity:0, y:-30, ease:Power2.easeInOut});
     tl.from('.section1-1', 4, {delay:3,opacity:0, x:50, ease:Power2.easeInOut},"-=6");
     tl.from('.section1-2, .section1-3',4 ,{delay:3,opacity:0, y:50,ease:Power2.easeInOut},"-=6");
-    tl.from('.section1-4',4,{delay:1.8,opacity:0, y:100,ease:Power2.easeInOut},"-=6");
+    tl.from('.section1-4',4,{opacity:0,ease:Power2.easeInOut},"-=6");
     tl.from('.more',1, {opacity:0,ease:Power2.easeInOut,delay:3},"=-6");
     tl.from('.second-section', 1, {opacity:0,ease:Power2.easeInOut,delay:3},'-=6');
     
 
     //second timeline//
     let t2 = new TimelineMax();
-    t2.to('.section1-4', 6, {top:'27%',ease:Power2.easeInOut},'-=3');
+
+    t2.to('.section1-4', 3, {top:'28%',ease:Power2.easeInOut},'-=3');
     t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
-    t2.to('.section1-3', 4, {top:'-27%',ease:Power2.easeInOut},'-=6');
+    t2.to('.section1-3', 4, {top:'-31%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut},'-=6');
-    t2.to('#heroImage',1,{y:-10,ease:Power0.easeNone,delay:1},'-=6');
     t2.from('.third-section,.fourth-section,.fifth-section,.newsletter,footer',2,{opacity:0,ease:Power2.easeInOut,delay:6},'-=6');
     t2.from('.section3-1', 6, {opacity:0,y:90,ease:Power2.easeInOut});  
     t2.to('.section3-1', 6, {top:'-8%',ease:Power2.easeInOut},'-=6');  
