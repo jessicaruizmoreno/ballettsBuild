@@ -310,6 +310,11 @@ button {
 }
 
 @include respond-above(xl) {
+
+#banner{   
+     padding-left: 40px;
+    padding-top: 60px;}
+
     #heroImage {
         background-position-x: 670px !important;
     

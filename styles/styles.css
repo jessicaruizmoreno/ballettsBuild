@@ -1105,6 +1105,10 @@ button {
 }
 
 @media (min-width: 1200px) {
+  #banner {
+    padding-left: 40px;
+    padding-top: 60px;
+  }
   #heroImage {
     background-position-x: 670px !important;
   }

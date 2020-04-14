@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     t2.to('.section1-4', 3, {top:'28%',ease:Power2.easeInOut},'-=3');
     t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-3', 4, {top:'-31%',ease:Power2.easeInOut},'-=6');
-    t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut},'-=6');
+    t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut,delay:1},'-=6');
     t2.from('.third-section,.fourth-section,.fifth-section,.newsletter,footer',2,{opacity:0,ease:Power2.easeInOut,delay:6},'-=6');
     t2.from('.section3-1', 6, {opacity:0,y:90,ease:Power2.easeInOut});  
     t2.to('.section3-1', 6, {top:'-8%',ease:Power2.easeInOut},'-=6');  
