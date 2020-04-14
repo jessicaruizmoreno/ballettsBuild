@@ -128,12 +128,6 @@ H2 {
   font-size: 1.25rem;
 }
 
-.ad-text {
-  background-color: #FFF5F9;
-  margin-top: 0.5rem;
-  padding: 6.25rem 1.5625rem 1.5625rem;
-}
-
 .ad-text h2 {
   text-align: center;
   padding-bottom: 20px;
@@ -522,12 +516,6 @@ H2 {
   font-size: 1.25rem;
 }
 
-.ad-text {
-  background-color: #FFF5F9;
-  margin-top: 0.5rem;
-  padding: 6.25rem 1.5625rem 1.5625rem;
-}
-
 .ad-text h2 {
   text-align: center;
   padding-bottom: 20px;
@@ -754,12 +742,6 @@ H2 {
   color: #2F2F2F;
   font-weight: 500;
   font-size: 1.25rem;
-}
-
-.ad-text {
-  background-color: #FFF5F9;
-  margin-top: 0.5rem;
-  padding: 6.25rem 1.5625rem 1.5625rem;
 }
 
 .ad-text h2 {
@@ -1138,6 +1120,13 @@ button {
   padding: 0px;
 }
 
+.ad-text {
+  min-height: 300px;
+  background-color: #FFF5F9;
+  margin-top: 0.5rem;
+  padding: 6.25rem 1.5625rem 1.5625rem;
+}
+
 .ad-image {
   min-height: 300px;
   width: 100%;
@@ -1161,8 +1150,8 @@ button {
 
 @media (min-width: 992px) {
   .ad-text {
-    padding-top: 116px;
     min-height: 384px;
+    padding-top: 110px;
   }
   .ad-image {
     min-height: 384px;

@@ -329,6 +329,12 @@ button {
     padding: 0px;
 }
 
+.ad-text {
+    min-height: 300px;
+    background-color: $light-accent;
+    margin-top: 0.5rem; //8px
+    padding: 6.25rem 1.5625rem 1.5625rem;//100px 25px
+}
 
 .ad-image {
     min-height: 300px;
@@ -354,8 +360,8 @@ button {
 @include respond-above(lg) {
    
     .ad-text {
-        padding-top: 116px;
         min-height: 384px;
+       padding-top: 110px;
     }
     
     .ad-image {
