@@ -4,8 +4,6 @@
     "sources": [
         "global.scss",
         "mixins.scss",
-        "colors.scss",
-        "fonts.scss",
         "breakpoints.scss"
     ],
     "names": [],
