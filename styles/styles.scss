@@ -1,10 +1,12 @@
+//Hompage Styles//
+
 @import "global";
 @import "mixins";
 @import "colors";
 @import "breakpoints";
-@import "fonts";
 
-//Hompage Styles//
+
+
 //ANIMATION//
 .first-section, .third-section {
     position: relative;
@@ -309,8 +311,23 @@ button {
 
 }
 
-@include respond-above(xl) {
 
+
+@media (min-width: 460px) {
+    #banner {
+        width: 100%;
+
+    }
+}
+
+
+@media (min-width:1100px){
+    #banner{   
+        padding-left: 50px;
+    } 
+}
+
+@include respond-above(xl) {
 #banner{   
      padding-left: 40px;
     padding-top: 60px;}
@@ -321,13 +338,6 @@ button {
     }
 }
 
-
-@media (min-width: 460px) {
-    #banner {
-        width: 100%;
-
-    }
-}
 
 //====Ad Image Layout=====//
 .ad-layout .col {

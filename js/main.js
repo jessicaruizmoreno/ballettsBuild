@@ -2,6 +2,21 @@
 	"use strict";
     console.log("SEAF Fired");
 
+//FOR SEARCH//
+document.addEventListener('DOMContentLoaded',()=>{
+let url ="https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?src=beaded"
+fetch(url)
+.then(response=>response.text())
+.then(data=>{
+//constole.log(data);
+let parser = new DOMParser();
+let xml = parser.parseFromString(data,"application/xml");
+document.getElementById('results').textContent = data;
+console.log(xml);
+
+})
+});
+
 //Smooth Scroll//
 let speed = 500;
 let moving_frequency = 15;
@@ -82,7 +97,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-3', 4, {top:'-31%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut,delay:1},'-=6');
-    t2.from('.third-section,.fourth-section,.fifth-section,.newsletter,footer',2,{opacity:0,ease:Power2.easeInOut,delay:6},'-=6');
+    t2.from('.third-section,.fourth-section,.fifth-section,.sixth-section',2,{opacity:0,ease:Power2.easeInOut,delay:6},'-=6');
     t2.from('.section3-1', 6, {opacity:0,y:90,ease:Power2.easeInOut});  
     t2.to('.section3-1', 6, {top:'-8%',ease:Power2.easeInOut},'-=6');  
 
@@ -134,7 +149,7 @@ if(hasDocumentMode) {
  if(isIE11){
     TimelineMax.killAll();
     ScrollMagic.killAll();
- } else if(isIE10){
+} else if(isIE10){
     TimelineMax.killAll();
     ScrollMagic.killAll();
  } else if(isIE9){
@@ -143,7 +158,7 @@ if(hasDocumentMode) {
  } else if(isIE8){
     TimelineMax.killAll();
     ScrollMagic.killAll();
- }
+}
 }
 
 
