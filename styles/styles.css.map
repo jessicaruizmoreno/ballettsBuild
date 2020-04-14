@@ -7,21 +7,7 @@
         "mixins.scss",
         "colors.scss",
         "breakpoints.scss",
-        "fonts.scss",
-        "colors.scss",
-        "breakpoints.scss",
-        "breakpoints.scss",
-        "mixins.scss",
-        "colors.scss",
-        "breakpoints.scss",
-        "fonts.scss",
-        "colors.scss",
-        "breakpoints.scss",
-        "colors.scss",
-        "breakpoints.scss",
-        "fonts.scss",
-        "colors.scss",
-        "breakpoints.scss"
+        "fonts.scss"
     ],
     "names": [],
     "file": "styles.css"
