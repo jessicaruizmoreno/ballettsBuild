@@ -1,21 +1,52 @@
+
 (function() {
 	"use strict";
     console.log("SEAF Fired");
+    
+    
 
-//FOR SEARCH//
-document.addEventListener('DOMContentLoaded',()=>{
-let url ="https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?src=beaded"
-fetch(url)
-.then(response=>response.text())
-.then(data=>{
-//constole.log(data);
-let parser = new DOMParser();
-let xml = parser.parseFromString(data,"application/xml");
-document.getElementById('results').textContent = data;
-console.log(xml);
 
-})
-});
+    let container = document.getElementById('results');  
+  
+    if (document.getElementById('results')){   
+    let params = window.location.search.substr(1);   
+    let xhr = new XMLHttpRequest();
+    let url = 'http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?'+params+'&format=json';
+    console.log("foudn div");
+    xhr.open('GET', url, true);
+    xhr.onload =function(){     
+    if(xhr.status >=200 && xhr.status < 400){
+        var ourData = null;
+try {
+    ourData = JSON.parse(xhr.responseText);
+    renderHTML(ourData);
+}
+catch(e) {
+  // forget about it :)
+}        
+}
+    };
+xhr.send(params);
+}
+else{
+    console.log("xhr dont load");
+}
+
+
+    function renderHTML(data){  
+        let htmlString ="";  
+        if (data !== 'undefined'|| data !== 'null' || data.length === 0  || data === ""){ 
+        for (var i = 0; i < data.Products.length; i++){
+            htmlString += "<p>" + data.Products[i]. SalePrice + "</p>" + "<img src="+data.Products[i].ImgURL+">";
+        }
+        console.log("show functions");    
+        
+    }else{  
+        console.log("no results");
+        }
+        container.insertAdjacentHTML('beforeend',htmlString);
+    }
+
 
 //Smooth Scroll//
 let speed = 500;
@@ -138,28 +169,31 @@ if(isIE7) {
      ScrollMagic.killAll();
 }    
 
-var hasDocumentMode = (document.documentMode !== undefined),
+var isIE8 = (document.attachEvent !== undefined);
+if(isIE8) {
+     TimelineMax.killAll();
+     ScrollMagic.killAll();
+}    
 
-isIE8 = (isDocumentMode === 8),
-isIE9 = (isDocumentMode === 9),
-isIE10 = (isDocumentMode === 10),
-isIE11 = (isDocumentMode === 11);
+var isIE9 = (document.attachEvent !== undefined);
+if(isIE9) {
+     TimelineMax.killAll();
+     ScrollMagic.killAll();
+}    
 
-if(hasDocumentMode) {
- if(isIE11){
-    TimelineMax.killAll();
-    ScrollMagic.killAll();
-} else if(isIE10){
-    TimelineMax.killAll();
-    ScrollMagic.killAll();
- } else if(isIE9){
-    TimelineMax.killAll();
-    ScrollMagic.killAll();
- } else if(isIE8){
-    TimelineMax.killAll();
-    ScrollMagic.killAll();
+var isIE10 = (document.attachEvent !== undefined);
+if(isIE10) {
+     TimelineMax.killAll();
+     ScrollMagic.killAll();
+}    
+
+var isIE11 = (document.attachEvent !== undefined);
+if(isIE11) {
+     TimelineMax.killAll();
+     ScrollMagic.killAll();
+
 }
-}
+
 
 
 
