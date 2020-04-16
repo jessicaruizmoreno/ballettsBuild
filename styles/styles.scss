@@ -1,10 +1,415 @@
-//Hompage Styles//
-
-@import "global";
-@import "mixins";
 @import "colors";
 @import "breakpoints";
 
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
+
+$font-cursive: 'Niconne',
+Helvetica,
+sans-serif;
+$font-set-1: 'Noto Sans JP',
+Helvetica,
+sans-serif;
+
+$light: 300;
+$normal: 400;
+$med:500;
+$bold:700;
+
+
+.more p {
+    text-align: center;
+    width: 100px;
+    height: 70px;
+    margin: 0 auto; 
+    font-size:1.0625rem;//17px
+}
+
+.more .fa-chevron-down{
+    -webkit-animation: mover 50s linear infinite;
+    animation: mover 1s linear infinite;
+    position: relative;
+
+
+@keyframes mover {
+    0%, 100% {
+        bottom: 0;
+      }
+      50% {
+        bottom: 3px;
+      }
+    }
+
+}
+
+
+H2,
+H3,
+H4,
+H5,
+H6,
+P {
+    font-family: $font-set-1;
+}
+
+a {
+    font-family: $font-set-1;
+}
+
+H1 {
+    font-family: $font-cursive;
+    font-size: 2.25rem; //36px
+    line-height: 2.375rem; //38px
+    color: $soft-black;
+    padding: 4.125rem 0 1.25rem; //66px 0 20px
+
+}
+
+@media (min-width: 460px) {
+    H1 {
+        font-size: 3rem;//48px
+        line-height: 2.99rem;//47.84px
+    }
+}
+
+@media (min-width: 500px) {
+    H1 {
+        font-size: 3.6rem;//57.6px
+        line-height: 3.5rem;//56px
+    }
+}
+
+
+@include respond-above(sm) {
+    H1 {
+        font-size: 4.0625rem;//65px
+        line-height: 3.9375rem;//63px
+    }
+}
+
+@include respond-above(lg) {
+    H1 {
+        font-size: 90px;
+        line-height: 72px;
+        letter-spacing: 0px;
+    }
+}
+
+
+H2 {
+    color: $soft-black;
+    font-weight: $med;
+    font-size: 1.25rem; //20px
+}
+
+.ad-text h2 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+
+
+
+
+H2.cats_title {
+    font-weight: $light;
+    font-size: 1.25rem; //20px
+    margin: 69px auto;
+    text-align: center;
+}
+
+
+
+H3 {
+    font-weight: $bold;
+    font-size: 1.25rem; //20px  
+}
+
+H3.testimonals {
+    color: $soft-black;
+    text-align: center;
+    margin-top: 4.625rem;//74px
+    margin-bottom: 1.875rem;//30px
+}
+
+H3.category_links {
+    color: $white;
+    position: relative;
+    z-index: 0;
+}
+
+
+H4.authors {
+    font-weight: $bold;
+    font-size: 0.875rem;//14px
+    color: $soft-black;
+}
+
+H4 {
+    font-weight: $light;
+    font-size: 1.25rem;//20px
+
+}
+
+H5 {
+    font-weight: $med;
+    font-size:  0.875rem;//14px
+}
+
+
+H5.modal-title{
+    font-size:1.125rem;//18px
+    color:$black;
+}
+
+p, .modal-body{
+    color: $soft-black;
+    font-size: 1rem;//16px
+    line-height:1.5rem; //24px
+}
+
+
+p.copyright {
+    font-size: 0.6875rem;//11px
+    color: $grey;
+    font-weight: $normal;
+    padding-top: 10px;
+    margin-bottom: 8px;
+
+    a {
+        font-weight: $med;
+        color: $white;
+
+        &:hover,
+        &:active {
+            color: $main-pink;
+            text-decoration: none;
+        }
+    }
+}
+
+p.link-nav {
+    font-size: 0.6875rem;//11px
+    text-align: left;
+    float: right;
+    padding-left: 6px;
+    margin-bottom: 0;
+}
+
+
+@include respond-above(md) {
+
+
+      .ad-text  h2 {
+            font-size: 1.625rem;//26px
+            text-align: left;
+            line-height: 2.0625rem;//33px
+        }
+    
+}
+
+@include respond-above(lg) {
+
+    H2.cats_title,
+    h3 {
+        font-size: 1.75rem;//28px
+    }
+
+  
+
+       .ad-text h2 {
+            font-size: 2.375rem;//38px
+            line-height: 2.875rem;//46px;
+          
+        }
+
+    h3.category_links {
+        font-size: 1.375rem;//22px
+    }
+
+    p,
+    h5 {
+        font-size: 1.125rem;//18px
+        line-height: 1.75rem;//28px
+    }
+
+    h4 {
+        font-size: 1.75rem;//28px
+    }
+
+
+}
+
+
+
+// ===== MIXINS ===== //
+//buttons
+@mixin primaryBtn {
+    background-color: $main-pink;
+    color: $black;
+    font-family: $font-set-1;
+    font-weight: $bold;
+    width: 168px;
+    height: 40px;
+    font-size: 0.8125rem; //13px
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+@mixin secBtn {
+    background-color: $black;
+    color: $white;
+    font-family: $font-set-1;
+    font-weight: $bold;
+    width: 168px;
+    height: 40px;
+    font-size: 0.8125rem; //13px
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+
+//aligments
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin tabletPadding {
+    padding: 0 40px;
+}
+
+//transparent
+@mixin remove {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
+
+// ===== GLOBAL STYLES ===== //
+body {
+    font-size: 16px;
+}
+
+.newsletter {
+    @include flexCenter();
+}
+
+.container-fluid,
+.container-md {
+    padding: 0px;
+}
+
+.layout-main{
+    position: relative;
+    top: 140px;
+    margin-bottom: 147px;
+    overflow: hidden;
+    height:100%;
+}
+
+
+
+@include respond-above(md){
+    .layout-main{   
+        top:180px;
+        margin-bottom: 0;
+    }
+
+}
+
+@include respond-above(lg){
+    .layout-main{
+    top: 130px; 
+    }
+}
+
+@media (min-width:1100px){
+.layout-main{
+    overflow: visible;
+}
+
+}
+
+#img-jumbo{
+    background: url(assets/images/jumbo-cover.jpg);
+}
+
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+.primaryBtn {
+    @include primaryBtn();
+}
+
+@include respond-above(md) {
+    .primaryBtn {
+        height: 46px;
+        font-size: 0.9375rem;//15px
+    }
+}
+
+
+
+
+.hero.primaryBtn {
+    @include primaryBtn();
+    margin-bottom: 1.375rem; //22px
+    a{
+        color:$black;
+    &:active,&:hover{
+    text-decoration: none;
+    }
+    
+    
+    }   
+
+    @include respond-above(md) {
+        font-size: 0.9375rem;//15px
+        height: 46px;
+    }
+
+
+}
+
+
+.secBtn {
+    @include secBtn();
+
+    @include respond-above(md) {
+        height: 46px;
+        font-size: 0.9375rem;//15px
+        width: 204px;
+    }
+
+}
+
+
+
+.ad.primaryBtn {
+    @include primaryBtn();
+    display: block;
+    margin: 0 auto;
+}
+
+
+@include respond-above(md) {
+    .ad.primaryBtn {
+        height: 46px;
+        width: 193px;
+        margin: unset;
+
+    }
+}
 
 
 //ANIMATION//
