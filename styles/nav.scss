@@ -1,7 +1,4 @@
-@import "breakpoints";
-@import "colors";
-@import "styles";
-
+@import 'styles';
 //global barNavs
 @mixin barNavs {
     font-size: 1.01rem;//16.16px
@@ -416,7 +413,7 @@ margin-top:14px ;
     .second-nav .center-align{
         display: block;
     position: relative;
-    top: -78px;
+    top: -69px;
     }
 
     .center-align {

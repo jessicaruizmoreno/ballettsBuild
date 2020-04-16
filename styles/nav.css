@@ -18,24 +18,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .container-md {
-    max-width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container-md {
-    max-width: 1000px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-md {
-    max-width: 1140px;
-  }
-}
-
 .more p {
   text-align: center;
   width: 100px;
@@ -87,6 +69,10 @@ H1 {
   line-height: 2.375rem;
   color: #2F2F2F;
   padding: 4.125rem 0 1.25rem;
+}
+
+H1.display-4 {
+  color: #FFFFFF;
 }
 
 @media (min-width: 460px) {
@@ -257,32 +243,62 @@ body {
 .container-fluid,
 .container-md {
   padding: 0px;
+  position: relative;
 }
 
 .layout-main {
   position: relative;
-  top: 140px;
-  margin-bottom: 147px;
   overflow: hidden;
-  height: 100%;
+  padding-top: 150px;
+  margin-bottom: 11px;
 }
 
 @media (min-width: 768px) {
   .layout-main {
-    top: 180px;
-    margin-bottom: 0;
+    padding-top: 180px;
   }
 }
 
 @media (min-width: 992px) {
   .layout-main {
-    top: 130px;
+    padding-top: 160px;
   }
 }
 
 @media (min-width: 1100px) {
   .layout-main {
     overflow: visible;
+  }
+}
+
+.sec-pad {
+  padding: 2rem 1.2rem 1rem;
+}
+
+section#cover-header {
+  position: relative;
+  top: 140px;
+}
+
+.jumbotron#img-jumbo {
+  background: url(/assets/images/jumbo-cover.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .jumbotron#img-jumbo {
+    height: 330px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .jumbotron#img-jumbo {
+    height: 380px;
+  }
+  .jumbotron#img-jumbo h1 {
+    padding-top: 10%;
   }
 }
 
@@ -478,7 +494,7 @@ body {
     width: 99px;
     position: absolute;
     z-index: -1;
-    top: -170px;
+    top: -90px;
     right: 0;
     left: 0;
   }
@@ -570,7 +586,7 @@ body {
   .section1-4 {
     display: block;
     left: 86%;
-    top: 25%;
+    top: 28%;
   }
 }
 
@@ -591,11 +607,11 @@ button {
 
 #heroImage {
   background: url(../assets/images/bride-hero.png) no-repeat;
-  min-height: 500px;
+  min-height: 450px;
   background-position-x: 35vw;
   background-size: 270px;
   padding: 30px 8px;
-  background-position-y: 5vh;
+  background-position-y: 2vh;
 }
 
 #banner {
@@ -924,12 +940,6 @@ a.active_link:active .cats_box .cat-images {
   }
 }
 
-@media (min-width: 768px) {
-  .posts {
-    margin-bottom: 200px;
-  }
-}
-
 .newsletter {
   background-color: #FFF5F9;
   padding: 77px 0;
@@ -940,7 +950,6 @@ a.active_link:active .cats_box .cat-images {
 }
 
 .newsletter .primaryBtn {
-  background-color: #FB9DC4;
   width: 100%;
   margin-top: 20px;
 }
@@ -959,7 +968,6 @@ a.active_link:active .cats_box .cat-images {
     margin-bottom: 21px;
   }
   .newsletter .primaryBtn {
-    background-color: #FB9DC4;
     width: 30%;
     float: left;
   }
@@ -1328,7 +1336,7 @@ ul.navbar-nav li a:hover, ul.navbar-nav li a:active {
   .second-nav .center-align {
     display: block;
     position: relative;
-    top: -78px;
+    top: -69px;
   }
   .center-align {
     width: 1000px;
