@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     //second timeline//
     let t2 = new TimelineMax();
 
-    t2.to('.section1-4', 3, {top:'28%',ease:Power2.easeInOut},'-=3');
+    t2.to('.section1-4', 3, {top:'33%',ease:Power2.easeInOut},'-=3');
     t2.to('.section1-2', 6, {top:'5%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-3', 4, {top:'-31%',ease:Power2.easeInOut},'-=6');
     t2.to('.section1-1', 4, {top:'10%',ease:Power2.easeInOut,delay:1},'-=6');
