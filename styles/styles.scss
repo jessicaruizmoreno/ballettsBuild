@@ -67,20 +67,21 @@ H1 {
 
 }
 
-H1.display-4{
-    color:$white;
-    padding:30px;
+.container H1{
+    padding-bottom:30px;
+    font-size: 3.25rem;
 }
 
+
 @media (min-width: 460px) {
-    H1 {
+ H1 {
         font-size: 3rem;//48px
         line-height: 2.99rem;//47.84px
     }
 }
 
 @media (min-width: 500px) {
-    H1 {
+   H1 {
         font-size: 3.6rem;//57.6px
         line-height: 3.5rem;//56px
     }
@@ -88,19 +89,20 @@ H1.display-4{
 
 
 @include respond-above(sm) {
-    H1 {
+    .container H1, H1 {
         font-size: 4.0625rem;//65px
         line-height: 3.9375rem;//63px
     }
 }
 
 @include respond-above(lg) {
-    H1 {
+    .container H1, H1 {
         font-size: 90px;
         line-height: 72px;
         letter-spacing: 0px;
     }
 }
+
 
 
 H2 {
@@ -294,12 +296,6 @@ p.link-nav {
     background-color: transparent;
 }
 
-//padding for text
-@mixin padSec{
-    padding: 2rem 1.2rem 1rem; 
-}
-
-
 // ===== GLOBAL STYLES ===== //
 body {
     font-size: 16px;
@@ -341,39 +337,6 @@ body {
 
 }
 
-
-.sec-pad{
-@include padSec();
-}
-
-section#cover-header{
-    position: relative;
-    top: 140px;
-}
-
-
-.jumbotron#img-jumbo{
-    background: url(/assets/images/jumbo-cover.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0;
-}
-
-@include respond-above(lg){
-    .jumbotron#img-jumbo{
-        height: 330px;
-        h1{
-            padding-top: 7%;
-        }
-    }
-}
-
-@media (min-width:1100px){
-    .jumbotron#img-jumbo{
-        height: 380px;
-
-    }
-}
 
 .row {
     margin-right: 0;
@@ -1152,4 +1115,8 @@ z-index: 0 !important;
 }
 
 
-
+//search page/
+#results{
+height: 300px;
+padding-top: 70px;
+}

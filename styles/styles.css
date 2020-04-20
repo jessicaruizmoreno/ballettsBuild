@@ -71,9 +71,9 @@ H1 {
   padding: 4.125rem 0 1.25rem;
 }
 
-H1.display-4 {
-  color: #FFFFFF;
-  padding: 30px;
+.container H1 {
+  padding-bottom: 30px;
+  font-size: 3.25rem;
 }
 
 @media (min-width: 460px) {
@@ -91,14 +91,14 @@ H1.display-4 {
 }
 
 @media (min-width: 576px) {
-  H1 {
+  .container H1, H1 {
     font-size: 4.0625rem;
     line-height: 3.9375rem;
   }
 }
 
 @media (min-width: 992px) {
-  H1 {
+  .container H1, H1 {
     font-size: 90px;
     line-height: 72px;
     letter-spacing: 0px;
@@ -269,37 +269,6 @@ body {
 @media (min-width: 1100px) {
   .layout-main {
     overflow: visible;
-  }
-}
-
-.sec-pad {
-  padding: 2rem 1.2rem 1rem;
-}
-
-section#cover-header {
-  position: relative;
-  top: 140px;
-}
-
-.jumbotron#img-jumbo {
-  background: url(/assets/images/jumbo-cover.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: 0;
-}
-
-@media (min-width: 992px) {
-  .jumbotron#img-jumbo {
-    height: 330px;
-  }
-  .jumbotron#img-jumbo h1 {
-    padding-top: 7%;
-  }
-}
-
-@media (min-width: 1100px) {
-  .jumbotron#img-jumbo {
-    height: 380px;
   }
 }
 
@@ -993,5 +962,10 @@ a.active_link:active .cats_box .cat-images {
   .form-group {
     width: 1130px;
   }
+}
+
+#results {
+  height: 300px;
+  padding-top: 70px;
 }
 /*# sourceMappingURL=styles.css.map */
