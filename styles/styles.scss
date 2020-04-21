@@ -816,7 +816,7 @@ a.active_link:active {
 
 
 
-.cats_box {
+.cats_box{
     min-height: 216px;
     position: relative;
     margin-bottom: 8px;
@@ -1119,4 +1119,56 @@ z-index: 0 !important;
 #results{
 height: 300px;
 padding-top: 70px;
+}
+
+//our collection page//
+
+.container.brands{
+    margin-bottom: 30px;
+}
+
+.bg-pink {
+    background-color:$light-accent;
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 8px;
+    @include flexCenter();
+
+ .mr-1{
+margin-right:0px !important;
+ }
+    
+}
+
+.brand-images{
+     width: 75%; 
+    margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        position: absolute;
+    }
+
+@include respond-above(sm){
+    .brands .row-cols-sm-2>*{
+    flex: 0 0 49%;
+    }
+}
+
+@include respond-above(lg) {
+
+.bg-pink{
+    min-height: 230px;
+}
+
+    .mr-1{
+        margin-right:8px !important;
+         }
+         .brands .row-cols-sm-2 > *{
+            flex: 1 0 24%;
+         }
+
+
 }
