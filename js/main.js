@@ -43,6 +43,7 @@ let params = location.search.substr(1).split("&");
 
                 } else {
                     console.error(xhr.statusText);
+                    document.getElementById("results").innerHTML += "error";
                 }
             }
 
