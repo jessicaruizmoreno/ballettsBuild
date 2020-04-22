@@ -51,6 +51,7 @@ let params = location.search.substr(1).split("&");
         };
         xhr.onerror = function (e) {
             console.error(xhr.statusText);
+            document.getElementById("results").innerHTML += "error";
         };
         xhr.send(params);
 
