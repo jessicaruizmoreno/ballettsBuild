@@ -53,7 +53,7 @@ let params = location.search.substr(1).split("&");
             console.error(xhr.statusText);
             document.getElementById("results").innerHTML += "error";
         };
-        xhr.send(params);
+        xhr.send();
 
 
     } else {
