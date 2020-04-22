@@ -98,7 +98,12 @@ H1 {
 }
 
 @media (min-width: 992px) {
-  .container H1, H1 {
+  .container H1 {
+    font-size: 70px;
+    line-height: 72px;
+    letter-spacing: 0px;
+  }
+  H1 {
     font-size: 90px;
     line-height: 72px;
     letter-spacing: 0px;
