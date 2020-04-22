@@ -74,6 +74,7 @@ H1 {
 .container H1 {
   padding-bottom: 30px;
   font-size: 3.25rem;
+  line-height: 62px;
 }
 
 @media (min-width: 460px) {
@@ -970,7 +971,7 @@ a.active_link:active .cats_box .cat-images {
 }
 
 #results {
-  padding-top: 70px;
+  padding: 70px 0;
 }
 
 .container.brands {
@@ -1029,6 +1030,45 @@ a.active_link:active .cats_box .cat-images {
         -ms-flex: 1 0 24%;
             flex: 1 0 24%;
   }
+}
+
+.service-box {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.icon-box img {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .cs-service .row-cols-lg-3 > * {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 32.333333% !important;
+            flex: 0 0 32.333333% !important;
+  }
+}
+
+span#faq {
+  margin-bottom: 33px;
+  display: block;
+}
+
+.btn-faq {
+  text-align: left;
+}
+
+#faq-dropdowns {
+  margin-bottom: 40px;
+}
+
+.bg-faq {
+  background-color: #FFF5F9;
+}
+
+.card-body a.emailLink {
+  color: #FA85B6;
 }
 
 footer {
