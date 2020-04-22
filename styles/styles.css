@@ -970,8 +970,7 @@ a.active_link:active .cats_box .cat-images {
 }
 
 #results {
-  height: 300px;
-  padding-top: 70px;
+  padding: 70px 0;
 }
 
 .container.brands {

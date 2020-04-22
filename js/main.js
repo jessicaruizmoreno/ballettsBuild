@@ -3,13 +3,10 @@
     console.log("SEAF Fired");
 
 
-    let container = document.getElementById('results');
+let container = document.getElementById('results');
 
-    let params = location.search.substr(1).split("&");
-   if(!location.search == 0){
-       document.getElementById("results").innerHTML ="err cannot get api";
-       return;
-   }
+let params = location.search.substr(1).split("&");
+ 
 
 
     if (container) {
@@ -26,10 +23,6 @@
                 if (xhr.status === 200) {
                     console.log(xhr.responseText);
 
-                    if (xhr.responseText){
-                        document.getElementById("results").innerHTML ="err";
-                    }
-                    
                     let ourData = JSON.parse(xhr.responseText);
 
                     if (ourData !== 'undefined' || ourData !== 'null' || ourData.length == 0 || ourData == "") {
@@ -38,7 +31,11 @@
 
                     }
                     try {
-                        if (isNaN(ourData)) throw "No results were found";
+                        if(ourData == "") throw "No results were found";
+                        if(isNaN(ourData)) throw "No results were found";
+                        ourData = Number(ourData);
+                        if(ourData < 5) throw "No results were found";
+                        if(ourData > 10) throw "No results were found";
 
                     } catch (e) {
                         document.getElementById("results").innerHTML += e;
