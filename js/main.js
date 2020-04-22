@@ -13,7 +13,7 @@ let params = location.search.substr(1).split("&");
         console.log("found div");
 
         let xhr = new XMLHttpRequest();
-        let url = 'http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json';
+        let url = 'https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json';
 
 
         xhr.open('GET', url, true);
@@ -33,10 +33,7 @@ let params = location.search.substr(1).split("&");
                     try {
                         if(ourData == "") throw "No results were found";
                         if(isNaN(ourData)) throw "No results were found";
-                        ourData = Number(ourData);
-                        if(ourData < 5) throw "No results were found";
-                        if(ourData > 10) throw "No results were found";
-
+                      
                     } catch (e) {
                         document.getElementById("results").innerHTML += e;
                     }
