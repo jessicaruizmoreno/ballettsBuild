@@ -1123,8 +1123,29 @@ z-index: 0 !important;
 
 //search page/
 #results{
-padding: 70px 0;
+padding: 60px 0;
 }
+
+.gallery#results{
+    padding:40px 0;
+           
+    #header h1{
+            padding:0;
+        }
+    
+
+        .col{
+            text-align: center;
+
+           .imgProduct{
+            width: 180px;
+            min-width: 260px;
+            margin: 50px 0;
+           }
+        }
+    
+}
+
 
 //our collection page//
 
