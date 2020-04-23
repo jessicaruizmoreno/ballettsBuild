@@ -52,11 +52,26 @@
 function renderHTML(data) {
     let htmlString = "";
     for (var i = 0; i < data.Products.length; i++) {
-        htmlString += "<p>" + data.Products[i].SalePrice + "</p>" + "<img src=" + data.Products[i].ImgURL + ">";
+        htmlString += 
+        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
+        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<h3>"+ data.Products[i].MfgName +"</h3>"+
+        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "</div>";
     }
     
     if (data.Products.length == 0){
         document.getElementById("results").innerHTML = "Results for '" +input+ "' was not found.";
+    }else{
+        var para = document.createElement("h1");                 // Create a <p> element
+        para.innerHTML = "Results: " +input+ "";                // Insert text
+        document.getElementById("header").appendChild(para);
+
+        var total = document.createElement("P");
+        total.innerHTML = "Total Results: " +data.Products.length+ "";
+        document.getElementById("header").appendChild(total);
+
     }
     container.insertAdjacentHTML('beforeend', htmlString);
 }
