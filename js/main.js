@@ -17,9 +17,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
    //console logging if axios is working
    console.log(axios);
-   
+  
+
+
    //GET
    if (container) {
+
    axios.get('https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
    .then(function(response) {
     
@@ -39,11 +42,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     if (!err.response){
         document.getElementById("results").innerHTML = "Please add a keyword to search";
     }  
-   
+
     console.log(err.response);
-
-
-   })
+  
+})
 
 
 } else {
@@ -77,6 +79,8 @@ function renderHTML(data) {
     }
     container.insertAdjacentHTML('beforeend', htmlString);
 }
+
+
 
 
 
