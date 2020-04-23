@@ -1,20 +1,39 @@
+
 (function () {
     "use strict";
     console.log("SEAF Fired");
 
 
-let container = document.getElementById('results');
+    let container = document.getElementById('results');
 
-let params = location.search.substr(1).split("&");
+    let params = location.search.substr(1).split("&");
+   console.log(params);
+
+
+
+   function performGetRequest1() {
+    var resultElement = document.getElementById('results');
+    console.log("hell?");
+    resultElement.innerHTML = '';
+    
+    axios.get('http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
+      .then(function (response) {
+        resultElement.innerHTML = generateSuccessHTMLOutput(response);
+        console.log("response");
+      })
+      .catch(function (error) {
+          console.log("err");
+        resultElement.innerHTML = generateErrorHTMLOutput(error);
+      });   
+  }
+  
  
-
-
+/* 
     if (container) {
         console.log("found div");
 
         let xhr = new XMLHttpRequest();
-        let url = 'https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json';
-
+        let url = 'http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json';
 
         xhr.open('GET', url, true);
         xhr.onload = function (e) {
@@ -22,33 +41,19 @@ let params = location.search.substr(1).split("&");
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     console.log(xhr.responseText);
+                    if (!xhr.responseText) {
+                        document.getElementById("results").innerHTML = "err";
+                    }
 
                     let ourData = JSON.parse(xhr.responseText);
-
-                    if (ourData !== 'undefined' || ourData !== 'null' || ourData.length == 0 || ourData == "") {
-                        console.log('true');
-                        renderHTML(ourData);
-
-                    }
-                    try {
-                        if(ourData == "") throw "No results were found";
-                        if(isNaN(ourData)) throw "No results were found";
-                      
-                    } catch (e) {
-                        document.getElementById("results").innerHTML += e;
-                    }
-
-                } else {
-                    console.error(xhr.statusText);
-                    document.getElementById("results").innerHTML += "error";
-                }
+                    renderHTML(ourData);
             }
 
-
+        }
         };
         xhr.onerror = function (e) {
             console.error(xhr.statusText);
-            document.getElementById("results").innerHTML += "error";
+    
         };
         xhr.send();
 
@@ -67,6 +72,17 @@ let params = location.search.substr(1).split("&");
         }
         container.insertAdjacentHTML('beforeend', htmlString);
     }
+
+ 
+
+
+    function renderHTML(data) {
+        let htmlString = "";
+        for (var i = 0; i < data.Products.length; i++) {
+            htmlString += "<p>" + data.Products[i].SalePrice + "</p>" + "<img src=" + data.Products[i].ImgURL + ">";
+        }
+        container.insertAdjacentHTML('beforeend', htmlString);
+    } */
 
 
 
