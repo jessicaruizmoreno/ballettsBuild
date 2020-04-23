@@ -634,7 +634,7 @@ button {
 @media (min-width: 1200px) {
   #banner {
     padding-left: 40px;
-    padding-top: 60px;
+    padding-top: 10px;
   }
   #heroImage {
     background-position-x: 670px !important;
@@ -988,7 +988,7 @@ a.active_link:active .cats_box .cat-images {
 
 .gallery#results .col .imgProduct {
   width: 180px;
-  min-width: 260px;
+  min-width: 100%;
   margin: 50px 0;
 }
 

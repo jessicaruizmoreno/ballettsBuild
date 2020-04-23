@@ -737,7 +737,8 @@ button {
 @include respond-above(xl) {
 #banner{   
      padding-left: 40px;
-    padding-top: 60px;}
+    padding-top: 10px;
+}
 
     #heroImage {
         background-position-x: 670px !important;
@@ -1139,7 +1140,7 @@ padding: 60px 0;
 
            .imgProduct{
             width: 180px;
-            min-width: 260px;
+            min-width: 100%;
             margin: 50px 0;
            }
         }
