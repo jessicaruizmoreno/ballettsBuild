@@ -1,4 +1,6 @@
 
+window.addEventListener('DOMContentLoaded', (event) => {
+
 (function () {
     "use strict";
     console.log("SEAF Fired");
@@ -277,3 +279,4 @@ function renderHTML(data) {
 
 
 })();
+});
