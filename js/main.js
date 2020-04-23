@@ -5,84 +5,63 @@
 
 
     let container = document.getElementById('results');
-
     let params = location.search.substr(1).split("&");
+
+    let input = location.search.substr(6);
+    
+  
+
    console.log(params);
 
-
-
-   function performGetRequest1() {
-    var resultElement = document.getElementById('results');
-    console.log("hell?");
-    resultElement.innerHTML = '';
+   //console logging if axios is working
+   console.log(axios);
+   
+   //GET
+   if (container) {
+   axios.get('http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
+   .then(function(response) {
     
-    axios.get('http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
-      .then(function (response) {
-        resultElement.innerHTML = generateSuccessHTMLOutput(response);
-        console.log("response");
-      })
-      .catch(function (error) {
-          console.log("err");
-        resultElement.innerHTML = generateErrorHTMLOutput(error);
-      });   
-  }
+    //getting reponse data
+
+    console.log(response.data);
+ 
+    //rendering out response data
+    renderHTML(response.data);
+ 
+
   
- 
-/* 
-    if (container) {
-        console.log("found div");
 
-        let xhr = new XMLHttpRequest();
-        let url = 'http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json';
+   })
 
-        xhr.open('GET', url, true);
-        xhr.onload = function (e) {
+   .catch(function(err){
+    if (!err.response){
+        document.getElementById("results").innerHTML = "Please add a keyword to search";
+    }  
+   
+    console.log(err.response);
 
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log(xhr.responseText);
-                    if (!xhr.responseText) {
-                        document.getElementById("results").innerHTML = "err";
-                    }
 
-                    let ourData = JSON.parse(xhr.responseText);
-                    renderHTML(ourData);
-            }
+   })
 
-        }
-        };
-        xhr.onerror = function (e) {
-            console.error(xhr.statusText);
+
+} else {
+    console.log("xhr dont load");
+}
+
+
+function renderHTML(data) {
+    let htmlString = "";
+    for (var i = 0; i < data.Products.length; i++) {
+        htmlString += "<p>" + data.Products[i].SalePrice + "</p>" + "<img src=" + data.Products[i].ImgURL + ">";
+    }
     
-        };
-        xhr.send();
-
-
-    } else {
-        console.log("xhr dont load");
+    if (data.Products.length == 0){
+        document.getElementById("results").innerHTML = "Results for '" +input+ "' was not found.";
     }
+    container.insertAdjacentHTML('beforeend', htmlString);
+}
 
 
-
-
-    function renderHTML(data) {
-        let htmlString = "";
-        for (var i = 0; i < data.Products.length; i++) {
-            htmlString += "<p>" + data.Products[i].SalePrice + "</p>" + "<img src=" + data.Products[i].ImgURL + ">";
-        }
-        container.insertAdjacentHTML('beforeend', htmlString);
-    }
-
- 
-
-
-    function renderHTML(data) {
-        let htmlString = "";
-        for (var i = 0; i < data.Products.length; i++) {
-            htmlString += "<p>" + data.Products[i].SalePrice + "</p>" + "<img src=" + data.Products[i].ImgURL + ">";
-        }
-        container.insertAdjacentHTML('beforeend', htmlString);
-    } */
 
 
 
