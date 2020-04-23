@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
    
    //GET
    if (container) {
-   axios.get('http://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
+   axios.get('https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
    .then(function(response) {
     
     //getting reponse data
