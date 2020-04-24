@@ -1129,21 +1129,51 @@ span#faq {
 h1.banner-jumbo {
   text-align: center;
   color: #FFFFFF;
+  margin-top: 13px;
 }
 
 .gallery .col {
   margin: 12px 0;
 }
 
-.jumbotron#bridemaids, .jumbotron#promgrad, .jumbotron#specialOcc, .jumbotron#weddingaccs {
+.pagelist {
+  margin: 30px 0;
+}
+
+#weddingaccs.jumbotron {
+  background: url(/assets/images/acc-img.jpg) center center no-repeat;
   background-size: cover;
   top: 150px;
   position: relative;
   height: 277px;
 }
 
-.jumbotron#bridalGowns {
+#specialOcc.jumbotron {
+  background: url(/assets/images/occ-img.jpg) center center no-repeat;
+  background-size: cover;
+  top: 150px;
+  position: relative;
+  height: 277px;
+}
+
+#bridalGowns.jumbotron {
   background: url(/assets/images/bridal-banner.jpg) center center no-repeat;
+  background-size: cover;
+  top: 150px;
+  position: relative;
+  height: 277px;
+}
+
+#bridemaids.jumbotron {
+  background: url(/assets/images/bridesmaid-cover.jpg) center center no-repeat;
+  background-size: cover;
+  top: 150px;
+  position: relative;
+  height: 277px;
+}
+
+#promgrad.jumbotron {
+  background: url(/assets/images/prom-img.jpg) center center no-repeat;
   background-size: cover;
   top: 150px;
   position: relative;
@@ -1175,20 +1205,57 @@ i#bread.fas.fa-chevron-right {
 }
 
 .gallery#bridalgallery .col, .gallery#bridemaidsgallery .col, .gallery#promgrad-gallery .col,
-.gallery#specialOcc-gallery .col, .weddingAcc-gallery .col {
+.gallery#specialOcc-gallery .col, .gallery#weddingAcc-gallery .col {
   text-align: center;
 }
 
-.gallery#bridalgallery .col .imgProduct, .gallery#bridemaidsgallery .col .imgProduct, .gallery#promgrad-gallery .col .imgProduct,
-.gallery#specialOcc-gallery .col .imgProduct, .weddingAcc-gallery .col .imgProduct {
-  width: 180px;
-  min-width: 100%;
+.gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox,
+.gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox {
+  height: 400px;
+  position: relative;
+  width: 240px;
+  margin: 0 auto;
+}
+
+.gallery#bridalgallery .col .imgBox .imgProduct, .gallery#bridemaidsgallery .col .imgBox .imgProduct, .gallery#promgrad-gallery .col .imgBox .imgProduct,
+.gallery#specialOcc-gallery .col .imgBox .imgProduct, .gallery#weddingAcc-gallery .col .imgBox .imgProduct {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+}
+
+.gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render,
+.gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render {
+  margin: 32px 0;
+}
+
+.gallery#bridalgallery .col .box-render h3, .gallery#bridemaidsgallery .col .box-render h3, .gallery#promgrad-gallery .col .box-render h3,
+.gallery#specialOcc-gallery .col .box-render h3, .gallery#weddingAcc-gallery .col .box-render h3 {
+  color: #2F2F2F;
+  margin-bottom: 2px;
+}
+
+.gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4,
+.gallery#specialOcc-gallery .col .box-render h4, .gallery#weddingAcc-gallery .col .box-render h4 {
+  font-size: 0.75rem;
+  color: #000000;
+}
+
+.gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p,
+.gallery#specialOcc-gallery .col .box-render p, .gallery#weddingAcc-gallery .col .box-render p {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .page-link {
   border: transparent;
   padding: 0.5rem 0.9rem;
   color: #A5A5A5;
+  font-weight: 700;
 }
 
 .page-item.active .page-link {
@@ -1202,5 +1269,62 @@ i#bread.fas.fa-chevron-right {
 
 .page-item.disabled {
   display: none;
+}
+
+@media (min-width: 576px) {
+  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox {
+    height: 300px;
+    position: relative;
+  }
+  #bridalGowns.jumbotron, #bridemaids.jumbotron, #promgrad.jumbotron, #specialOcc.jumbotron,
+  #weddingaccs.jumbotron {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox {
+    width: 200px;
+    height: 280px;
+  }
+  .breadcrumb li {
+    font-size: 18px;
+  }
+  #bridalGowns.jumbotron, #bridemaids.jumbotron, #promgrad.jumbotron, #specialOcc.jumbotron,
+  #weddingaccs.jumbotron {
+    height: 409px;
+    top: 180px;
+  }
+  .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .weddingAcc-gallery .col .box-render {
+    margin: 15px 0;
+  }
+  .gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4, .gallery#specialOcc-gallery .col .box-render h4, .weddingAcc-gallery .col .box-render h4 {
+    font-size: 13px;
+    padding-bottom: 2px;
+  }
+  .gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p, .gallery#specialOcc-gallery .col .box-render p, .weddingAcc-gallery .col .box-render p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox {
+    height: 390px;
+    width: 275px;
+  }
+  .gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4, .gallery#specialOcc-gallery .col .box-render h4, .weddingAcc-gallery .col .box-render h4 {
+    font-size: 16px;
+  }
+  .gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p, .gallery#specialOcc-gallery .col .box-render p, .weddingAcc-gallery .col .box-render p {
+    font-size: 20px;
+  }
+  #bridalGowns.jumbotron, #bridemaids.jumbotron, #promgrad.jumbotron, #specialOcc.jumbotron,
+  #weddingaccs.jumbotron {
+    height: 600px;
+    top: 158px;
+  }
+  h1.banner-jumbo {
+    margin-top: 133px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
