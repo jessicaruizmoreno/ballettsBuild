@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 let weddingAccContainer = document.getElementById('weddingAcc-gallery');
 
 if(weddingAccContainer){
-axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=accessories&mpp=30&format=json')
+axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=accessories&mpp=30&format=json')
 .then(function(response){
     console.log(response.data);
 
@@ -61,7 +61,7 @@ function renderWeddingAcc(data) {
 let specOccContainer = document.getElementById('specialOcc-gallery');
 
 if(specOccContainer){
-axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=special-occasions&mpp=30&format=json')
+axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=special-occasions&mpp=30&format=json')
 .then(function(response){
     console.log(response.data);
 
@@ -109,7 +109,7 @@ function renderSpecOcc(data) {
 let promgradContainer = document.getElementById('promgrad-gallery');
 
 if(promgradContainer){
-axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=prom&mpp=30&format=json')
+axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=prom&mpp=30&format=json')
 .then(function(response){
     console.log(response.data);
 
@@ -158,7 +158,7 @@ function renderProm(data) {
   let bridemaidsContainer = document.getElementById('bridemaidsgallery');
 
   if(bridemaidsContainer){
-  axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridesmaids&mpp=30&format=json')
+  axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridesmaids&mpp=30&format=json')
   .then(function(response){
       console.log(response.data);
 
@@ -207,7 +207,7 @@ function renderProm(data) {
    ////BRIDAL GOWNS GET////
    let bridalContainer = document.getElementById('bridalgallery');
    if (bridalContainer) {
-    axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&format=json')
+    axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&format=json')
     .then(function(response){
         console.log(response.data);
  
