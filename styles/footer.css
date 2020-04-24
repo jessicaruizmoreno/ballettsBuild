@@ -1272,7 +1272,7 @@ i#bread.fas.fa-chevron-right {
 }
 
 @media (min-width: 576px) {
-  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox {
+  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox {
     height: 300px;
     position: relative;
   }
@@ -1283,7 +1283,7 @@ i#bread.fas.fa-chevron-right {
 }
 
 @media (min-width: 768px) {
-  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox {
+  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox {
     width: 200px;
     height: 280px;
   }
@@ -1295,27 +1295,27 @@ i#bread.fas.fa-chevron-right {
     height: 409px;
     top: 180px;
   }
-  .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .weddingAcc-gallery .col .box-render {
+  .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render {
     margin: 15px 0;
   }
-  .gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4, .gallery#specialOcc-gallery .col .box-render h4, .weddingAcc-gallery .col .box-render h4 {
+  .gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4, .gallery#specialOcc-gallery .col .box-render h4, .gallery#weddingAcc-gallery .col .box-render h4 {
     font-size: 13px;
     padding-bottom: 2px;
   }
-  .gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p, .gallery#specialOcc-gallery .col .box-render p, .weddingAcc-gallery .col .box-render p {
+  .gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p, .gallery#specialOcc-gallery .col .box-render p, .gallery#weddingAcc-gallery .col .box-render p {
     font-size: 18px;
   }
 }
 
 @media (min-width: 992px) {
-  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox {
+  .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox {
     height: 390px;
     width: 275px;
   }
-  .gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4, .gallery#specialOcc-gallery .col .box-render h4, .weddingAcc-gallery .col .box-render h4 {
+  .gallery#bridalgallery .col .box-render h4, .gallery#bridemaidsgallery .col .box-render h4, .gallery#promgrad-gallery .col .box-render h4, .gallery#specialOcc-gallery .col .box-render h4, .gallery#weddingAcc-gallery .col .box-render h4 {
     font-size: 16px;
   }
-  .gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p, .gallery#specialOcc-gallery .col .box-render p, .weddingAcc-gallery .col .box-render p {
+  .gallery#bridalgallery .col .box-render p, .gallery#bridemaidsgallery .col .box-render p, .gallery#promgrad-gallery .col .box-render p, .gallery#specialOcc-gallery .col .box-render p, .gallery#weddingAcc-gallery .col .box-render p {
     font-size: 20px;
   }
   #bridalGowns.jumbotron, #bridemaids.jumbotron, #promgrad.jumbotron, #specialOcc.jumbotron,
