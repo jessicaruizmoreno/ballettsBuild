@@ -1433,7 +1433,7 @@ display:none;
 }
 
 @include respond-above(sm){
-    .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox{
+    .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox{
         height: 300px;
         position: relative;
     }
@@ -1444,7 +1444,7 @@ display:none;
     
 }
     @include respond-above(md){
-        .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox{
+        .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox{
             width: 200px;
             height: 280px;
     }
@@ -1459,7 +1459,7 @@ display:none;
         top: 180px;
     }
 
-    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .weddingAcc-gallery .col .box-render{
+    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render{
 
     margin: 15px 0;
 
@@ -1479,13 +1479,13 @@ display:none;
     
 
     @include respond-above(lg){
-      .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .weddingAcc-gallery .col .imgBox{
+      .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox{
         height: 390px;
         width: 275px;
     
     }
 
-    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .weddingAcc-gallery .col .box-render{
+    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render{
 
         h4{
             font-size: 16px;
