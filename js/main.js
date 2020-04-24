@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 //ACCESSORIES//
 let weddingAccContainer = document.getElementById('weddingAcc-gallery');
+
 if(weddingAccContainer){
 axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=accessories&mpp=30&format=json')
 .then(function(response){
@@ -35,11 +36,17 @@ function renderWeddingAcc(data) {
     let htmlweddingAcc = "";
     for (var i = 0; i < data.Products.length; i++) {
         htmlweddingAcc += 
-        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
-        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<div class='col col-sm-6 col-md-4'>"+
+        "<div class='imgBox'>"+
+        "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
+        "<i class='far fa-heart' id='heart'></i>"+
+        "<i class='far fa-eye' id='eye'></i>"+
+        "</div>"+
+        "<div class='box-render'>"+
         "<h3>"+ data.Products[i].MfgName +"</h3>"+
         "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "</div>"+
         "</div>";
     }
 
@@ -52,6 +59,7 @@ function renderWeddingAcc(data) {
 
 //SPEICAL OCCASIONS//
 let specOccContainer = document.getElementById('specialOcc-gallery');
+
 if(specOccContainer){
 axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=special-occasions&mpp=30&format=json')
 .then(function(response){
@@ -78,11 +86,17 @@ function renderSpecOcc(data) {
     let htmlspecOcc = "";
     for (var i = 0; i < data.Products.length; i++) {
         htmlspecOcc += 
-        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
-        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<div class='col col-sm-6 col-md-4'>"+
+        "<div class='imgBox'>"+
+        "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
+        "<i class='far fa-heart' id='heart'></i>"+
+        "<i class='far fa-eye' id='eye'></i>"+
+        "</div>"+
+        "<div class='box-render'>"+
         "<h3>"+ data.Products[i].MfgName +"</h3>"+
         "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "</div>"+
         "</div>";
     }
 
@@ -121,11 +135,17 @@ function renderProm(data) {
     let htmlpromgrad = "";
     for (var i = 0; i < data.Products.length; i++) {
         htmlpromgrad += 
-        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
-        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<div class='col col-sm-6 col-md-4'>"+
+        "<div class='imgBox'>"+
+        "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
+        "<i class='far fa-heart' id='heart'></i>"+
+        "<i class='far fa-eye' id='eye'></i>"+
+        "</div>"+
+        "<div class='box-render'>"+
         "<h3>"+ data.Products[i].MfgName +"</h3>"+
         "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "</div>"+
         "</div>";
     }
 
@@ -164,12 +184,18 @@ function renderProm(data) {
       let htmlBridemaids = "";
       for (var i = 0; i < data.Products.length; i++) {
         htmlBridemaids += 
-          "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
-          "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
-          "<h3>"+ data.Products[i].MfgName +"</h3>"+
-          "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-          "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
-          "</div>";
+        "<div class='col col-sm-6 col-md-4'>"+
+        "<div class='imgBox'>"+
+        "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
+        "<i class='far fa-heart' id='heart'></i>"+
+        "<i class='far fa-eye' id='eye'></i>"+
+        "</div>"+
+        "<div class='box-render'>"+
+        "<h3>"+ data.Products[i].MfgName +"</h3>"+
+        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "</div>"+
+        "</div>";
       }
   
       bridemaidsContainer.insertAdjacentHTML('beforeend', htmlBridemaids);
@@ -207,11 +233,17 @@ function renderProm(data) {
         let htmlBridal = "";
         for (var i = 0; i < data.Products.length; i++) {
             htmlBridal += 
-            "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
-            "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+            "<div class='col col-sm-6 col-md-4'>"+
+            "<div class='imgBox'>"+
+            "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:130%;'></span>"+
+            "<i class='far fa-heart' id='heart'></i>"+
+            "<i class='far fa-eye' id='eye'></i>"+
+            "</div>"+
+            "<div class='box-render'>"+
             "<h3>"+ data.Products[i].MfgName +"</h3>"+
             "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-            "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+            "<p>$" + data.Products[i].SalePrice + "</p>"+
+            "</div>"+
             "</div>";
         }
     
@@ -280,7 +312,7 @@ function renderHTML(data) {
         "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
         "<h3>"+ data.Products[i].MfgName +"</h3>"+
         "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "<p>$" + data.Products[i].SalePrice + "</p>"+
         "</div>";
     }
     
