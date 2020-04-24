@@ -1125,4 +1125,82 @@ span#faq {
 .card-body a.emailLink {
   color: #FA85B6;
 }
+
+h1.banner-jumbo {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.gallery .col {
+  margin: 12px 0;
+}
+
+.jumbotron#bridemaids, .jumbotron#promgrad, .jumbotron#specialOcc, .jumbotron#weddingaccs {
+  background-size: cover;
+  top: 150px;
+  position: relative;
+  height: 277px;
+}
+
+.jumbotron#bridalGowns {
+  background: url(/assets/images/bridal-banner.jpg) center center no-repeat;
+  background-size: cover;
+  top: 150px;
+  position: relative;
+  height: 277px;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  font-weight: 300;
+}
+
+li.breadcrumb-item a {
+  color: #A5A5A5;
+}
+
+li.breadcrumb-item a:hover, li.breadcrumb-item a:active {
+  color: #FA85B6;
+}
+
+i#bread.fas.fa-chevron-right {
+  font-size: 12px;
+  line-height: 28px;
+  padding: 0 10px;
+  color: #A5A5A5;
+}
+
+.breadcrumb-item.active {
+  color: #000000;
+}
+
+.gallery#bridalgallery .col, .gallery#bridemaidsgallery .col, .gallery#promgrad-gallery .col,
+.gallery#specialOcc-gallery .col, .weddingAcc-gallery .col {
+  text-align: center;
+}
+
+.gallery#bridalgallery .col .imgProduct, .gallery#bridemaidsgallery .col .imgProduct, .gallery#promgrad-gallery .col .imgProduct,
+.gallery#specialOcc-gallery .col .imgProduct, .weddingAcc-gallery .col .imgProduct {
+  width: 180px;
+  min-width: 100%;
+}
+
+.page-link {
+  border: transparent;
+  padding: 0.5rem 0.9rem;
+  color: #A5A5A5;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #000000;
+  background-color: #FA85B6;
+  border-color: transparent;
+  border-radius: 100%;
+  font-weight: 700;
+}
+
+.page-item.disabled {
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */

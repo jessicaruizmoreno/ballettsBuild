@@ -1122,7 +1122,7 @@ z-index: 0 !important;
 }
 
 
-//search page/
+//search page//
 #results{
 padding: 60px 0;
 }
@@ -1134,7 +1134,7 @@ padding: 60px 0;
             padding:0;
         }
     
-
+    
         .col{
             text-align: center;
 
@@ -1283,3 +1283,87 @@ span#faq{
 }
 
 //measuring guidelines//
+
+//Product pages//
+h1.banner-jumbo{
+    text-align:center;
+    color:$white;
+}
+
+.gallery .col{
+    margin: 12px 0;
+}
+
+.jumbotron#bridemaids,.jumbotron#promgrad, .jumbotron#specialOcc, .jumbotron#weddingaccs{
+    background-size: cover;
+    top: 150px;
+    position: relative;
+    height: 277px;
+}
+
+
+.jumbotron#bridalGowns{
+    background: url(/assets/images/bridal-banner.jpg) center center no-repeat;
+    background-size: cover;
+    top: 150px;
+    position: relative;
+    height: 277px;
+}
+
+.breadcrumb{
+    background-color:transparent;
+    font-weight:$light;
+}
+
+li.breadcrumb-item a{
+    color:$grey;
+&:hover, &:active{
+    color:$main-pink;
+}
+
+}
+
+i#bread.fas.fa-chevron-right{
+        font-size: 12px;
+        line-height: 28px;
+        padding: 0 10px;
+        color:$grey;
+    }
+
+
+    .breadcrumb-item.active {
+        color:$black;
+    }
+
+    .gallery#bridalgallery, .gallery#bridemaidsgallery, .gallery#promgrad-gallery,
+    .gallery#specialOcc-gallery, .weddingAcc-gallery{
+    
+        .col{
+        text-align: center;
+
+       .imgProduct{
+        width: 180px;
+        min-width: 100%;
+       }
+    }
+}
+    
+.page-link{
+    border: transparent;
+    padding: 0.5rem 0.9rem;
+    color:$grey;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color:$black;
+    background-color:$main-pink;
+    border-color: transparent;
+    border-radius: 100%;
+    font-weight: $bold;
+}
+    
+.page-item.disabled{
+display:none;
+}
+
