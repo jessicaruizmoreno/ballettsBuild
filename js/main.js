@@ -6,21 +6,239 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log("SEAF Fired");
 
 
-    let container = document.getElementById('results');
-    let params = location.search.substr(1).split("&");
+//ACCESSORIES//
+let weddingAccContainer = document.getElementById('weddingAcc-gallery');
+if(weddingAccContainer){
+axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=accessories&mpp=30&format=json')
+.then(function(response){
+    console.log(response.data);
 
-    let input = location.search.substr(6);
+    //rendering out response data
+    renderWeddingAcc(response.data);
+ 
+})
+
+   .catch(function(err){
+    if (!err.response){
+        document.getElementById("weddingAcc-gallery").innerHTML = "Error";
+    }  
+
+    console.log(err.response);
+  
+});
+   }else{
+    console.log("dont load wedding accessories");
+}
+
+
+function renderWeddingAcc(data) {
+    let htmlweddingAcc = "";
+    for (var i = 0; i < data.Products.length; i++) {
+        htmlweddingAcc += 
+        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
+        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<h3>"+ data.Products[i].MfgName +"</h3>"+
+        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "</div>";
+    }
+
+    weddingAccContainer.insertAdjacentHTML('beforeend', htmlweddingAcc);
+}
+
+
+
+
+
+//SPEICAL OCCASIONS//
+let specOccContainer = document.getElementById('specialOcc-gallery');
+if(specOccContainer){
+axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=special-occasions&mpp=30&format=json')
+.then(function(response){
+    console.log(response.data);
+
+    //rendering out response data
+    renderSpecOcc(response.data);
+ 
+})
+
+   .catch(function(err){
+    if (!err.response){
+        document.getElementById("specialOcc-gallery").innerHTML = "Error";
+    }  
+
+    console.log(err.response);
+  
+});
+}else{
+    console.log("dont load specialOccasions");
+}
+
+function renderSpecOcc(data) {
+    let htmlspecOcc = "";
+    for (var i = 0; i < data.Products.length; i++) {
+        htmlspecOcc += 
+        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
+        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<h3>"+ data.Products[i].MfgName +"</h3>"+
+        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "</div>";
+    }
+
+    specOccContainer.insertAdjacentHTML('beforeend', htmlspecOcc);
+}
+
+
+
+//PROM & GRAD//
+let promgradContainer = document.getElementById('promgrad-gallery');
+
+if(promgradContainer){
+axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=prom&mpp=30&format=json')
+.then(function(response){
+    console.log(response.data);
+
+    //rendering out response data
+    renderProm(response.data);
+ 
+})
+
+   .catch(function(err){
+    if (!err.response){
+        document.getElementById("promgrad-gallery").innerHTML = "Error";
+    }  
+
+    console.log(err.response);
+  
+});
+}else{
+    console.log("dont load promgrads");
+}
+
+
+function renderProm(data) {
+    let htmlpromgrad = "";
+    for (var i = 0; i < data.Products.length; i++) {
+        htmlpromgrad += 
+        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
+        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+        "<h3>"+ data.Products[i].MfgName +"</h3>"+
+        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+        "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+        "</div>";
+    }
+
+    promgradContainer.insertAdjacentHTML('beforeend', htmlpromgrad);
+}
+
+
+
+//BRIDEMAIDS//
+  let bridemaidsContainer = document.getElementById('bridemaidsgallery');
+
+  if(bridemaidsContainer){
+  axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridesmaids&mpp=30&format=json')
+  .then(function(response){
+      console.log(response.data);
+
+      //rendering out response data
+      renderBridesmaids(response.data);
+   
+  })
+  
+     .catch(function(err){
+      if (!err.response){
+          document.getElementById("bridemaidsgallery").innerHTML = "Error";
+      }  
+  
+      console.log(err.response);
     
+  });
+}else{
+    console.log("dont load bridemaids");
+}
   
-
-   console.log(params);
-
-   //console logging if axios is working
-   console.log(axios);
   
+  function renderBridesmaids(data) {
+      let htmlBridemaids = "";
+      for (var i = 0; i < data.Products.length; i++) {
+        htmlBridemaids += 
+          "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
+          "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+          "<h3>"+ data.Products[i].MfgName +"</h3>"+
+          "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+          "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+          "</div>";
+      }
+  
+      bridemaidsContainer.insertAdjacentHTML('beforeend', htmlBridemaids);
+  }
 
 
-   //GET
+
+
+   ////BRIDAL GOWNS GET////
+   let bridalContainer = document.getElementById('bridalgallery');
+   if (bridalContainer) {
+    axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&format=json')
+    .then(function(response){
+        console.log(response.data);
+ 
+        //rendering out response data
+        renderBridalGowns(response.data);
+     
+    })
+    
+       .catch(function(err){
+        if (!err.response){
+            document.getElementById("bridalgallery").innerHTML = "Error";
+        }  
+    
+        console.log(err.response);
+      
+    });
+ 
+}else {
+    console.log("dont load bridalgowns");
+}
+    
+    function renderBridalGowns(data) {
+        let htmlBridal = "";
+        for (var i = 0; i < data.Products.length; i++) {
+            htmlBridal += 
+            "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
+            "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
+            "<h3>"+ data.Products[i].MfgName +"</h3>"+
+            "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
+            "<p>$" + data.Products[i].SalePrice + " CAD </p>"+
+            "</div>";
+        }
+    
+        bridalContainer.insertAdjacentHTML('beforeend', htmlBridal);
+    }
+
+    
+    
+
+
+
+
+
+   /////SEARCH FUNCTION GET////
+   let container = document.getElementById('results');
+   let params = location.search.substr(1).split("&");
+
+   let input = location.search.substr(6);
+   
+ 
+
+  //console.log(params);
+
+  //console logging if axios is working
+
+  //console.log(axios);
+
    if (container) {
 
    axios.get('https://www.bridalwebsolutions.net/retail/onlinestore/api-products.cfm?' + params + '&format=json')
@@ -49,8 +267,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 } else {
-    console.log("xhr dont load");
+    console.log("dont load results");
 }
+
 
 
 function renderHTML(data) {
