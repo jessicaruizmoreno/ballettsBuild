@@ -1122,30 +1122,6 @@ z-index: 0 !important;
 }
 
 
-//search page//
-#results{
-padding: 60px 0;
-}
-
-.gallery#results{
-    padding:40px 0;
-           
-    #header h1{
-            padding:0;
-        }
-    
-    
-        .col{
-            text-align: center;
-
-           .imgProduct{
-            width: 180px;
-            min-width: 100%;
-            margin: 50px 0;
-           }
-        }
-    
-}
 
 
 //our collection page//
@@ -1285,6 +1261,36 @@ span#faq{
 //measuring guidelines//
 
 //Product pages//
+
+button#eye-icon,button#heart-icon{
+    width:30px;
+    height:30px;
+    display:block;
+    position: relative;
+    top: 280px;
+    left: 0;
+    margin-inline-start: 80%;
+}
+
+button i#heart, button i#eye{
+    color: $dark-grey;
+    font-size:25px;
+}
+
+
+
+i#eye{
+    margin-bottom: 8px;  
+}
+
+i#heart{
+    padding-left: 3px;
+}
+
+i#eye.fa-eye.fas, i#heart.fa-heart.fas{
+    color:$main-pink;
+}
+
 h1.banner-jumbo{
     text-align:center;
     color:$white;
@@ -1367,14 +1373,14 @@ i#bread.fas.fa-chevron-right{
     }
 
     .gallery#bridalgallery, .gallery#bridemaidsgallery, .gallery#promgrad-gallery,
-    .gallery#specialOcc-gallery, .gallery#weddingAcc-gallery{
+    .gallery#specialOcc-gallery, .gallery#weddingAcc-gallery, .gallery#results{
     
         .col{
         text-align: center;
         
 
         .imgBox{
-            height: 400px;
+            height: 360px;
             position: relative;
             width: 240px;
             margin: 0 auto;
@@ -1391,22 +1397,18 @@ i#bread.fas.fa-chevron-right{
         }
 
        .box-render{
-        margin: 32px 0;   
+        margin: 18px 0;   
 
         h3{
-            color:$soft-black;
+            color:$dark-grey;
             margin-bottom: 2px;
         }
 
-        h4{
-           font-size:0.75rem;
-           color:$black;
-        }
 
         p{
             color:$black;
             font-weight: $bold;
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
 
        }
@@ -1433,7 +1435,7 @@ display:none;
 }
 
 @include respond-above(sm){
-    .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox{
+    .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox, .gallery#results .col .imgBox{
         height: 300px;
         position: relative;
     }
@@ -1442,9 +1444,15 @@ display:none;
         height: 350px;
     }
     
+    button#eye-icon, button#heart-icon{
+        top: 232px;
+    }
+
+
+
 }
     @include respond-above(md){
-        .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox{
+        .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox, .gallery#results .col .imgBox{
             width: 200px;
             height: 280px;
     }
@@ -1459,36 +1467,45 @@ display:none;
         top: 180px;
     }
 
-    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render{
+    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render , .gallery#results .col .box-render{
 
     margin: 15px 0;
 
-            h4{
-                font-size: 13px;
-                 padding-bottom: 2px;
-                }
-                
                 p{
                     font-size: 18px;
                 }
 
 
             }
+            button#eye-icon, button#heart-icon{
+                top: 215px;
+                margin-inline-start: 78%;
+                
 
-    }
+          i#heart, i#eye{
+        font-size: 22px;
+          }
+
+
+
+            }
+    
+    
+    
+        }
     
 
     @include respond-above(lg){
-      .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox{
+      .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox, .gallery#results .col .imgBox{
         height: 390px;
         width: 275px;
     
     }
 
-    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render{
+    .gallery#bridalgallery .col .box-render, .gallery#bridemaidsgallery .col .box-render, .gallery#promgrad-gallery .col .box-render, .gallery#specialOcc-gallery .col .box-render, .gallery#weddingAcc-gallery .col .box-render, .gallery#results .col .box-render{
 
-        h4{
-            font-size: 16px;
+        h3{
+            font-size: 1.25rem;
         }
 
         p{
@@ -1505,5 +1522,21 @@ display:none;
     margin-top: 133px;
     }
 
+
+    button#eye-icon, button#heart-icon {
+        top: 321px;
+        margin-inline-start: 82%;
+
+    }
+
+}
+
+@include respond-above(xl){
+    .breadcrumbnav{
+    text-align: center;
+    margin: 0 auto;
+    width: 20%;
+    margin-bottom: 1pc;
+    }
 }
 
