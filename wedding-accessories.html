@@ -349,6 +349,29 @@
 
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+	<script>
+
+		function changeIcon(elem) {
+			if ($(elem).find('i#heart').hasClass('far')) {
+					$(elem).find('i#heart').removeClass('far').addClass('fas');
+				}
+				else if ($(elem).find('i#heart').hasClass('fas')) {
+					$(elem).find('i#heart').removeClass('fas').addClass('far');
+				}
+			
+		}
+		
+		function changeIcon2(elem) {
+			if ($(elem).find('i#eye').hasClass('far')) {
+					$(elem).find('i#eye').removeClass('far').addClass('fas');
+				}
+				else if ($(elem).find('i#eye').hasClass('fas')) {
+					$(elem).find('i#eye').removeClass('fas').addClass('far');
+				}
+			}
+		
+		</script>
+
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

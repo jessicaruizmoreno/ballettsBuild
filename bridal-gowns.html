@@ -219,10 +219,10 @@
                         </a>
                       </li>
                       <li class="page-item active"><a class="page-link" href="bridal-gowns.html">1</a></li>
-                      <li class="page-item"><a class="page-link" href="bridal-gowns.html?id=2">2</a></li>
-                      <li class="page-item"><a class="page-link" href="bridal-gowns.html?id=3">3</a></li>
+                      <li class="page-item"><a class="page-link" href="">2</a></li>
+                      <li class="page-item"><a class="page-link" href="">3</a></li>
                       <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
+                      <a class="page-link" id="nextPage" aria-label="Next">
                           <span aria-hidden="true">  <i class="fas fa-chevron-right"></i></span>
                         </a>
                       </li>
@@ -349,14 +349,16 @@
 
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+
 function changeIcon(elem) {
-        if ($(elem).find('i#heart').hasClass('far')) {
+	if ($(elem).find('i#heart').hasClass('far')) {
             $(elem).find('i#heart').removeClass('far').addClass('fas');
         }
         else if ($(elem).find('i#heart').hasClass('fas')) {
             $(elem).find('i#heart').removeClass('fas').addClass('far');
 		}
-	}
+	
+}
 
 function changeIcon2(elem) {
 	if ($(elem).find('i#eye').hasClass('far')) {
@@ -365,7 +367,8 @@ function changeIcon2(elem) {
         else if ($(elem).find('i#eye').hasClass('fas')) {
             $(elem).find('i#eye').removeClass('fas').addClass('far');
 		}
-}
+	}
+
 </script>
 
 	<script type="text/javascript" src="js/main.js"></script>
