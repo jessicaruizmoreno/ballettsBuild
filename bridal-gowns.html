@@ -197,7 +197,7 @@
 	<!------MAIN LAYOUT PADDING------>
 		<main class="container-md layout-main">	
 			<div class="container">
-                  <nav aria-label="breadcrumb">
+                  <nav aria-label="breadcrumb" class="breadcrumbnav">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="https://balletts.com/jessica/">Home</a></li>
                       <i class="fas fa-chevron-right" id="bread"></i>
@@ -348,6 +348,25 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+function changeIcon(elem) {
+        if ($(elem).find('i#heart').hasClass('far')) {
+            $(elem).find('i#heart').removeClass('far').addClass('fas');
+        }
+        else if ($(elem).find('i#heart').hasClass('fas')) {
+            $(elem).find('i#heart').removeClass('fas').addClass('far');
+		}
+	}
+
+function changeIcon2(elem) {
+	if ($(elem).find('i#eye').hasClass('far')) {
+            $(elem).find('i#eye').removeClass('far').addClass('fas');
+        }
+        else if ($(elem).find('i#eye').hasClass('fas')) {
+            $(elem).find('i#eye').removeClass('fas').addClass('far');
+		}
+}
+</script>
 
 	<script type="text/javascript" src="js/main.js"></script>
 
