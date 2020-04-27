@@ -69,6 +69,7 @@ function renderWeddingAcc(data) {
 //SPEICAL OCCASIONS//
 let specOccContainer = document.getElementById('specialOcc-gallery');
 
+
 if(specOccContainer){
 axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=special-occasions&mpp=30&format=json')
 .then(function(response){
@@ -239,9 +240,18 @@ function renderProm(data) {
 
 
    ////BRIDAL GOWNS GET////
-   let bridalContainer = document.getElementById('bridalgallery');
-   if (bridalContainer) {
-    axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&format=json')
+   let queryString = ("pg=1")
+   let w = new URLSearchParams(queryString);
+   let q = parseInt(w.get("pg")); // is the number 123
+
+   console.log(q);
+   
+
+  let bridalContainer = document.getElementById('bridalgallery');
+
+  
+  if (bridalContainer) {
+    axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&'+w+'&format=json')
     .then(function(response){
         console.log(response.data);
  
@@ -259,17 +269,17 @@ function renderProm(data) {
       
     });
  
+
+
+
 }else {
     console.log("dont load bridalgowns");
 }
  
 
 
-
     function renderBridalGowns(data) {
         let htmlBridal = "";
-
-      
 
         for (var i = 0; i < data.Products.length; i++) {
         
@@ -299,6 +309,10 @@ function renderProm(data) {
 
         bridalContainer.insertAdjacentHTML('beforeend', htmlBridal);
     }
+
+
+
+
 
    /////SEARCH FUNCTION GET////
    let container = document.getElementById('results');
