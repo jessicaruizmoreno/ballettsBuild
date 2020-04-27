@@ -251,7 +251,7 @@ function renderProm(data) {
 
   
   if (bridalContainer) {
-    axios.get('http://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&'+w+'&format=json')
+    axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&'+w+'&format=json')
     .then(function(response){
         console.log(response.data);
  
