@@ -240,23 +240,33 @@ function renderProm(data) {
 
 
    ////BRIDAL GOWNS GET////
-   let queryString = ("pg=1")
-   let w = new URLSearchParams(queryString);
-   let q = parseInt(w.get("pg")); // is the number 123
 
-   console.log(q);
-   
+let queryString =1;
+let paramNum =  queryString;
+
+let url ='https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&pg='+paramNum+'&format=json';
+
+let urlPart1 = url.split('=')[2]; //getting 30&pg=
+console.log(urlPart1);
+
+let newURL = urlPart1 + "=" + queryString;
+console.log(newURL);
+
+
+let pageUrl ='https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp='+newURL+'&format=json';
+
 
   let bridalContainer = document.getElementById('bridalgallery');
 
   
   if (bridalContainer) {
-    axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&'+w+'&format=json')
+    axios.get(pageUrl)
     .then(function(response){
         console.log(response.data);
  
         //rendering out response data
         renderBridalGowns(response.data);
+      
      
     })
     
@@ -305,6 +315,7 @@ function renderProm(data) {
         "</div>"+
         "</div>";
     }
+
 
 
         bridalContainer.insertAdjacentHTML('beforeend', htmlBridal);
