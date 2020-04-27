@@ -1421,13 +1421,17 @@ i#bread.fas.fa-chevron-right{
     font-weight: $bold;
 }
 
-.page-item.active .page-link {
+.page-item.active .page-link, .page-link:hover {
     z-index: 3;
     color:$black;
     background-color:$main-pink;
     border-color: transparent;
     border-radius: 100%;
     font-weight: $bold;
+}
+
+.page-item:last-child .page-link{
+    background: transparent;  
 }
     
 .page-item.disabled{
