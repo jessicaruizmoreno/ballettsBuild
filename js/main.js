@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log("SEAF Fired");
 
 
+    
 //ACCESSORIES//
 let weddingAccContainer = document.getElementById('weddingAcc-gallery');
 
@@ -35,20 +36,28 @@ axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?ca
 function renderWeddingAcc(data) {
     let htmlweddingAcc = "";
     for (var i = 0; i < data.Products.length; i++) {
-        htmlweddingAcc += 
-        "<div class='col col-sm-6 col-md-4'>"+
-        "<div class='imgBox'>"+
-        "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
-        "<i class='far fa-heart' id='heart'></i>"+
-        "<i class='far fa-eye' id='eye'></i>"+
-        "</div>"+
-        "<div class='box-render'>"+
-        "<h3>"+ data.Products[i].MfgName +"</h3>"+
-        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + "</p>"+
-        "</div>"+
-        "</div>";
-    }
+        let output = data.Products[i].SalePrice;
+        // console.log(output);
+         
+         //regex right currency code
+             let myRe = output.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+ 
+             //console.log(myRe);
+  
+ 
+             htmlweddingAcc += 
+             "<div class='col col-sm-6 col-md-4'>"+
+             "<div class='imgBox'>"+
+             "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
+             "<button id='eye-icon' onClick='changeIcon2(this)'><i class='far fa-eye' id='eye'></i></button>"+
+             "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>"+
+             "</div>"+
+             "<div class='box-render'>"+
+             "<h3>ID "+ data.Products[i].DisplayID+"</h3>"+
+             "<p class='output'>$" +myRe+ "</p>"+
+             "</div>"+
+             "</div>";
+         }
 
     weddingAccContainer.insertAdjacentHTML('beforeend', htmlweddingAcc);
 }
@@ -85,20 +94,28 @@ axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?ca
 function renderSpecOcc(data) {
     let htmlspecOcc = "";
     for (var i = 0; i < data.Products.length; i++) {
+        let output = data.Products[i].SalePrice;
+        // console.log(output);
+         
+         //regex right currency code
+             let myRe = output.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+ 
+             //console.log(myRe);
+  
+ 
         htmlspecOcc += 
         "<div class='col col-sm-6 col-md-4'>"+
         "<div class='imgBox'>"+
         "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
-        "<i class='far fa-heart' id='heart'></i>"+
-        "<i class='far fa-eye' id='eye'></i>"+
+        "<button id='eye-icon' onClick='changeIcon2(this)'><i class='far fa-eye' id='eye'></i></button>"+
+        "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>"+
         "</div>"+
         "<div class='box-render'>"+
-        "<h3>"+ data.Products[i].MfgName +"</h3>"+
-        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "<h3>ID "+ data.Products[i].DisplayID+"</h3>"+
+        "<p class='output'>$" +myRe+ "</p>"+
         "</div>"+
         "</div>";
-    }
+         }
 
     specOccContainer.insertAdjacentHTML('beforeend', htmlspecOcc);
 }
@@ -134,20 +151,29 @@ axios.get('https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?ca
 function renderProm(data) {
     let htmlpromgrad = "";
     for (var i = 0; i < data.Products.length; i++) {
+        let output = data.Products[i].SalePrice;
+        // console.log(output);
+         
+         //regex right currency code
+             let myRe = output.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+ 
+             //console.log(myRe);
+  
+ 
         htmlpromgrad += 
         "<div class='col col-sm-6 col-md-4'>"+
         "<div class='imgBox'>"+
         "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
-        "<i class='far fa-heart' id='heart'></i>"+
-        "<i class='far fa-eye' id='eye'></i>"+
+        "<button id='eye-icon' onClick='changeIcon2(this)'><i class='far fa-eye' id='eye'></i></button>"+
+        "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>"+
         "</div>"+
         "<div class='box-render'>"+
-        "<h3>"+ data.Products[i].MfgName +"</h3>"+
-        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "<h3>ID "+ data.Products[i].DisplayID+"</h3>"+
+        "<p class='output'>$" +myRe+ "</p>"+
         "</div>"+
         "</div>";
-    }
+         }
+   
 
     promgradContainer.insertAdjacentHTML('beforeend', htmlpromgrad);
 }
@@ -183,20 +209,28 @@ function renderProm(data) {
   function renderBridesmaids(data) {
       let htmlBridemaids = "";
       for (var i = 0; i < data.Products.length; i++) {
+        let output = data.Products[i].SalePrice;
+       // console.log(output);
+        
+        //regex right currency code
+            let myRe = output.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+
+            //console.log(myRe);
+ 
+
         htmlBridemaids += 
         "<div class='col col-sm-6 col-md-4'>"+
         "<div class='imgBox'>"+
         "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:cover;'></span>"+
-        "<i class='far fa-heart' id='heart'></i>"+
-        "<i class='far fa-eye' id='eye'></i>"+
+        "<button id='eye-icon' onClick='changeIcon2(this)'><i class='far fa-eye' id='eye'></i></button>"+
+        "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>"+
         "</div>"+
         "<div class='box-render'>"+
-        "<h3>"+ data.Products[i].MfgName +"</h3>"+
-        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + "</p>"+
+        "<h3>ID "+ data.Products[i].DisplayID+"</h3>"+
+        "<p class='output'>$" +myRe+ "</p>"+
         "</div>"+
         "</div>";
-      }
+        }
   
       bridemaidsContainer.insertAdjacentHTML('beforeend', htmlBridemaids);
   }
@@ -228,34 +262,43 @@ function renderProm(data) {
 }else {
     console.log("dont load bridalgowns");
 }
-    
+ 
+
+
+
     function renderBridalGowns(data) {
         let htmlBridal = "";
+
+      
+
         for (var i = 0; i < data.Products.length; i++) {
-            htmlBridal += 
-            "<div class='col col-sm-6 col-md-4'>"+
-            "<div class='imgBox'>"+
-            "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:130%;'></span>"+
-            "<i class='far fa-heart' id='heart'></i>"+
-            "<i class='far fa-eye' id='eye'></i>"+
-            "</div>"+
-            "<div class='box-render'>"+
-            "<h3>"+ data.Products[i].MfgName +"</h3>"+
-            "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-            "<p>$" + data.Products[i].SalePrice + "</p>"+
-            "</div>"+
-            "</div>";
-        }
-    
-        bridalContainer.insertAdjacentHTML('beforeend', htmlBridal);
+        
+        let output = data.Products[i].SalePrice;
+       // console.log(output);
+        
+        //regex right currency code
+            let myRe = output.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+
+            //console.log(myRe);
+ 
+
+        htmlBridal += 
+        "<div class='col col-sm-6 col-md-4'>"+
+        "<div class='imgBox'>"+
+        "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:130%;'></span>"+
+        "<button id='eye-icon' onClick='changeIcon2(this)'><i class='far fa-eye' id='eye'></i></button>"+
+        "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>"+
+        "</div>"+
+        "<div class='box-render'>"+
+        "<h3>ID "+ data.Products[i].DisplayID+"</h3>"+
+        "<p class='output'>$" +myRe+ "</p>"+
+        "</div>"+
+        "</div>";
     }
 
-    
-    
 
-
-
-
+        bridalContainer.insertAdjacentHTML('beforeend', htmlBridal);
+    }
 
    /////SEARCH FUNCTION GET////
    let container = document.getElementById('results');
@@ -307,20 +350,35 @@ function renderProm(data) {
 function renderHTML(data) {
     let htmlString = "";
     for (var i = 0; i < data.Products.length; i++) {
+        let output = data.Products[i].SalePrice;
+        // console.log(output);
+         
+         //regex right currency code
+             let myRe = output.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+ 
+             //console.log(myRe);
+  
+ 
         htmlString += 
-        "<div class='col col-sm-6 col-md-4 col-lg-3'>"+
-        "<img class=imgProduct src=" + data.Products[i].ImgURL + ">"+
-        "<h3>"+ data.Products[i].MfgName +"</h3>"+
-        "<h4>Style #"+ data.Products[i].MfgStyleNumber+"</h4>"+
-        "<p>$" + data.Products[i].SalePrice + "</p>"+
-        "</div>";
-    }
+         "<div class='col col-sm-6 col-md-4'>"+
+         "<div class='imgBox'>"+
+         "<span class='imgProduct' style='background:url("+data.Products[i].ImgURL+") center center no-repeat; background-size:130%;'></span>"+
+         "</div>"+
+         "<div class='box-render'>"+
+         "<h3>ID "+ data.Products[i].DisplayID+"</h3>"+
+         "<p class='output'>$" +myRe+ "</p>"+
+         "</div>"+
+         "</div>";
+         }
+
+       
+
     
     if (data.Products.length == 0){
         document.getElementById("results").innerHTML = "Results for '" +input+ "' was not found.";
     }else{
-        var para = document.createElement("h1");                 // Create a <p> element
-        para.innerHTML = "Results: " +input+ "";                // Insert text
+        var para = document.createElement("h1");                 
+        para.innerHTML = "Results: " +input+ "";                
         document.getElementById("header").appendChild(para);
 
         var total = document.createElement("P");
@@ -330,10 +388,6 @@ function renderHTML(data) {
     }
     container.insertAdjacentHTML('beforeend', htmlString);
 }
-
-
-
-
 
 
 
