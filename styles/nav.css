@@ -1258,13 +1258,17 @@ i#bread.fas.fa-chevron-right {
   font-weight: 700;
 }
 
-.page-item.active .page-link {
+.page-item.active .page-link, .page-link:hover {
   z-index: 3;
   color: #000000;
   background-color: #FA85B6;
   border-color: transparent;
   border-radius: 100%;
   font-weight: 700;
+}
+
+.page-item:last-child .page-link {
+  background: transparent;
 }
 
 .page-item.disabled {
