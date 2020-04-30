@@ -147,6 +147,10 @@ H3.category_links {
   z-index: 0;
 }
 
+H3.cost {
+  color: #000000;
+}
+
 H4.authors {
   font-weight: 700;
   font-size: 0.875rem;
@@ -200,7 +204,21 @@ p.link-nav {
   margin-bottom: 0;
 }
 
+.light {
+  font-weight: 300;
+  color: #2F2F2F;
+}
+
+.black {
+  color: #000000;
+}
+
 @media (min-width: 768px) {
+  .h3-product {
+    font-size: 23px;
+    padding: 0;
+    margin: 0px;
+  }
   .ad-text h2 {
     font-size: 1.625rem;
     text-align: left;
@@ -1104,7 +1122,11 @@ span#faq {
   color: #FA85B6;
 }
 
-button#eye-icon, button#heart-icon {
+button#eye-icon {
+  display: none;
+}
+
+button#heart-icon {
   width: 30px;
   height: 30px;
   display: block;
@@ -1118,10 +1140,6 @@ button#eye-icon, button#heart-icon {
 button i#heart, button i#eye {
   color: #4E4E4E;
   font-size: 25px;
-}
-
-i#eye {
-  margin-bottom: 8px;
 }
 
 i#heart {
@@ -1275,6 +1293,53 @@ i#bread.fas.fa-chevron-right {
   display: none;
 }
 
+.h3-product {
+  color: #4E4E4E;
+}
+
+.product_content {
+  width: 370px;
+  margin: 0 auto;
+}
+
+.modal-dialog {
+  max-width: 670px;
+}
+
+.modal-body-product {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 0px;
+  padding-bottom: 50px;
+}
+
+.modal-header {
+  padding: 0.4rem 1rem;
+  border-bottom: transparent;
+  display: block;
+  text-align: right;
+}
+
+.modal-header .times-icon {
+  color: #000000;
+}
+
+.img-product {
+  width: 300px;
+  height: 470px;
+  display: block;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.btn-ground {
+  margin-top: 12px;
+}
+
+.btn-ground .primaryBtn {
+  width: 100%;
+}
+
 @media (min-width: 576px) {
   .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox, .gallery#results .col .imgBox {
     height: 300px;
@@ -1284,12 +1349,28 @@ i#bread.fas.fa-chevron-right {
   #weddingaccs.jumbotron {
     height: 350px;
   }
-  button#eye-icon, button#heart-icon {
+  button#eye-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    top: 230px;
+    left: 0;
+    -webkit-margin-start: 80%;
+    margin-inline-start: 80%;
+  }
+  i#eye {
+    display: block;
+  }
+  button#heart-icon {
     top: 232px;
   }
 }
 
 @media (min-width: 768px) {
+  .product_content {
+    padding-right: 40px;
+  }
   .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox, .gallery#results .col .imgBox {
     width: 200px;
     height: 280px;

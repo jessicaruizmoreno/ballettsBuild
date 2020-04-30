@@ -240,25 +240,47 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         ////BRIDAL GOWNS GET////
 
-        let queryString = 1; //to get pg=1 //somehow how to increment it when button is click on
-        let paramNum = queryString;
-
-        let url = 'https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&pg=' + paramNum + '&format=json';
-
-        let urlPart1 = url.split('=')[2]; //getting '30&pg' string
-        console.log(urlPart1);
-
-        let newURL = urlPart1 + "=" + queryString; //getting 30&pg = 1 
-        console.log(newURL);
-
-
-        let pageUrl = 'https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=' + newURL + '&format=json';
-
 
         let bridalContainer = document.getElementById('bridalgallery');
 
         //finding if page has div id bridal gallery if yes get products api 
         if (bridalContainer) {
+
+            let queryString = 'pg=1';
+           
+            let paramNum = queryString;
+    
+            let pageUrl = 'https://bridalwebsolutions.net/retail/onlinestore/api-products.cfm?cat=bridal-gowns&mpp=30&' + paramNum + '&format=json';
+    
+            //getting the pagination ids
+    
+            let page1 = document.getElementById('1');
+            page1.addEventListener('click', function (e) {
+                nextPage(e.target.id);
+            }, false);
+
+    
+            let page2 = document.getElementById('2');
+            page2.addEventListener('click', function (e) {
+                nextPage(e.target.id);
+            }, false);
+    
+            let page3 = document.getElementById('3');
+            page3.addEventListener('click', function (e) {
+                nextPage(e.target.id);
+            }, false);
+
+
+            function nextPage(id) {
+            let mypage =  'pg=' + id;
+            console.log(mypage);  
+            }
+
+         
+           
+
+            
+
             axios.get(pageUrl)
                 .then(function (response) {
                     //console.log(response.data);
@@ -300,7 +322,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 //console.log(productId);
 
                 //getting api product details
-                axios.get('http://www.bridalwebsolutions.net/retail/onlinestore/api-productdetails.cfm?id=' + productId + '&format=json')
+                axios.get('https://www.bridalwebsolutions.net/retail/onlinestore/api-productdetails.cfm?id=' + productId + '&format=json')
                     .then(function (response) {
                         //console.log(response.data);
 
@@ -333,7 +355,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>" +
                     "</div>" +
                     "<div class='box-render'>" +
-                    "<h3>ID " + data.Products[i].DisplayID + "</h3>" +
+                    "<h3 class='h3-product'>ID " + data.Products[i].DisplayID + "</h3>" +
                     "<p class='output'>$" + myRe + "</p>" +
                     "</div>" +
                     "</div>"
@@ -347,55 +369,44 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         //renderDetail 
         //getting data for product pages gallery
-        "<div class='col col-sm-6 col-md-4'>" +
-        "<div class='imgBox'>" +
-        "<span class='imgProduct' style='background:url(" + data.Products[i].ImgURL + ") center center no-repeat; background-size:130%;'></span>" +
-        "<button id='eye-icon' onClick='changeIcon2(this)' data-toggle='modal' data-target='#quickView'><i class='far fa-eye' id='eye'></i></button>" +
-        "<button id='heart-icon' onClick='changeIcon(this)'><a><i class='far fa-heart' id='heart'></i></a></button>" +
-        "</div>" +
-        "<div class='box-render'>" +
-        "<h3>ID " + data.Products[i].DisplayID + "</h3>" +
-        "<p class='output'>$" + myRe + "</p>" +
-        "</div>" +
-        "</div>";
 
         //getting data for modal 
-     /*    htmlDetail+= 
-        "<div class='modal fade quickView' id='quickView'>"+
-        "<div class='modal-dialog'>"+
-        "<div class='modal-content'>"+
-        "<a href='#' data-dismiss='modal' class='class pull-right'><span class='glyphicon glyphicon-remove'></span></a>"+
-        "</div>"+
-        "<div class='modal-body'>"+
-           "<div class='row'>"+
-                    "<div class='col-md-6 img-product'>"+
-                        "<img src="+data.Products[i].ImgURL+" class='img-responsive'>"+
-                    "</div>"+
-               "<div class='col-md-6 quick'>"+
-                        "<h2>ID "+ data.Products[i].DisplayID+"</h2>"+
-                        "<p>"+data.Products[i].Description+"</p>"+
-                        "<h3 class='price'>"+data.Products[i].SalePrice;+"</h3>"+
-                   "<div class='row'>"+
-                            "<div class='col-md-4 col-sm-6 col-xs-12'>"+
-                                "<select class='form-control name='select'>"+
-                                    "<option value='' selected=''>data.Products[i].Color1AvailableColors</option>"+
-                                    "<option value='black'>Black</option>"+
-                                    "<option value='white'>White</option>"+
-                                "</select>"+
-                               "</div>"+
-                           
+        /*    htmlDetail+= 
+           "<div class='modal fade quickView' id='quickView'>"+
+           "<div class='modal-dialog'>"+
+           "<div class='modal-content'>"+
+           "<a href='#' data-dismiss='modal' class='class pull-right'><span class='glyphicon glyphicon-remove'></span></a>"+
+           "</div>"+
+           "<div class='modal-body'>"+
+              "<div class='row'>"+
+                       "<div class='col-md-6 img-product'>"+
+                           "<img src="+data.Products[i].ImgURL+" class='img-responsive'>"+
+                       "</div>"+
+                  "<div class='col-md-6 quick'>"+
+                           "<h2>ID "+ data.Products[i].DisplayID+"</h2>"+
+                           "<p>"+data.Products[i].Description+"</p>"+
+                           "<h3 class='price'>"+data.Products[i].SalePrice;+"</h3>"+
+                      "<div class='row'>"+
                                "<div class='col-md-4 col-sm-6 col-xs-12'>"+
-                                "<p>"+data.Products[i].AvailableSizes+"</p>"
-                               "</div>"+
-                       "<div class='btn-ground'>"+
-                            "<button type='button' class='btn btn-primary'>Buy Now</button>"+
-                        "</div>"+
+                                   "<select class='form-control name='select'>"+
+                                       "<option value='' selected=''>data.Products[i].Color1AvailableColors</option>"+
+                                       "<option value='black'>Black</option>"+
+                                       "<option value='white'>White</option>"+
+                                   "</select>"+
+                                  "</div>"+
+                              
+                                  "<div class='col-md-4 col-sm-6 col-xs-12'>"+
+                                   "<p>"+data.Products[i].AvailableSizes+"</p>"
+                                  "</div>"+
+                          "<div class='btn-ground'>"+
+                               "<button type='button' class='btn btn-primary'>Buy Now</button>"+
+                           "</div>"+
+                      "</div>"+
                    "</div>"+
-                "</div>"+
-            "</div>"+
-       "</div>"+
-       "</div>"+
-       "</div>"; */
+               "</div>"+
+          "</div>"+
+          "</div>"+
+          "</div>"; */
 
 
 
@@ -412,7 +423,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //getting search location src=
         let params = location.search.substr(1).split("&");
 
-        
+
         let input = location.search.substr(6);
 
 
