@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html  id='loading'>
 	<head>
+		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Bridal Shop London, Kitchener, St. Catharines | Ontario's Designer Wedding Dresses & Gowns</title>
+		<title>Balletts Bridal Shop London, Kitchener, St. Catharines | Ontario's Designer Wedding Dresses & Gowns</title>
 		<meta name="description" content="Your one stop shop for all of your designer bridal gowns, prom dresses, & wedding accessories offered by Balletts Bridal Shop in London, Kitchener & St. Catharines.">
 		<link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+
+			<!---Google analytics-->
+		<script> 
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-75806919-1', 'auto'); ga('send', 'pageview');
+		</script>
+
+
 
 		<!--bootstrap css-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		
 		<!---css styles--->
 		<link href="./styles/styles.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="./styles/footer.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="./styles/nav.css" rel="stylesheet" type="text/css" media="screen">
 
 
 		<!--font awesome icons/ loading faster script--->
 		<script src="https://kit.fontawesome.com/2994bc2806.js" crossorigin="anonymous"></script>
 		<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+		
+
 	</head>
 	<body>
 
@@ -56,15 +68,15 @@
 			  </button>
 			  <img src="assets/images/logo.png" alt="Balletts Bridal Logo" id="logo">
 			
-			
-
-
-			
-					<form action="/search" method="get" action="Search.asp" class="searchbar">
-					<input class="search_input" type="text" name="" placeholder="Search...">
-					<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+		
+		
+			   <form class="searchbar" id="searchbar" action="searchresults.html" method="GET">
+				<input class="search_input" id="search_input" type="text" name="srch" placeholder="Search..." size="40" maxlenghth="256" required>
+				<a class="search_icon"><i class="fas fa-search"></i></a>	
 				</form>
-			  
+
+				
+
 			  
 <button class="icon icon-cart" type="button"><svg id="Group_119" data-name="Group 119" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.49 17.13"><path id="Path_1" data-name="Path 1" d="M6.28,11.42H16.64a.58.58,0,0,0,.55-.41l2.28-8a.57.57,0,0,0-.39-.71l-.16,0H5L4.55.45A.56.56,0,0,0,4,0H.57A.58.58,0,0,0,0,.57a.57.57,0,0,0,.57.57h3L5.6,10.42a1.72,1.72,0,0,0,.68,3.29H16.64a.58.58,0,0,0,0-1.15H6.28A.57.57,0,0,1,5.71,12a.58.58,0,0,1,.57-.57Zm11.88-8-1.95,6.85H6.74L5.22,3.43Z" transform="translate(0)"/><path id="Path_2" data-name="Path 2" d="M5.71,15.42a1.72,1.72,0,1,0,1.71-1.71A1.71,1.71,0,0,0,5.71,15.42Zm1.71-.57a.56.56,0,0,1,.57.57.57.57,0,0,1-.57.57.58.58,0,0,1-.57-.57A.57.57,0,0,1,7.42,14.85Z" transform="translate(0)"/><path id="Path_3" data-name="Path 3" d="M13.78,15.42a1.72,1.72,0,1,0,1.72-1.71A1.71,1.71,0,0,0,13.78,15.42Zm1.72-.57a.57.57,0,0,1,.57.57.58.58,0,0,1-1.15,0A.57.57,0,0,1,15.5,14.85Z" transform="translate(0)"/></svg></button>
 			 
@@ -87,7 +99,7 @@
 				   <path class="st1" d="M82.2,2.7c-1.5,0-2.7,1.2-2.7,2.7c0,1.5,1.2,2.7,2.7,2.7c1.5,0,2.7-1.2,2.7-2.7v0C84.9,3.9,83.7,2.7,82.2,2.7z
 						M82.2,7.2c-1,0-1.8-0.8-1.8-1.8c0-1,0.8-1.8,1.8-1.8S84,4.4,84,5.4c0,0,0,0,0,0C84,6.4,83.2,7.2,82.2,7.2z"/>
 			   </g>
-			   </svg> <p class="link-nav">LOCATION</p></button>
+			   </svg> <p class="link-nav"><a href=location.html>LOCATION</a></p></button>
 			
 			   <button class="icon" type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				viewBox="0 0 18.4 16.3" style="enable-background:new 0 0 18.4 16.3;" xml:space="preserve">
@@ -159,23 +171,23 @@
 			<div class="collapse navbar-collaspe" id="showNav">
 				<div class="pink-box">
 				  <ul class="navbar-nav">
-					  <li><a link href="https://balletts.com/">Home</a></li>
+					  <li><a link href="https://balletts.com/jessica">Home</a></li>
 					  <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  Shop
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <a class="dropdown-item" href="https://balletts.com/bridal-gowns/">Bridal Gowns</a>
-						  <a class="dropdown-item" href="https://balletts.com/bridesmaid-dresses/">Bridesmaids</a>
-						  <a class="dropdown-item" href="https://balletts.com/prom-dresses/">Prom & Grad</a>
-						  <a class="dropdown-item" href="https://balletts.com/wedding-accessories/">Accessories</a>
-						  <a class="dropdown-item" href="https://balletts.com/special-occasions-dresses/">Special Occasions</a>
+							<a class="dropdown-item" href="bridal-gowns.html">Bridal Gowns</a>
+							<a class="dropdown-item" href="bridesmaids.html">Bridesmaids</a>
+							<a class="dropdown-item" href="prom-grad.html">Prom & Grad</a>
+							<a class="dropdown-item" href="wedding-accessories.html">Accessories</a>
+							<a class="dropdown-item" href="special-occasions.html">Special Occasions</a>
 						 <!---- <a class="dropdown-item" href="#">Flower Girls</a>-->
 						</div>
 
 					  </li>
 
-					  <li><a link href="#contact">Contact</a></li>
+					  <li><a link href="contact-us.html">Contact</a></li>
 				  </ul>
 		
 				</div>
@@ -227,13 +239,6 @@
 			<img src ="assets/images/bubble-right.png" class="section1-3">
 		</div>
 		</div>
-		<!--bubble near cats--->
-<div class="image-wrapper">
-	<div class="image-container">	
-<img src ="assets/images/bubble-right.png" class="section1-4">
-</div>
-</div>
-	
 	
 	<div class="more"><p>Scroll Down<i class="fas fa-chevron-down"></i></p></div>
 
@@ -256,6 +261,13 @@
 	</div>
 		</div>
 		</div>
+				<!--bubble near cats--->
+<div class="image-wrapper">
+	<div class="image-container">	
+<img src ="assets/images/bubble-right.png" class="section1-4">
+</div>
+</div>
+	
 	</section>
 
 
@@ -272,9 +284,9 @@
 
 		<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
 		<div class="cat col pr-2">
-			<a href="https://balletts.com/bridal-gowns" class="active_link">
+			<a href="bridal-gowns.html" class="active_link">
 			<div class="cats_box">
-			<span class="cat-images" style="background:url(assets/images/bridal-img.jpg) center center no-repeat; background-size:cover;">
+			<span class="cat-images" style="background:url(assets/images/bridal-banner.jpg) center center no-repeat; background-size:cover;">
 			</span>
 			<h3 class=category_links>SHOP BRIDAL GOWNS</h3>
 			</div>
@@ -284,9 +296,9 @@
 		</div>
 
 		<div class="cat col pr-3">
-			<a href="https://balletts.com/bridesmaid-dresses/" class="active_link">
+			<a href="bridesmaids.html" class="active_link">
 				<div class="cats_box">
-					<span class="cat-images" style="background:url(assets/images/bridemaids-img.jpg) center center no-repeat; background-size:cover;">
+					<span class="cat-images" style="background:url(assets/images/bridesmaid-cover.jpg) center center no-repeat; background-size:cover;">
 					</span>
 					<h3 class=category_links>SHOP BRIDESMAID'S</h3>
 					</div>
@@ -295,7 +307,7 @@
 		</div>
 
 		<div class="cat col pr-1">
-			<a href="https://balletts.com/prom-dresses/" class="active_link">
+			<a href="prom-grad.html" class="active_link">
 				<div class="cats_box">
 					<span class="cat-images" style="background:url(assets/images/prom-img.jpg) center center no-repeat; background-size:cover;">
 					</span>
@@ -307,7 +319,7 @@
 
 	
 			<div class="cat mid col pr-3">
-				<a href="https://balletts.com/wedding-accessories/" class="active_link">
+				<a href="wedding-accessories.html" class="active_link">
 					<div class="cats_box">
 						<span class="cat-images" style="background:url(assets/images/acc-img.jpg) center center no-repeat; background-size:cover;">
 						</span>
@@ -318,7 +330,7 @@
 			</div>
 
 			<div class="cat mid2 col pr-2">
-				<a href="https://balletts.com/special-occasions-dresses/" class="active_link">
+				<a href="special-occasions.html" class="active_link">
 					<div class="cats_box">
 						<span class="cat-images" style="background:url(assets/images/occ-img.jpg) center center no-repeat; background-size:cover;">
 						</span>
@@ -328,7 +340,7 @@
 				</a>
 			</div>
 	
-		<!----	<div class="cat col pr-4">
+	<div class="cat col pr-4">
 				<a href="#" class="active_link">
 					<div class="cats_box">
 						<span class="cat-images" style="background:url(assets/images/flower-img.jpg) center center no-repeat; background-size:cover;">
@@ -337,7 +349,7 @@
 						</div>
 			
 				</a>
-			</div>-->
+			</div>
 		</div>
 		</section>
 		
@@ -514,17 +526,17 @@
 
 <section class="fifth-section">
 	<div class="row posts">
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-nVfLOHygi/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/92446986_2560473200908196_2547343435414677804_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=108&_nc_ohc=19rYry0Ge4oAX8hAiq1&oh=b808df719f40549a7da551e8e309cac5&oe=5EB41E53" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-Zp7h3A2rE/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/91228215_1712563258886542_2459684126983430112_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=LoCdgV7j6lUAX8m9ZGM&oh=24fa3ea66fc0af4b177806afd9c85254&oe=5EB56562" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-QAt2wn3Sk/"><img src="https://instagram.fyto1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/90990380_876946139410792_3505603861654859216_n.jpg?_nc_ht=instagram.fyto1-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=mTlbaFmvuwcAX9w7Qjj&oh=7686786edf44510614b037b37a4b2c2f&oe=5EB38A40" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-PTUHjnbEF/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/90887064_2709675932594554_6983461255326209981_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=3dXmz7LVWEwAX-yxpaX&oh=76e5b009841a2aca0dd0158289d252e3&oe=5EB313A7" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-M19z8FjOV/"><img src="https://instagram.fyto1-1.fna.fbcdn.net/v/t51.2885-15/e15/91269466_149528099866169_2110904162059929151_n.jpg?_nc_ht=instagram.fyto1-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=7nUDQbXzcJkAX83f0hH&oh=ddbe36d15e58025a721f4d9800577304&oe=5EB51533" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-FJYt0I6DV/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/e15/p640x640/90705193_665206294307700_1724841072878246545_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=f-p3YLOnB88AX-IHaEs&oh=e96670be187dc1b55da84179ec36b09d&oe=5EB4D05C" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B99OUmRFtGo/"><img src="https://instagram.fyto1-1.fna.fbcdn.net/v/t51.2885-15/e15/90214939_188997515884611_3372339308481917538_n.jpg?_nc_ht=instagram.fyto1-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=OTFKTPBCr9wAX9uU__h&oh=bfdd39d8d804c45188976bc3ef2d0e25&oe=5EB31993" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B960axzDI3b/"><img src="https://instagram.fyto1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/90087703_142203687322973_6564626896899558869_n.jpg?_nc_ht=instagram.fyto1-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=Rg4_9A0_2roAX-gB6ng&oh=6cbbf8e3a86b6ebf75c136f995a6af62&oe=5EB56BA8" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B94N88fAdvO/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/90088190_129836425253298_7373832158738494164_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=Vj7BsBKCpLQAX-LoX6F&oh=54754df36703411f19b7fc32b47c34f4&oe=5EB515FB" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="instagram.com/p/B9zA9zFA2cD/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/90088726_1553218448170086_7414862280312044511_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=106&_nc_ohc=KkHP66Nod18AX_QtqaE&oh=91095008c4cfd540628595855a25fe29&oe=5EB4E075" alt width="640" height="800"></a></div>
-		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B9rRVkIjJLY/"><img src="https://instagram.fyto1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/89802736_283569859291020_7624108605373309875_n.jpg?_nc_ht=instagram.fyto1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=g1wODLOCZosAX95WEvQ&oh=fea5405f7d7857c641cf93a14cdcfea9&oe=5EB53330" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-nVfLOHygi/"><img src="https://instagram.fyzd1-2.fna.fbcdn.net/v/t51.2885-15/e35/92446986_2560473200908196_2547343435414677804_n.jpg?_nc_ht=instagram.fyzd1-2.fna.fbcdn.net&_nc_cat=108&_nc_ohc=6d0kQGkb_AcAX-ctKi7&oh=088c2b2910c33cc9e6f5e7f0b02f9ea5&oe=5EF45D39" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-Zp7h3A2rE/"><img src="https://instagram.fyzd1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/91228215_1712563258886542_2459684126983430112_n.jpg?_nc_ht=instagram.fyzd1-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Nrq8ecfM_AkAX9a8TVw&oh=861b20c8858dae1460d4a845e4247be6&oe=5EF3D626" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-QAt2wn3Sk/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/e35/90990380_876946139410792_3505603861654859216_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=104&_nc_ohc=m-rQAhpdw3QAX9v0rFb&oh=c9893494cbe74a4cc8ff78630568c186&oe=5EF2EBCA" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-PTUHjnbEF/"><img src="https://instagram.fyzd1-2.fna.fbcdn.net/v/t51.2885-15/fr/e15/p1080x1080/90887064_2709675932594554_6983461255326209981_n.jpg?_nc_ht=instagram.fyzd1-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=MCQmsOI3wosAX9Xc_Hn&oh=98e89ff24b4501c3aea0f32fc15db17b&oe=5EF3006F" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-M19z8FjOV/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/e15/91269466_149528099866169_2110904162059929151_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=105&_nc_ohc=HKzxJo5UUj8AX9uPL3s&oh=bc74c4fa55d3569331c916ea617f911a&oe=5EF45D33" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B-FJYt0I6DV/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/e15/90705193_665206294307700_1724841072878246545_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=100&_nc_ohc=15cw13wb_sAAX8AndPA&oh=15cce63e056e5553e8f144a08f73b3c8&oe=5EF499B7" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B99OUmRFtGo/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/e15/90214939_188997515884611_3372339308481917538_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=103&_nc_ohc=jL0K9P96Dp0AX9IVeMI&oh=d067d208d0b5ebb6c615bb2c3f9edf60&oe=5EF26193" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B960axzDI3b/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/90087703_142203687322973_6564626896899558869_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=105&_nc_ohc=zYeKh8KBtR0AX_uFxJ-&oh=316a1545a27af87534b91a00468be877&oe=5EF4B3A8" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B94N88fAdvO/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p750x750/90088190_129836425253298_7373832158738494164_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=jvxNw9oT2-wAX8gIUrx&oh=aa661c122ac437e627cd40a209b7da24&oe=5EF4D47B" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="instagram.com/p/B9zA9zFA2cD/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/fr/e15/p1080x1080/90088726_1553218448170086_7414862280312044511_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=VfSCP54NKIgAX8oUclg&oh=04ac643ae0e051d2b2ff777366c23ac9&oe=5EF49EBD" alt width="640" height="800"></a></div>
+		<div class="col-sm-3 equal-height"><a href="https://www.instagram.com/p/B9rRVkIjJLY/"><img src="https://instagram.fyzd1-3.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/89408295_2630330153919282_4548720500592802903_n.jpg?_nc_ht=instagram.fyzd1-3.fna.fbcdn.net&_nc_cat=106&_nc_ohc=04cab1s1LJoAX-VQJ2U&oh=dcabed34ea380938458d1dc595d00621&oe=5EF30B81" alt width="640" height="800"></a></div>
 		<div class="col-sm-3 equal-height instagram-url"><a href="https://www.instagram.com/balletts_bridal"><i class="fab fa-instagram"><p>View More</p></i></a></div>
 
 
@@ -537,7 +549,7 @@
 
 
 		  <!----NEWSLETTER FULL WIDTH-->
-		  <section class="container-fluid">
+		  <section class="container-fluid sixth-section">
 		  <div class="row newsletter">
 			  <div class="col">
 			<form>
@@ -572,10 +584,9 @@
 					<div class="collapse multi-collapse" id="multiCollapseExample1">
 						<div class="more-links">
 						<ul>
-							<li><a href="">Customer Service</a></li>
-							<li><a href="">Shipping</a></li>
-							<li><a href="">Your Orders</a></li>
-							<li><a href="">Party Measurements</a></li>
+							<li><a href="online-faqs.html">Online FAQ's</a></li>
+							<li><a href="customer-service.html">Customer Service</a></li>
+							<li><a href="measuring-guidelines.html">Measuring Guidelines</a></li>
 						</ul>
 						</div>
 					</div>
@@ -592,8 +603,8 @@
 					<div class="collapse multi-collapse" id="multiCollapseExample2">
 						<div class="more-links">
 							<ul>
-								<li><a href="">Our Story</a></li>
-								<li><a href="">Brands</a></li>
+								<li><a href="our-story.html">Our Story</a></li>
+								<li><a href="our-collections.html">Our Collections</a></li>
 							</ul>
 							</div>
 					</div>
@@ -604,7 +615,7 @@
 			<div class="col footer-link">
 				<ul>
 					<li class="nav-item">
-						<a class="nav-link" href=""> FIND A STORE</a>
+						<a class="nav-link" href="location.html"> FIND A STORE</a>
 					</li>
 					</ul>
 			</div>
@@ -624,9 +635,9 @@
 
 			<div class="row">
 				<div class="col">
-				<p class="copyright">Copyright © 2020 <a href="https://balletts.com/">Ballett's Bridal</a>. All rights reserved</p>
+				<p class="copyright">Copyright © 2020 <a href="https://balletts.com/jessica">Ballett's Bridal</a>. All rights reserved</p>
 				<div class="last-links">
-				<a href="#">CONTACT</a>
+				<a href="contact-us.html">CONTACT</a>
 				<a href="#">PRIVACY POLICY</a>
 				</div>
 				</div>
@@ -640,6 +651,7 @@
 
 
 	<!---bootstrap js bundle-->
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -649,6 +661,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 	<script type="text/javascript" src="js/main.js"></script>
 
