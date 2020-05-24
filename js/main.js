@@ -1,11 +1,10 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded',  (event)=> { 
 
-    (function () {
-        "use strict";
+    window.onload = (function () {
+    "use strict";
         console.log("SEAF Fired");
-
-
-
+  
+        
         //ACCESSORIES//
         let weddingAccContainer = document.getElementById('weddingAcc-gallery');
 
@@ -564,37 +563,37 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //automatic//
         let tl = new TimelineMax();
         tl.from('#heroImage', 1, {
-            opacity: 0,
+            autoAlpha:0,
             delay: 1
         });
         tl.from('#banner', 1, {
-            opacity: 0,
+            autoAlpha:0,
             y: -30,
             ease: Power2.easeInOut
         });
         tl.from('.section1-1', 4, {
             delay: 3,
-            opacity: 0,
+            autoAlpha:0,
             x: 50,
             ease: Power2.easeInOut
         }, "-=6");
         tl.from('.section1-2, .section1-3', 4, {
             delay: 3,
-            opacity: 0,
+            autoAlpha:0,
             y: 50,
             ease: Power2.easeInOut
         }, "-=6");
         tl.from('.section1-4', 6, {
-            opacity: 0,
+            autoAlpha:0,
             ease: Power2.easeInOut
         }, "-=6");
         tl.from('.more', 1, {
-            opacity: 0,
+            autoAlpha:0,
             ease: Power2.easeInOut,
             delay: 3
         }, "=-6");
         tl.from('.second-section,.third-section,.fourth-section,.fifth-section,.sixth-section', 1, {
-            opacity: 0,
+            autoAlpha:0,
             ease: Power2.easeInOut,
             delay: 3
         }, '-=6');
@@ -621,7 +620,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }, '-=6');
 
         t2.from('.section3-1', 6, {
-            opacity: 0,
+            autoAlpha:0,
             y: 90,
             ease: Power2.easeInOut
         });
@@ -645,12 +644,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         let t3 = new TimelineMax();
         t3.from('.section4-1', 6, {
-            opacity: 0,
+            autoAlpha:0,
             y: 90,
             ease: Power2.easeInOut
         }, '-=6');
         t3.from('.section4-2', 6, {
-            opacity: 0,
+            autoAlpha:0,
             y: 200,
             ease: Power2.easeInOut
         }, '-=6');
@@ -705,4 +704,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     })();
-});
+},false);
