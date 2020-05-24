@@ -204,16 +204,21 @@ p.link-nav {
   margin-bottom: 0;
 }
 
-span.light {
+.light {
   font-weight: 300;
   color: #2F2F2F;
 }
 
-span.black {
+.black {
   color: #000000;
 }
 
 @media (min-width: 768px) {
+  .h3-product {
+    font-size: 23px;
+    padding: 0;
+    margin: 0px;
+  }
   .ad-text h2 {
     font-size: 1.625rem;
     text-align: left;
@@ -245,6 +250,27 @@ span.black {
 
 body {
   font-size: 16px;
+  -webkit-animation: fadeinLoad 1s 1s forwards;
+  animation: fadeinLoad 1s 1s forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeinLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .newsletter {
@@ -567,7 +593,7 @@ body {
 @media (min-width: 1200px) {
   .section1-3 {
     display: block;
-    left: 78%;
+    left: 82%;
   }
   .section1-2 {
     left: -30px;
@@ -693,6 +719,12 @@ button {
   }
   .ad-image {
     min-height: 384px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .ad-text {
+    padding: 109px;
   }
 }
 
@@ -1363,6 +1395,9 @@ i#bread.fas.fa-chevron-right {
 }
 
 @media (min-width: 768px) {
+  .product_content {
+    padding-right: 40px;
+  }
   .gallery#bridalgallery .col .imgBox, .gallery#bridemaidsgallery .col .imgBox, .gallery#promgrad-gallery .col .imgBox, .gallery#specialOcc-gallery .col .imgBox, .gallery#weddingAcc-gallery .col .imgBox, .gallery#results .col .imgBox {
     width: 200px;
     height: 280px;

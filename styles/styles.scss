@@ -1,5 +1,68 @@
-@import "colors";
-@import "breakpoints";
+// Colours
+$black: #000000;
+$soft-black:#2F2F2F;
+$white: #FFFFFF;
+$light-grey: #F0F0F0;
+$main-pink: #FA85B6;
+$accent:#FCBAD6;
+$light-accent:#FFF5F9;
+$grey:#A5A5A5;
+$opacGrey:#a5a5a557;
+$dark-grey:#4E4E4E;
+
+// BreakPoints 
+
+$breakpoints: (sm: 576px,
+    md:768px,
+    lg:992px,
+    xl:1200px);
+
+$breakpoint: map-get($breakpoints, sm);
+
+@mixin respond-above($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+
+        // If the breakpoint doesn't exist in the map.
+    }
+
+    @else {
+
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
+
+
+
+@include respond-above(md) {
+    .container-md{
+        max-width: 750px;
+    } 
+}
+
+
+@include respond-above(lg) {
+  
+    .container-md{
+        max-width: 1000px;
+    } 
+}
+
+@include respond-above(xl) {
+    .container-md{
+     max-width: 1140px;
+    }   
+}
 
 
 // Typography
@@ -321,8 +384,27 @@ color:$soft-black;
 // ===== GLOBAL STYLES ===== //
 body {
     font-size: 16px;
+    -webkit-animation: fadeinLoad 1s 1s forwards;
+    animation: fadeinLoad 1s 1s forwards;
+    opacity:0;
 }
 
+@-webkit-keyframes fadeinLoad {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeinLoad {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 .newsletter {
     @include flexCenter();
 }
@@ -434,6 +516,7 @@ body {
 //ANIMATION//
 .first-section, .third-section {
     position: relative;
+    
 }
 
 
@@ -621,6 +704,9 @@ width: 140px;
 
 
 @media(min-width:1100px){
+
+
+
     .section1-4 {
         position: absolute;
         width: 130px;
@@ -657,7 +743,7 @@ width: 140px;
 
        .section1-3{
            display: block;
-           left: 78%;
+           left: 82%;
        }
 
 .section1-2 {
@@ -697,6 +783,7 @@ button {
     background-size: 270px;
     padding: 30px 8px;
     background-position-y: 2vh;
+    
 }
 
 #banner {
@@ -805,6 +892,12 @@ button {
     
     .ad-image {
         min-height: 384px;
+    }
+}
+
+@media (min-width:1100px){
+    .ad-text {
+        padding: 109px;
     }
 }
 
